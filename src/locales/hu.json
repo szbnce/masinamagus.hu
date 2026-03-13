@@ -1,0 +1,128 @@
+{
+    "navbar": {
+        "home": "Főoldal",
+        "services": "Szolgáltatások",
+        "blog": "Blog",
+        "contact": "Kapcsolat",
+        "brand_prefix": "Masina",
+        "brand_suffix": "mágus"
+    },
+    "footer": {
+        "brand_desc": "Mérnöki precizitás a motorháztető alatt. Ha nem csak tippelni akarsz, hanem tudni.",
+        "links": "Gyorslinkek",
+        "contact": "Kapcsolat",
+        "location": "2655 Kétbodony, Rákóczi út 36.",
+        "phone": "+36 70 303 1020",
+        "email": "info@masinamagus.hu",
+        "disclaimer": "Fontos: A környezetvédelmi rendszerek (DPF, EGR, SCR) szoftveres módosítása kizárólag zárt pályás (verseny) használatra engedélyezett! A közúti forgalomban a módosítás a jármű környezetvédelmi besorolását érintheti, és hatósági eljárást vonhat maga után.",
+        "copyright": "Minden jog fenntartva – Masinamágus 2026",
+        "aszf": "Általános Szerződési Feltételek",
+        "gdpr": "Adatkezelési Tájékoztató"
+    },
+    "hero": {
+        "title_prefix": "Vezérlés a",
+        "title_span": "Vérünkben.",
+        "subtitle": "Ahol a 25 éves gépészeti rutin és a modern szoftverfejlesztés találkozik. ECU optimalizálás és diagnosztika – sallangok nélkül, Kétbodonyban.",
+        "cta_primary": "Mit vállalunk?",
+        "cta_secondary": "Árajánlat",
+        "stat_hp": "+Lóerő",
+        "stat_nm": "+Nyomaték",
+        "stat_eco": "-Fogyasztás"
+    },
+    "services": {
+        "title": "Szolgáltat",
+        "title_span": "ásaink",
+        "items": [
+            {
+                "title": "Egyedi ECU kalibráció",
+                "description": "Nem sablonfájlokat töltögetünk. Valódi finomhangolás az autó mechanikai korlátain belül."
+            },
+            {
+                "title": "Emissziós megoldások",
+                "description": "DPF, EGR és AdBlue rendszerek szoftveres kezelése. Professzionális hibakódmentesítés, nem csak „kiütés”."
+            },
+            {
+                "title": "Chiptuning & Performance",
+                "description": "Érezhető teljesítménynövekedés anélkül, hogy a turbó az első padlógáznál köszönne el."
+            },
+            {
+                "title": "Mélyszintű diagnosztika",
+                "description": "Élőadat-logolás és rendszerelemzés. Ott is megtaláljuk a hibát, ahol mások már feladták."
+            },
+            {
+                "title": "Kipufogógáz-kezelés",
+                "description": "Lambda szonda és katalizátor korrekciók a motor optimális működéséhez."
+            },
+            {
+                "title": "Szoftveres helyreállítás",
+                "description": "Mókányolt programok gyári visszaállítása és navigációs rendszerek frissítése."
+            }
+        ]
+    },
+    "about": {
+        "title": "A",
+        "title_span": " „Mágus” ",
+        "title_suffix": "Duo",
+        "tagline": "„Mérünk, elemzünk, írunk. Nem tippelünk.”",
+        "profile_1_name": "Szabó Zsolt",
+        "profile_1_role": "A gépészeti agy",
+        "profile_1_desc": "25 év a motortérben. Ismeri a vas minden rezdülését, mielőtt még a laptopot rádugnánk. 🛠️",
+        "profile_2_name": "Szabó Bence",
+        "profile_2_role": "A kódfelelős",
+        "profile_2_desc": "Szoftverfejlesztői háttérrel látja át az ECU logikáját. Ahol a mechanika véget ér, ott kezdődik az ő birodalma. 💻",
+        "table_title_1": "Mérnök",
+        "table_title_span": " vs. ",
+        "table_title_2": "Sufnituning",
+        "table_header_1": "Szempont",
+        "table_header_2": "Masinamágus",
+        "table_header_3": "Átlagos Fájlhuszár",
+        "table_rows": [
+            {
+                "title": "Szoftver forrása",
+                "col1": "Saját fejlesztésű, egyedi kalibráció",
+                "col2": "Vásárolt, bizonytalan eredetű „tömegfájl”"
+            },
+            {
+                "title": "Biztonsági limitek",
+                "col1": "Gyári védelmi funkciók és nyomatékhatárok megtartva",
+                "col2": "Védelmek kiiktatva a látványosabb számokért"
+            },
+            {
+                "title": "Állapotfelmérés",
+                "col1": "Csak műszakilag hibátlan autót módosítunk",
+                "col2": "Bármire ráírják, aminek van OBD csatlakozója"
+            },
+            {
+                "title": "Adatbiztonság",
+                "col1": "Eredeti szoftver örökös archiválása",
+                "col2": "Ha elveszik az eredeti, így jártál"
+            }
+        ]
+    },
+    "process": {
+        "title": "A",
+        "title_span": " Folyamat",
+        "steps": [
+            {
+                "num": "01",
+                "title": "Diagnózis",
+                "description": "Átbeszéljük a célokat, és megnézzük, egyáltalán alkalmas-e az autó a beavatkozásra."
+            },
+            {
+                "num": "02",
+                "title": "Logolás",
+                "description": "Menet közbeni paramétervizsgálat. A számok nem hazudnak."
+            },
+            {
+                "num": "03",
+                "title": "Optimalizálás",
+                "description": "A módosítás elvégzése. Nem sietünk, a minőséghez idő kell (1-2 munkanap)."
+            },
+            {
+                "num": "04",
+                "title": "Validálás",
+                "description": "Próbakör és kontrollmérés. Csak akkor távozhatsz, ha minden paraméter stabil."
+            }
+        ]
+    }
+}

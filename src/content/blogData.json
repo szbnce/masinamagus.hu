@@ -1,0 +1,31 @@
+[
+    {
+        "slug": "mi-az-a-checksum",
+        "title": "Mi az a Checksum, és miért öli meg a motorvezérlőt a helytelen számítás?",
+        "description": "Fedezze fel, hogyan működik a motorvezérlő (ECU) belső matematikai ellenőrző mechanizmusa, és miért végzetes, ha egy 'parkolós tuner' nem ért a programozáshoz.",
+        "category": "Tudástár",
+        "tags": [
+            "Hex-kód",
+            "Checksum",
+            "ECU",
+            "Motorvezérlő Flash"
+        ],
+        "author": "Szabó Bence",
+        "readingTime": "5 perc",
+        "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200"
+    },
+    {
+        "slug": "dpf-regeneralas-szoftveres-kikapcsolasa",
+        "title": "A DPF Regenerálás Folyamata és Szoftveres Kikapcsolása",
+        "description": "Részletes útmutató a DPF regenerálási problémákról és a szakszerű szoftveres megoldásról zárt pályás használatra.",
+        "category": "Mágus Műhely",
+        "tags": [
+            "DPF",
+            "Kipufogó",
+            "Szoftveres Javítás"
+        ],
+        "author": "Szabó Zsolt",
+        "readingTime": "7 perc",
+        "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80&w=1200"
+    }
+]
