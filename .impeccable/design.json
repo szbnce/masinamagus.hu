@@ -1,0 +1,408 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-09T12:00:00+01:00",
+  "title": "Design System: Masinamágus — Zománctábla-műhely",
+  "extensions": {
+    "colorMeta": {
+      "oxblood": {
+        "role": "primary",
+        "displayName": "Oxblood",
+        "tonalRamp": [
+          "oklch(15% 0.044 25)",
+          "oklch(25% 0.075 25)",
+          "oklch(35% 0.107 25)",
+          "oklch(45% 0.125 25)",
+          "oklch(55% 0.125 25)",
+          "oklch(68% 0.107 25)",
+          "oklch(80% 0.069 25)",
+          "oklch(95% 0.031 25)"
+        ]
+      },
+      "oxblood-deep": {
+        "role": "primary",
+        "displayName": "Oxblood Deep",
+        "tonalRamp": [
+          "oklch(15% 0.036 25)",
+          "oklch(25% 0.061 25)",
+          "oklch(35% 0.086 25)",
+          "oklch(45% 0.102 25)",
+          "oklch(55% 0.102 25)",
+          "oklch(68% 0.086 25)",
+          "oklch(80% 0.056 25)",
+          "oklch(95% 0.025 25)"
+        ]
+      },
+      "enamel-blue": {
+        "role": "secondary",
+        "displayName": "Zománckék",
+        "tonalRamp": [
+          "oklch(15% 0.026 256)",
+          "oklch(25% 0.044 256)",
+          "oklch(35% 0.063 256)",
+          "oklch(45% 0.074 256)",
+          "oklch(55% 0.074 256)",
+          "oklch(68% 0.063 256)",
+          "oklch(80% 0.04 256)",
+          "oklch(95% 0.018 256)"
+        ]
+      },
+      "brass": {
+        "role": "tertiary",
+        "displayName": "Sárgaréz",
+        "tonalRamp": [
+          "oklch(15% 0.047 87)",
+          "oklch(25% 0.081 87)",
+          "oklch(35% 0.115 87)",
+          "oklch(45% 0.135 87)",
+          "oklch(55% 0.135 87)",
+          "oklch(68% 0.115 87)",
+          "oklch(80% 0.074 87)",
+          "oklch(95% 0.034 87)"
+        ]
+      },
+      "wall": {
+        "role": "neutral",
+        "displayName": "Olaj-fekete fal",
+        "tonalRamp": [
+          "oklch(15% 0.003 75)",
+          "oklch(25% 0.005 75)",
+          "oklch(35% 0.007 75)",
+          "oklch(45% 0.009 75)",
+          "oklch(55% 0.009 75)",
+          "oklch(68% 0.007 75)",
+          "oklch(80% 0.005 75)",
+          "oklch(95% 0.002 75)"
+        ]
+      },
+      "cream": {
+        "role": "neutral",
+        "displayName": "Zománckrém",
+        "tonalRamp": [
+          "oklch(15% 0.009 94)",
+          "oklch(25% 0.015 94)",
+          "oklch(35% 0.021 94)",
+          "oklch(45% 0.024 94)",
+          "oklch(55% 0.024 94)",
+          "oklch(68% 0.021 94)",
+          "oklch(80% 0.013 94)",
+          "oklch(95% 0.006 94)"
+        ]
+      },
+      "cast": {
+        "role": "neutral",
+        "displayName": "Öntött szöveg",
+        "tonalRamp": [
+          "oklch(15% 0.004 78)",
+          "oklch(25% 0.007 78)",
+          "oklch(35% 0.01 78)",
+          "oklch(45% 0.012 78)",
+          "oklch(55% 0.012 78)",
+          "oklch(68% 0.01 78)",
+          "oklch(80% 0.007 78)",
+          "oklch(95% 0.003 78)"
+        ]
+      },
+      "cast-2": {
+        "role": "neutral",
+        "displayName": "Öntött másodlagos",
+        "tonalRamp": [
+          "oklch(15% 0.008 73)",
+          "oklch(25% 0.013 73)",
+          "oklch(35% 0.019 73)",
+          "oklch(45% 0.022 73)",
+          "oklch(55% 0.022 73)",
+          "oklch(68% 0.019 73)",
+          "oklch(80% 0.012 73)",
+          "oklch(95% 0.005 73)"
+        ]
+      },
+      "parchment": {
+        "role": "neutral",
+        "displayName": "Pergamen",
+        "tonalRamp": [
+          "oklch(15% 0.013 90)",
+          "oklch(25% 0.023 90)",
+          "oklch(35% 0.033 90)",
+          "oklch(45% 0.038 90)",
+          "oklch(55% 0.038 90)",
+          "oklch(68% 0.033 90)",
+          "oklch(80% 0.021 90)",
+          "oklch(95% 0.01 90)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display (Oswald)",
+        "purpose": "Oldal- és szekciócímek, táblacímek — mindig UPPERCASE, kivéve a wordmarkot."
+      },
+      "headline": {
+        "displayName": "Headline (Oswald)",
+        "purpose": "Szekciófejek és táblacímek (h2)."
+      },
+      "title": {
+        "displayName": "Title (Oswald)",
+        "purpose": "Tábla-alcímek, folyamat-lépések, FAQ-kérdések (h3)."
+      },
+      "body": {
+        "displayName": "Body (Barlow)",
+        "purpose": "Törzsszöveg; max. sorhossz 68ch."
+      },
+      "label": {
+        "displayName": "Label (IBM Plex Mono)",
+        "purpose": "Tábla-feliratok és fal-feliratok — verzál, 0.18–0.22em tracking."
+      }
+    },
+    "shadows": [
+      {
+        "name": "plate-rest",
+        "value": "0 14px 28px rgba(0, 0, 0, 0.45)",
+        "purpose": "Minden zománctábla nyugalmi árnyéka — súlyosan ül a falon."
+      },
+      {
+        "name": "plate-lift",
+        "value": "0 20px 36px rgba(0, 0, 0, 0.55)",
+        "purpose": "Interaktív tábla hover-emelése (translateY(-2px) mellett)."
+      },
+      {
+        "name": "button-rest",
+        "value": "0 10px 22px rgba(0, 0, 0, 0.4)",
+        "purpose": "Elsődleges gomb nyugalmi árnyéka."
+      },
+      {
+        "name": "button-lift",
+        "value": "0 16px 28px rgba(0, 0, 0, 0.5)",
+        "purpose": "Elsődleges gomb hover-emelése."
+      },
+      {
+        "name": "overlay-strong",
+        "value": "0 22px 44px rgba(0, 0, 0, 0.55)",
+        "purpose": "Lebegő overlay-panel (cookie-sáv) a fal fölött."
+      },
+      {
+        "name": "overlay-menu",
+        "value": "0 18px 36px rgba(0, 0, 0, 0.5)",
+        "purpose": "Mobilmenü legördülő krém panelje."
+      },
+      {
+        "name": "medal",
+        "value": "0 10px 22px rgba(0, 0, 0, 0.45)",
+        "purpose": "Olajtégely-címke medál (hero)."
+      },
+      {
+        "name": "screw-rest",
+        "value": "0 1px 2px rgba(0, 0, 0, 0.5)",
+        "purpose": "Sarok-csavar nyugalmi árnyéka."
+      },
+      {
+        "name": "screw-hover",
+        "value": "0 3px 5px rgba(0, 0, 0, 0.6)",
+        "purpose": "Sarok-csavar árnyéka interaktív tábla hover-én."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-settle",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Alap ease: a táblák súlyos, exponálódó leülése."
+      },
+      {
+        "name": "plate-settle",
+        "value": "animation: plate-settle 0.9s cubic-bezier(0.16, 1, 0.3, 1) both",
+        "purpose": "Egyszeri belépő: blur(10px)→éles + translateY(-10px)→0; stagger 0.05–0.57s. prefers-reduced-motion alatt kikapcsol."
+      },
+      {
+        "name": "sheen-sweep",
+        "value": "animation: sheen-sweep 1.6s ease-in-out 0.7s 1 both",
+        "purpose": "Egyszeri zománcfény-átvonulás a fő táblán — soha nem ismétlődik."
+      },
+      {
+        "name": "hover-lift",
+        "value": "transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease",
+        "purpose": "Tábla/gomb hover-emelés; prefers-reduced-motion alatt transition: none."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "head-compact",
+        "value": "1100px",
+        "purpose": "Fejléc-cím elrejtése."
+      },
+      {
+        "name": "steps-2col",
+        "value": "1000px",
+        "purpose": "Folyamat-rács 2 oszlopra."
+      },
+      {
+        "name": "hero-stack",
+        "value": "980px",
+        "purpose": "Első képernyő egy oszlopra áll, a tábla-stack 2×2."
+      },
+      {
+        "name": "nav-mobile",
+        "value": "900px",
+        "purpose": "Mobilmenü, lábléc 2 oszlop, demo/kapcsolat egy oszlop."
+      },
+      {
+        "name": "rows-1col",
+        "value": "760px",
+        "purpose": "Bizalom-sorok 1 oszlop."
+      },
+      {
+        "name": "single-col",
+        "value": "560px",
+        "purpose": "Hero-stack 1 oszlop, CTA oszlopban, cookie-gombok teljes szélesség."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Elsődleges gomb (Primary Button)",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Kis zománctábla-gomb: krém mező, oxblood perem — az árajánlatkérés és kapcsolat fő hívóeleme.",
+      "html": "<button class=\"ds-btn-primary\" type=\"button\">KÉRJEN ÁRAJÁNLATOT</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 0.5em; font-family: var(--font-display); font-weight: 600; font-size: clamp(17px, 1.5vw, 22px); letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; cursor: pointer; background: var(--cream); color: var(--oxblood); border: 6px solid var(--oxblood); border-radius: 10px; padding: 0.75em 1.2em; box-shadow: 0 10px 22px rgba(0,0,0,0.4); transition: transform 0.2s cubic-bezier(0.16,1,0.3,1), box-shadow 0.2s ease; } .ds-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 16px 28px rgba(0,0,0,0.5); } .ds-btn-primary:focus-visible { outline: 3px solid var(--brass); outline-offset: 3px; }"
+    },
+    {
+      "name": "Másodlagos gomb (Secondary Button)",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Perem nélküli, aláhúzott jelzőtábla-hivatkozás a falon és krém táblán (btn--on-cream).",
+      "html": "<a class=\"ds-btn-secondary\" href=\"#\">SZOLGÁLTATÁSOK <svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 12h15\"/><path d=\"M13 6l6 6-6 6\"/></svg></a>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; gap: 0.5em; font-family: var(--font-display); font-weight: 600; font-size: clamp(17px, 1.5vw, 22px); letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; cursor: pointer; background: none; border: none; border-bottom: 3px solid var(--cream); border-radius: 0; padding: 0.35em 0.1em; color: var(--cream); transition: color 0.2s ease, border-color 0.2s ease; } .ds-btn-secondary:hover { color: var(--brass); border-bottom-color: var(--brass); } .ds-btn-secondary:focus-visible { outline: 3px solid var(--brass); outline-offset: 3px; } .ds-btn-secondary--on-cream { color: var(--cast); border-bottom-color: var(--cast); } .ds-btn-secondary--on-cream:hover { color: var(--oxblood); border-bottom-color: var(--oxblood); }"
+    },
+    {
+      "name": "Zománctábla — krém (Enamel Plate)",
+      "kind": "card",
+      "refersTo": "plate-cream",
+      "description": "A rendszer alap-anyagegysége: krém zománcmező, oxblood perem, sarok-csavarok, zománcfény.",
+      "html": "<div class=\"ds-plate ds-plate--cream\"><span class=\"ds-screw ds-screw--tl\"></span><span class=\"ds-screw ds-screw--tr\"></span><span class=\"ds-screw ds-screw--bl\"></span><span class=\"ds-screw ds-screw--br\"></span><h3 class=\"ds-plate-title\">MÉRT ÉRTÉK</h3><p class=\"ds-plate-fact\">163 → 193 lóerő — kontrollmérve</p></div>",
+      "css": ".ds-plate { position: relative; border-radius: 16px; border: 8px solid var(--cream); padding: clamp(26px, 3vw, 38px); box-shadow: 0 14px 28px rgba(0,0,0,0.45); background: var(--enamel-blue); color: var(--cream); font-family: var(--font-body); font-size: 18px; line-height: 1.6; } .ds-plate::after { content: ''; position: absolute; inset: 0; border-radius: 10px; background: linear-gradient(160deg, rgba(255,255,255,0.14), rgba(255,255,255,0) 38%); pointer-events: none; } .ds-plate--cream { background: var(--cream); color: var(--cast); border-color: var(--oxblood); } .ds-plate--blue { background: var(--enamel-blue); color: var(--cream); border-color: var(--cream); } .ds-plate--red { background: var(--oxblood); color: var(--cream); border-color: var(--cream); } .ds-plate-title { font-family: var(--font-display); font-weight: 600; font-size: clamp(21px, 2vw, 28px); letter-spacing: 0.02em; line-height: 1.05; text-transform: uppercase; margin: 0 0 0.35em; } .ds-plate-fact { margin: 0; font-size: clamp(16px, 1.4vw, 20px); line-height: 1.35; letter-spacing: 0.01em; } .ds-screw { position: absolute; width: 14px; height: 14px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #c9c2ae, #5a544a); box-shadow: 0 1px 2px rgba(0,0,0,0.5); transition: box-shadow 0.25s ease; z-index: 1; } .ds-screw--tl { top: 14px; left: 14px; } .ds-screw--tr { top: 14px; right: 14px; } .ds-screw--bl { bottom: 14px; left: 14px; } .ds-screw--br { bottom: 14px; right: 14px; } .ds-plate--interactive { display: block; text-decoration: none; transition: transform 0.25s cubic-bezier(0.16,1,0.3,1), box-shadow 0.25s ease; } .ds-plate--interactive:hover { transform: translateY(-2px); box-shadow: 0 20px 36px rgba(0,0,0,0.55); } .ds-plate--interactive:hover .ds-screw { box-shadow: 0 3px 5px rgba(0,0,0,0.6); } .ds-plate--interactive:focus-visible { outline: 3px solid var(--brass); outline-offset: 3px; } .ds-plate--cream .ds-screw { box-shadow: 0 1px 2px rgba(0,0,0,0.5); }"
+    },
+    {
+      "name": "Szolgáltatás-tábla — kék, interaktív (Service Plate)",
+      "kind": "card",
+      "refersTo": "plate-blue",
+      "description": "Zománckék mező, krém perem; hover-en 2px-t emelkedik, a csavarok árnyékot vetnek.",
+      "html": "<a class=\"ds-plate ds-plate--blue ds-plate--interactive\" href=\"#\"><span class=\"ds-screw ds-screw--tl\"></span><span class=\"ds-screw ds-screw--tr\"></span><span class=\"ds-screw ds-screw--bl\"></span><span class=\"ds-screw ds-screw--br\"></span><h3 class=\"ds-plate-title\">CHIPTUNING STAGE 1</h3><p class=\"ds-plate-fact\">Egyedi kalibráció az ügyfél saját kifájolt fájljából.</p></a>",
+      "css": ".ds-plate { position: relative; border-radius: 16px; border: 8px solid var(--cream); padding: clamp(26px, 3vw, 38px); box-shadow: 0 14px 28px rgba(0,0,0,0.45); background: var(--enamel-blue); color: var(--cream); font-family: var(--font-body); font-size: 18px; line-height: 1.6; } .ds-plate::after { content: ''; position: absolute; inset: 0; border-radius: 10px; background: linear-gradient(160deg, rgba(255,255,255,0.14), rgba(255,255,255,0) 38%); pointer-events: none; } .ds-plate--cream { background: var(--cream); color: var(--cast); border-color: var(--oxblood); } .ds-plate--blue { background: var(--enamel-blue); color: var(--cream); border-color: var(--cream); } .ds-plate--red { background: var(--oxblood); color: var(--cream); border-color: var(--cream); } .ds-plate-title { font-family: var(--font-display); font-weight: 600; font-size: clamp(21px, 2vw, 28px); letter-spacing: 0.02em; line-height: 1.05; text-transform: uppercase; margin: 0 0 0.35em; } .ds-plate-fact { margin: 0; font-size: clamp(16px, 1.4vw, 20px); line-height: 1.35; letter-spacing: 0.01em; } .ds-screw { position: absolute; width: 14px; height: 14px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #c9c2ae, #5a544a); box-shadow: 0 1px 2px rgba(0,0,0,0.5); transition: box-shadow 0.25s ease; z-index: 1; } .ds-screw--tl { top: 14px; left: 14px; } .ds-screw--tr { top: 14px; right: 14px; } .ds-screw--bl { bottom: 14px; left: 14px; } .ds-screw--br { bottom: 14px; right: 14px; } .ds-plate--interactive { display: block; text-decoration: none; transition: transform 0.25s cubic-bezier(0.16,1,0.3,1), box-shadow 0.25s ease; } .ds-plate--interactive:hover { transform: translateY(-2px); box-shadow: 0 20px 36px rgba(0,0,0,0.55); } .ds-plate--interactive:hover .ds-screw { box-shadow: 0 3px 5px rgba(0,0,0,0.6); } .ds-plate--interactive:focus-visible { outline: 3px solid var(--brass); outline-offset: 3px; } .ds-plate--cream .ds-screw { box-shadow: 0 1px 2px rgba(0,0,0,0.5); }"
+    },
+    {
+      "name": "Záró CTA-tábla — oxblood (CTA Plate)",
+      "kind": "card",
+      "refersTo": "plate-red",
+      "description": "Oxblood mező, krém perem, középre zárt záró hívás; a telefonszám monó, sárgaréz aláhúzással.",
+      "html": "<div class=\"ds-plate ds-plate--red ds-cta\"><span class=\"ds-screw ds-screw--tl\"></span><span class=\"ds-screw ds-screw--tr\"></span><span class=\"ds-screw ds-screw--bl\"></span><span class=\"ds-screw ds-screw--br\"></span><h3 class=\"ds-plate-title\">KÉRJEN ÁRAJÁNLATOT</h3><p class=\"ds-cta-text\">Egyedi munka, egyedi egyeztetéssel — mérünk, elemzünk, írunk.</p><button class=\"ds-btn-primary\" type=\"button\">KAPCSOLAT</button><p class=\"ds-cta-phone\"><a href=\"tel:+36703031020\">+36 70 303 1020</a></p></div>",
+      "css": ".ds-plate { position: relative; border-radius: 16px; border: 8px solid var(--cream); padding: clamp(26px, 3vw, 38px); box-shadow: 0 14px 28px rgba(0,0,0,0.45); background: var(--enamel-blue); color: var(--cream); font-family: var(--font-body); font-size: 18px; line-height: 1.6; } .ds-plate::after { content: ''; position: absolute; inset: 0; border-radius: 10px; background: linear-gradient(160deg, rgba(255,255,255,0.14), rgba(255,255,255,0) 38%); pointer-events: none; } .ds-plate--cream { background: var(--cream); color: var(--cast); border-color: var(--oxblood); } .ds-plate--blue { background: var(--enamel-blue); color: var(--cream); border-color: var(--cream); } .ds-plate--red { background: var(--oxblood); color: var(--cream); border-color: var(--cream); } .ds-plate-title { font-family: var(--font-display); font-weight: 600; font-size: clamp(21px, 2vw, 28px); letter-spacing: 0.02em; line-height: 1.05; text-transform: uppercase; margin: 0 0 0.35em; } .ds-plate-fact { margin: 0; font-size: clamp(16px, 1.4vw, 20px); line-height: 1.35; letter-spacing: 0.01em; } .ds-screw { position: absolute; width: 14px; height: 14px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #c9c2ae, #5a544a); box-shadow: 0 1px 2px rgba(0,0,0,0.5); transition: box-shadow 0.25s ease; z-index: 1; } .ds-screw--tl { top: 14px; left: 14px; } .ds-screw--tr { top: 14px; right: 14px; } .ds-screw--bl { bottom: 14px; left: 14px; } .ds-screw--br { bottom: 14px; right: 14px; } .ds-plate--interactive { display: block; text-decoration: none; transition: transform 0.25s cubic-bezier(0.16,1,0.3,1), box-shadow 0.25s ease; } .ds-plate--interactive:hover { transform: translateY(-2px); box-shadow: 0 20px 36px rgba(0,0,0,0.55); } .ds-plate--interactive:hover .ds-screw { box-shadow: 0 3px 5px rgba(0,0,0,0.6); } .ds-plate--interactive:focus-visible { outline: 3px solid var(--brass); outline-offset: 3px; } .ds-plate--cream .ds-screw { box-shadow: 0 1px 2px rgba(0,0,0,0.5); } .ds-cta { text-align: center; padding-block: clamp(34px, 5vw, 58px); } .ds-cta-text { margin: 0 auto 1em; color: rgba(239,234,216,0.85); max-width: 60ch; } .ds-cta-phone { margin: 18px 0 0; } .ds-cta-phone a { color: var(--cream); font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-size: clamp(22px, 2.6vw, 32px); letter-spacing: 0.02em; text-decoration-color: var(--brass); } .ds-cta-phone a:hover { color: var(--brass); } .ds-btn-primary { display: inline-flex; align-items: center; gap: 0.5em; font-family: var(--font-display); font-weight: 600; font-size: clamp(17px, 1.5vw, 22px); letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; cursor: pointer; background: var(--cream); color: var(--oxblood); border: 6px solid var(--oxblood); border-radius: 10px; padding: 0.75em 1.2em; box-shadow: 0 10px 22px rgba(0,0,0,0.4); transition: transform 0.2s cubic-bezier(0.16,1,0.3,1), box-shadow 0.2s ease; } .ds-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 16px 28px rgba(0,0,0,0.5); } .ds-btn-primary:focus-visible { outline: 3px solid var(--brass); outline-offset: 3px; }"
+    },
+    {
+      "name": "Wordmark — zománc-öntvény (wm-zomanc)",
+      "kind": "custom",
+      "refersTo": "wordmark",
+      "description": "„Masina‖mágus\" — kevert kis/nagybetűs Oswald 700, domború öntvény; a ‖ maratott fémválasztó, nem tipográfiai jel.",
+      "html": "<span class=\"ds-wordmark\">Masina<span class=\"ds-wordmark__slot\" aria-hidden=\"true\"></span>mágus</span>",
+      "css": ".ds-wordmark { font-family: var(--font-display); font-weight: 700; letter-spacing: 0.01em; line-height: 1; color: var(--cast); text-transform: none; white-space: nowrap; font-size: clamp(44px, 5.6vw, 84px); text-shadow: 0 2px 0 rgba(255,255,255,0.35), 0 -1px 0 rgba(0,0,0,0.25); } .ds-wordmark__slot { display: inline-block; width: 0.16em; height: 0.78em; margin: 0 0.12em; vertical-align: -0.06em; background: var(--oxblood); border-radius: 0.05em; box-shadow: inset 0 2px 4px rgba(0,0,0,0.5); } .ds-wordmark--light { color: var(--cream); text-shadow: 0 1px 0 rgba(255,255,255,0.22), 0 -1px 0 rgba(0,0,0,0.35); } .ds-wordmark--light .ds-wordmark__slot { background: var(--brass); }"
+    },
+    {
+      "name": "Navigációs hivatkozás (Nav Link)",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Verzál Oswald jelzőtábla-felirat a falon; hover sárgaréz, aktív oldal oxblood aláhúzással.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav__link\" href=\"#\">SZOLGÁLTATÁSOK</a> <a class=\"ds-nav__link ds-nav__link--current\" href=\"#\">DIAGNOSZTIKA</a></nav>",
+      "css": ".ds-nav { display: flex; gap: 22px; } .ds-nav__link { font-family: var(--font-display); font-size: 15px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; color: var(--parchment); padding: 0.35em 0.15em; border-bottom: 2px solid transparent; transition: color 0.2s ease, border-color 0.2s ease; } .ds-nav__link:hover { color: var(--cream); border-bottom-color: var(--brass); } .ds-nav__link--current { color: var(--cream); border-bottom-color: var(--oxblood); } .ds-nav__link:focus-visible { outline: 3px solid var(--brass); outline-offset: 3px; }"
+    },
+    {
+      "name": "Űrlap-mező (Form Field)",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Monó beviteli mező a krém árajánlat-táblán: 3px cast perem, 10px radius, oxblood fókusz.",
+      "html": "<div class=\"ds-field\"><label class=\"ds-field__label\" for=\"ds-q-phone\">TELEFON</label><input class=\"ds-field__input\" id=\"ds-q-phone\" type=\"tel\" placeholder=\"+36 …\" /></div>",
+      "css": ".ds-field { display: grid; gap: 8px; } .ds-field__label { font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.12em; font-size: 14px; color: var(--cast-2); } .ds-field__input { font-family: var(--font-mono); font-size: 17px; padding: 12px 14px; border: 3px solid var(--cast); border-radius: 10px; background: #fff; color: var(--cast); width: 100%; caret-color: var(--oxblood); } .ds-field__input:focus-visible { outline: 3px solid var(--oxblood); outline-offset: 2px; }"
+    },
+    {
+      "name": "Adattábla — mért értékek (Data Table)",
+      "kind": "custom",
+      "refersTo": "data-table",
+      "description": "Tabuláris számok, 2px-es vonalak; az „utána\" és delta értékek oxblood kiemeléssel.",
+      "html": "<table class=\"ds-table\"><thead><tr><th>MUTATÓ</th><th class=\"ds-num\">ELŐTTE</th><th class=\"ds-num\">UTÁNA</th><th class=\"ds-num\">DELTA</th></tr></thead><tbody><tr><th scope=\"row\">Teljesítmény</th><td class=\"ds-num\">163 LE</td><td class=\"ds-num ds-table__after\">193 LE</td><td class=\"ds-num ds-table__delta\">+30 LE</td></tr></tbody></table>",
+      "css": ".ds-table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; font-family: var(--font-body); font-size: 16px; color: var(--cast); } .ds-table th, .ds-table td { text-align: left; padding: 0.85em 1em; border-bottom: 2px solid rgba(46,42,36,0.18); } .ds-table th { font-family: var(--font-display); font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; font-size: 0.85em; } .ds-table .ds-num { font-family: var(--font-mono); text-align: right; } .ds-table__after, .ds-table__delta { font-weight: 600; color: var(--oxblood); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Zománctábla-műhely — a műhely fala",
+    "overview": "A webhely a kétbodonyi műhely fala. Az alap egy olaj-fekete, finoman csíkozott falfelület (#211E1A), és minden tartalom zománctáblaként lóg rajta: krém, zománckék vagy oxblood mező, festett peremmel, sarok-csavarokkal, enyhe zománcfénnyel. A világ tézise szerint ami ki van függesztve, az el van végezve — a mért érték és a telefonszám nagyobb hangsúlyt kap, mint bármilyen szlogen. A felszín módja Persuade: a látogató dönt és cselekszik (árajánlatkérés vagy telefonhívás).\n\nAz anyaghasználat tisztán tipografikus és CSS-alapú: raszteres képanyag nélkül. A hangulat sűrű, ipari és becsületes — sötét fal, nehéz zománctáblák, tömör verzál jelzőtábla-tipográfia (Oswald), nyugodt törzsszöveg (Barlow), és tabuláris monó számok (IBM Plex Mono) minden mérthez. Az egyetlen szankcionált szerzői mozgáspillanat: a táblák egyszer, súlyosan a falra ülnek (késleltetett blur→éles stagger), és a zománcfény egyszer áthalad a fő táblán. Semmi nem loopol; minden más mozgás állapotváltozás (hover, focus).\n\nKifejezett vizuális elutasítások (a világ maga utasítja vissza): a kategória-alapértelmezés — középre zárt hero autófotóval, egyforma kártyákkal, kék gombbal —; kicker/eyebrow a címek felett; gradiens szöveg; kemény eltolt árnyék (hard offset shadow); emodzsi-ikonok; rendszer-display betűtípusok; fotó- vagy kép-alapú díszítés.",
+    "keyCharacteristics": [
+      "Olaj-fekete fal + zománctáblák: krém / zománckék / oxblood mezők, 8px festett perem, négy sarok-csavar, zománcfény",
+      "Verzál jelzőtábla-tipográfia (Oswald) a címekben, nyugodt törzsszöveg (Barlow), tabuláris monó (IBM Plex Mono) minden számnak",
+      "Egyszeri, súlyos leülés-animáció (plate-settle, stagger) + egyszeri zománcfény-átvonulás (sheen-sweep); prefers-reduced-motion alatt mindkettő kikapcsol",
+      "Tisztán tipografikus/CSS anyag: raszteres képanyag nélkül, kézzel szerkesztett SVG-ikonkészlet",
+      "A +36 70 303 1020 telefonszám a legnagyobb funkcionális elem (clamp(26px, 7.6vw, 72px) monó), közvetlenül a wordmark után"
+    ],
+    "rules": [
+      {
+        "name": "A Peremszabály (The Rim Rule)",
+        "body": "A krém táblára oxblood perem jár; a zománckék és oxblood táblákra krém perem. A perem 8px (gombokon 6px, paneleken 6px) — festett zománcszegély, nem vonal.",
+        "section": "colors"
+      },
+      {
+        "name": "A Sárgaréz-ritkaság Szabály (The Brass Scarce Rule)",
+        "body": "A sárgaréz csak accentként jelenik meg (focus, hover, kis fejléc, ikon, jelölés) — soha tölt ki táblát vagy szekciót; a ritkasága a lényeg.",
+        "section": "colors"
+      },
+      {
+        "name": "A 4.5 Kontraszt Szabály",
+        "body": "Törzsszöveg kontrasztja mindenütt ≥ 4.5:1 — cast krémen, krém/kék a falon, ox-bloodon és zománckéken. A parchment és cast-2 csak másodlagos szövegre.",
+        "section": "colors"
+      },
+      {
+        "name": "A Jelzőtábla-verzál Szabály",
+        "body": "A megjelenítő betű mindenütt UPPERCASE — egy kivétel: a wordmark kevert kis/nagybetűs formája a jóváhagyott wm-zomanc szerint kötött, soha nem alakítható át.",
+        "section": "typography"
+      },
+      {
+        "name": "A Tabuláris Számjegy Szabály",
+        "body": "Minden mért érték, előtte-utána szám, telefonszám és adattábla-szám IBM Plex Mono, font-variant-numeric: tabular-nums — a számok oszlopban állnak, a delta oxblood.",
+        "section": "typography"
+      },
+      {
+        "name": "A Fal-látható Rács Szabály",
+        "body": "A táblák között mindig látszik a fal — a tartalom soha nem fut össze teljes szélességű, keret nélküli sávokká; ami tartalmat hordoz, az plakett.",
+        "section": "layout"
+      },
+      {
+        "name": "Az Anyag-gradiens Szabály",
+        "body": "CSS-gradiens kizárólag anyagtextúraként létezik: falcsík (115° repeating-linear-gradient), zománcfény (160° fehér fade), csavarfej (radial), sheen-átvonulás (100° ferde fehér sáv). Szövegen, gombokon, dekoratív színátmenetként soha.",
+        "section": "elevation"
+      },
+      {
+        "name": "A Súlyos Ülés Szabály",
+        "body": "Minden árnyék széles, sötét és ambient — az elemek a falon ülnek, nem lebegnek neon-glow-ban; kemény, 1px-es eltolt árnyék nincs a rendszerben.",
+        "section": "elevation"
+      },
+      {
+        "name": "A Plakett Szabály",
+        "body": "Ami a falon tartalmat hordoz, az plakett: lekerekített (16px), peremezett (8px), csavarozott. A színes „border-left\" kiemelés tilos — a figyelmeztetés teljes plakett (pl. a lábléc-disclaimer oxblood-deep mező, 3px krém perem).",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do minden tartalmi egységet zománctáblaként kezelni: 16px lekerekítés, 8px festett perem (Peremszabály), négy sarok-csavar — a falon csak plakett lóghat.",
+      "Do minden számot (mért érték, telefonszám, adattábla) IBM Plex Mono tabuláris számjegyekkel megjeleníteni; a telefonszám a legnagyobb funkcionális elem (clamp(26px, 7.6vw, 72px)).",
+      "Do a figyelmeztető és jogi tartalmakat teljes plakett-ként megjeleníteni (pl. oxblood-deep mező, 3px krém perem) — soha színes border-left kiemelésként.",
+      "Do a DPF/EGR/SCR szoftvermódosításokat kizárólag zárt pálya / K+F / hobby keretben, az ÁSZF 6.2 záradékával mutatni.",
+      "Do a prefers-reduced-motion esetén minden szerzői animációt kikapcsolni (settle, sheen, hover-transition).",
+      "Do önhosztolt betűtípusokat használni (public/fonts woff2, latin + latin-ext); a betűtípus-készlet zárt: Oswald, Barlow, IBM Plex Mono."
+    ],
+    "donts": [
+      "Don't kitalált árat, véleményt, értékelést, nyitvatartást vagy garanciaszámot megjeleníteni; az egyetlen két valós ügyfélidézet (H. Martin Golf VII Stage 1; S. Zsolt Mercedes Sprinter OM651 163→193 ló) szó szerint, a felkiáltójellel együtt szerepel.",
+      "Don't kicker/eyebrow-t, gradiens szöveget, kemény eltolt árnyékot, emodzsi-ikont vagy rendszer-display betűtípust használni.",
+      "Don't CSS-gradienst anyagtextúrán kívül (falcsík, zománcfény, csavarfej, sheen) alkalmazni.",
+      "Don't raszteres képanyagot, fotót, og:image-et vagy közösségi média linket beépíteni — a szállító build tisztán tipografikus/CSS (egyetlen kép-asset: public/favicon.svg, szerkesztett SVG).",
+      "Don't felkiáltójelet marketing-szövegben használni — felkiáltójel csak jogi/compliance bélyegben és a szó szerinti ügyfélidézetekben marad.",
+      "Don't loop-animációt bevezetni — a mozgás egyszeri (leülés, sheen) és állapot-reakció (hover, focus); a táblák nem „úsznak\" folyamatosan.",
+      "Don't a DPF/EGR/SCR módosításokat közúti használatra bátorító kontextusban ábrázolni vagy sugallni.",
+      "Don't UI-szöveget a widgetekben hardkódolni — minden felületszöveg az l10n rétegből (hu.arb, t()) érkezik."
+    ]
+  }
+}

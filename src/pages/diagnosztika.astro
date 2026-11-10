@@ -1,0 +1,161 @@
+---
+// Diagnosztika — műhelyi diagnosztikai panel (nem csak OBDeleven).
+// A hitelesített hivatalos képességlistákból (PRODUCT.md).
+// 4 kör: kódolás, szervizműveletek, diagnosztika, karbantartás.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Screws from '../components/Screws.astro';
+import Icon, { type IconName } from '../components/Icon.astro';
+import { t, l10n } from '../lib/l10n';
+
+interface Capability {
+  title: string;
+  lead: string;
+  items: string[];
+}
+
+const diag = (l10n as unknown as {
+  diagnostics: {
+    coding: Capability;
+    service: Capability;
+    diagnostics: Capability;
+    maintenance: Capability;
+  };
+}).diagnostics;
+
+const groups: { key: string; data: Capability; icon: IconName; tone: string }[] = [
+  { key: 'coding', data: diag.coding, icon: 'code', tone: 'plate--blue' },
+  { key: 'service', data: diag.service, icon: 'gauge', tone: 'plate--cream' },
+  { key: 'diagnostics', data: diag.diagnostics, icon: 'activity', tone: 'plate--cream' },
+  { key: 'maintenance', data: diag.maintenance, icon: 'check', tone: 'plate--blue' },
+];
+---
+
+<BaseLayout title={t('diagnostics.meta.title')} description={t('diagnostics.meta.description')}>
+  <header class="page-hero shell">
+    <h1>{t('diagnostics.hero.title')}</h1>
+    <p class="page-hero__lead">{t('diagnostics.hero.lead')}</p>
+  </header>
+
+  <section class="section shell">
+    <div class="diag-grid">
+      {
+        groups.map((g) => (
+          <div class:list={['plate', g.tone, 'diag-card']}>
+            <Screws />
+            <Icon name={g.icon} size={30} />
+            <h2 class="diag-card__title">{g.data.title}</h2>
+            <p class:list={['diag-card__lead', g.tone === 'plate--cream' ? 'on-cream' : 'on-dark']}>{g.data.lead}</p>
+            <ul class="diag-card__list">
+              {g.data.items.map((item) => (
+                <li>
+                  <Icon name="check" size={20} />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section shell">
+    <div class="plate plate--red disclaimer-plate">
+      <Screws />
+      <Icon name="alert" size={32} />
+      <h2>{t('diagnostics.disclaimer.title')}</h2>
+      <p>{t('diagnostics.disclaimer.text')}</p>
+    </div>
+  </section>
+
+  <section class="section shell">
+    <div class="plate plate--cream cta-plate">
+      <Screws />
+      <h2>{t('diagnostics.cta.title')}</h2>
+      <p>{t('diagnostics.cta.lead')}</p>
+      <a class="btn btn--primary" href="/kapcsolat">{t('diagnostics.cta.button')}</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-hero {
+    padding-block: clamp(26px, 4vw, 52px) 0;
+  }
+  .page-hero__lead {
+    color: var(--parchment);
+    font-size: clamp(18px, 1.7vw, 22px);
+    max-width: 64ch;
+    margin-top: 18px;
+  }
+
+  .diag-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(18px, 2.4vw, 30px);
+  }
+  @media (min-width: 860px) {
+    /* 2×2 sakktábla: kék/krém váltakozás — a 4 tábla párban olvasható */
+    .diag-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .diag-card :global(.icon) {
+    color: var(--brass);
+  }
+  .plate--cream.diag-card :global(.icon) {
+    color: var(--oxblood);
+  }
+  .diag-card__title {
+    margin: 14px 0 0.35em;
+    font-size: clamp(20px, 1.9vw, 26px);
+  }
+  .diag-card__lead {
+    margin-bottom: 16px;
+  }
+  .diag-card__lead.on-cream {
+    color: var(--cast-2);
+  }
+  .diag-card__lead.on-dark {
+    color: rgba(239, 234, 216, 0.85);
+  }
+  .diag-card__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 10px;
+  }
+  .diag-card__list li {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-family: var(--font-mono);
+    font-size: 15px;
+  }
+  .diag-card__list :global(.icon) {
+    margin-top: 2px;
+    flex: none;
+  }
+
+  .disclaimer-plate :global(.icon),
+  .cta-plate :global(.icon) {
+    color: var(--brass);
+    margin-bottom: 12px;
+  }
+  .disclaimer-plate p {
+    color: rgba(239, 234, 216, 0.88);
+    max-width: 72ch;
+    margin-bottom: 0;
+  }
+
+  .cta-plate {
+    text-align: center;
+    padding-block: clamp(34px, 5vw, 58px);
+  }
+  .cta-plate p {
+    color: var(--cast-2);
+    margin-inline: auto;
+    max-width: 60ch;
+  }
+</style>

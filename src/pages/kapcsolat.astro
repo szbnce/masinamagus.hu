@@ -1,0 +1,295 @@
+---
+// Kapcsolat — árajánlatkérő űrlap (mailto), telefon, e-mail, cím.
+// UI-szöveg kizárólag l10n (contact.* kulcsok).
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Screws from '../components/Screws.astro';
+import Icon from '../components/Icon.astro';
+import { t } from '../lib/l10n';
+---
+
+<BaseLayout title={t('page.contact.title')} description={t('contact.lead')}>
+  <header class="page-hero shell">
+    <h1>
+      {t('contact.title_a')}{' '}
+      <span class="mark">{t('contact.title_mark')}</span>
+    </h1>
+    <p class="page-hero__lead">{t('contact.lead')}</p>
+  </header>
+
+  <section class="section shell contact-grid">
+    <div class="contact-info">
+      <div class="plate plate--blue">
+        <Screws />
+        <Icon name="phone" size={28} />
+        <h2>{t('contact.phone_label')}</h2>
+        <p class="contact-info__value mono">
+          <a href="tel:+36703031020">{t('footer.phone')}</a>
+        </p>
+      </div>
+      <div class="plate plate--blue">
+        <Screws />
+        <Icon name="mail" size={28} />
+        <h2>{t('contact.email_label')}</h2>
+        <p class="contact-info__value">
+          <a href="mailto:info@masinamagus.hu">{t('footer.email')}</a>
+        </p>
+      </div>
+      <div class="plate plate--blue">
+        <Screws />
+        <Icon name="pin" size={28} />
+        <h2>{t('contact.address_label')}</h2>
+        <p class="contact-info__value">{t('contact.address')}</p>
+      </div>
+    </div>
+
+    <div class="plate plate--cream form-plate">
+      <Screws />
+      <form
+        id="quote-form"
+        class="quote-form"
+        data-subject={t('contact.form.mail_subject')}
+        data-mailto="info@masinamagus.hu"
+        data-default-car={t('contact.form.mail_default_car')}
+        data-mail-name={t('contact.form.mail_name')}
+        data-mail-phone={t('contact.form.mail_phone')}
+        data-mail-car={t('contact.form.mail_car')}
+        data-mail-date={t('contact.form.mail_date')}
+        data-mail-no-data={t('contact.form.mail_no_data')}
+        novalidate
+      >
+        <div class="quote-form__field">
+          <label for="q-name">{t('contact.form.name')}</label>
+          <input
+            id="q-name"
+            name="name"
+            type="text"
+            autocomplete="name"
+            required
+            data-error-required={t('contact.form.error_name')}
+          />
+        </div>
+        <div class="quote-form__field">
+          <label for="q-phone">{t('contact.form.phone')}</label>
+          <input
+            id="q-phone"
+            name="phone"
+            type="tel"
+            autocomplete="tel"
+            required
+            data-error-required={t('contact.form.error_phone_required')}
+            data-error-invalid={t('contact.form.error_phone_invalid')}
+          />
+        </div>
+        <div class="quote-form__field">
+          <label for="q-car">{t('contact.form.car')}</label>
+          <input id="q-car" name="car" type="text" />
+        </div>
+        <div class="quote-form__field">
+          <label for="q-date">{t('contact.form.date')}</label>
+          <input id="q-date" name="date" type="text" />
+        </div>
+        <div class="quote-form__field">
+          <label for="q-message">{t('contact.form.message')}</label>
+          <textarea id="q-message" name="message" rows="5"></textarea>
+        </div>
+        <button class="btn btn--primary" type="submit">{t('contact.form.submit')}</button>
+        <p class="quote-form__note">{t('contact.form.note')}</p>
+      </form>
+
+      <div id="quote-sent" class="quote-sent" hidden>
+        <Icon name="check" size={36} />
+        <h2>{t('contact.form.sent_title')}</h2>
+        <p>{t('contact.form.sent_body')}</p>
+        <p class="quote-sent__fallback">
+          {t('contact.form.sent_fallback')}
+          <a class="mono" href="tel:+36703031020">{t('footer.phone')}</a>
+          <a href="mailto:info@masinamagus.hu">{t('footer.email')}</a>
+        </p>
+        <button class="btn btn--secondary btn--on-cream" type="button" id="quote-back">
+          {t('contact.form.sent_back')}
+        </button>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  // Az űrlap a levelezőprogramot nyitja meg egy előre kitöltött levéllel.
+  const form = document.getElementById('quote-form') as HTMLFormElement | null;
+  const sent = document.getElementById('quote-sent') as HTMLElement | null;
+  const back = document.getElementById('quote-back') as HTMLButtonElement | null;
+
+  const showValidity = (field: HTMLInputElement | HTMLTextAreaElement) => {
+    if (field.validity.valueMissing) {
+      field.setCustomValidity(field.dataset.errorRequired ?? '');
+    } else if (field.validity.patternMismatch || field.validity.typeMismatch) {
+      field.setCustomValidity(field.dataset.errorInvalid ?? '');
+    } else {
+      field.setCustomValidity('');
+    }
+  };
+
+  form?.querySelectorAll('input, textarea').forEach((el) => {
+    el.addEventListener('input', () => showValidity(el as HTMLInputElement));
+    el.addEventListener('blur', () => showValidity(el as HTMLInputElement));
+  });
+
+  // Telefonszám: legalább 7 számjegy
+  const phonePattern = /^[+0-9 ()\-]{7,20}$/;
+
+  form?.addEventListener('submit', (ev) => {
+    ev.preventDefault();
+    const name = form.querySelector<HTMLInputElement>('#q-name');
+    const phone = form.querySelector<HTMLInputElement>('#q-phone');
+    const car = form.querySelector<HTMLInputElement>('#q-car');
+    const date = form.querySelector<HTMLInputElement>('#q-date');
+    const message = form.querySelector<HTMLTextAreaElement>('#q-message');
+    if (!name || !phone) return;
+
+    showValidity(name);
+    showValidity(phone);
+    if (phone.value.trim() && !phonePattern.test(phone.value.trim())) {
+      phone.setCustomValidity(phone.dataset.errorInvalid ?? '');
+    }
+    if (!form.reportValidity()) return;
+
+    const d = form.dataset;
+    const lines = [
+      `${d.mailName}: ${name.value.trim()}`,
+      `${d.mailPhone}: ${phone.value.trim()}`,
+      `${d.mailCar}: ${car?.value.trim() || d.defaultCar || ''}`,
+      `${d.mailDate}: ${date?.value.trim() || d.mailNoData || ''}`,
+      '',
+      message?.value.trim() ?? '',
+    ];
+    const subject = d.subject ?? '';
+    const mailto = d.mailto ?? '';
+    window.location.href = `mailto:${mailto}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join('\n'))}`;
+
+    form.hidden = true;
+    if (sent) sent.hidden = false;
+  });
+
+  back?.addEventListener('click', () => {
+    if (sent) sent.hidden = true;
+    if (form) {
+      form.hidden = false;
+      form.querySelector<HTMLInputElement>('#q-name')?.focus();
+    }
+  });
+</script>
+
+<style>
+  .page-hero {
+    padding-block: clamp(26px, 4vw, 52px) 0;
+  }
+  .mark {
+    color: var(--brass);
+  }
+  .page-hero__lead {
+    color: var(--parchment);
+    font-size: clamp(18px, 1.7vw, 22px);
+    max-width: 62ch;
+    margin-top: 18px;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.45fr);
+    gap: clamp(18px, 2.4vw, 30px);
+    align-items: start;
+  }
+  @media (max-width: 900px) {
+    .contact-grid {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+  .contact-info {
+    display: grid;
+    gap: clamp(14px, 2vw, 22px);
+  }
+  .contact-info :global(.icon) {
+    color: var(--brass);
+  }
+  .contact-info h2 {
+    margin: 12px 0 0.3em;
+    font-size: 19px;
+  }
+  .contact-info__value {
+    margin: 0;
+    font-size: 19px;
+  }
+  .contact-info__value a {
+    color: var(--on-dark);
+  }
+
+  .quote-form {
+    display: grid;
+    gap: 16px;
+    margin-top: 18px;
+  }
+  .quote-form__field {
+    display: grid;
+    gap: 8px;
+  }
+  .quote-form label {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 14px;
+    color: var(--cast-2);
+  }
+  .quote-form input,
+  .quote-form textarea {
+    font: inherit;
+    font-family: var(--font-mono);
+    font-size: 17px;
+    padding: 12px 14px;
+    border: 3px solid var(--cast);
+    border-radius: 10px;
+    background: #fff;
+    color: var(--cast);
+    width: 100%;
+  }
+  .quote-form textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  .quote-form input:focus-visible,
+  .quote-form textarea:focus-visible {
+    outline: 3px solid var(--oxblood);
+    outline-offset: 2px;
+  }
+  .quote-form .btn {
+    justify-self: start;
+  }
+  .quote-form__note {
+    margin: 0;
+    font-size: 14px;
+    color: var(--cast-2);
+  }
+
+  .quote-sent {
+    margin-top: 18px;
+    display: grid;
+    gap: 14px;
+    justify-items: start;
+  }
+  .quote-sent :global(.icon) {
+    color: var(--oxblood);
+  }
+  .quote-sent p {
+    color: var(--cast-2);
+    max-width: 56ch;
+  }
+  .quote-sent__fallback {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    align-items: baseline;
+  }
+  .quote-sent__fallback a {
+    color: var(--oxblood);
+    font-size: 18px;
+  }
+</style>

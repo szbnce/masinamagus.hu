@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<title>Műszaki vizsga–jegyzőkönyv — első képernyő</title>
+<style>
+  html,body{margin:0;padding:0}
+  body{width:1440px;height:900px;overflow:hidden;position:relative;background:#E9EAE4;color:#22231F;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+  .mono{font-family:ui-monospace,"SF Mono",Menlo,monospace;font-variant-numeric:tabular-nums}
+  header{display:flex;align-items:flex-end;justify-content:space-between;padding:30px 48px 0;border-bottom:4px solid #2B4C7E;padding-bottom:18px}
+  .wordmark{font-size:42px;font-weight:800;letter-spacing:.05em;font-stretch:condensed}
+  .bar{color:#2B4C7E}
+  .formboxes{display:flex;gap:14px}
+  .fb{border:2px solid #22231F;padding:8px 16px;font-size:22px;letter-spacing:.08em;background:#F3F4EE}
+  .display{padding:30px 48px 0}
+  .display h1{margin:0;font-size:84px;font-weight:800;line-height:1;font-stretch:condensed;letter-spacing:-.01em}
+  .display p{margin:14px 0 0;font-size:26px;max-width:760px}
+  .matrix{position:absolute;left:48px;right:48px;top:330px;border:2px solid #22231F;background:#F3F4EE}
+  .row{display:grid;grid-template-columns:420px 1fr 1fr 1fr;align-items:center;border-bottom:1px solid #B9BCAF}
+  .row:last-child{border-bottom:none}
+  .row.head{background:#2B4C7E;color:#F3F4EE}
+  .row.head div{font-size:22px;letter-spacing:.14em;padding:12px 18px}
+  .row .svc{font-size:24px;font-weight:700;padding:12px 18px;letter-spacing:.04em}
+  .row .cell{font-size:26px;padding:12px 18px;border-left:1px solid #B9BCAF;text-align:center}
+  .row.active{background:#DCE2EE}
+  .row.active .svc{color:#2B4C7E}
+  .stamp{position:absolute;right:70px;top:250px;transform:rotate(-8deg);border:4px double #8C2F2F;color:#8C2F2F;padding:14px 22px;font-size:30px;font-weight:800;letter-spacing:.18em}
+  .demo{position:absolute;left:48px;top:288px;font-size:22px;letter-spacing:.14em;color:#6B6E5F}
+  .cta{position:absolute;left:48px;right:48px;bottom:44px;display:flex;align-items:center;justify-content:space-between;border-top:2px solid #22231F;padding-top:24px}
+  .cta .phone{font-size:30px;font-weight:700}
+  .cta .lbl{font-size:22px;letter-spacing:.14em;color:#6B6E5F}
+  .btn{background:#2B4C7E;color:#F3F4EE;font-size:28px;font-weight:800;letter-spacing:.12em;padding:18px 34px}
+</style>
+</head>
+<body>
+  <header>
+    <div>
+      <div class="wordmark">MASINA<span class="bar">‖</span>MÁGUS</div>
+    </div>
+    <div class="formboxes mono">
+      <div class="fb">LAPSZÁM: 001</div>
+      <div class="fb">DÁTUM: 2026. 11. 09.</div>
+      <div class="fb">HELY: KÉTBODONY</div>
+    </div>
+  </header>
+
+  <div class="display">
+    <h1>MINDEN EREDMÉNY<br>BEJEGYZÉS.</h1>
+    <p>A szolgáltatás ellenőrzőpont, a mérés bejegyzés — nincs szó nélküli állítás.</p>
+  </div>
+
+  <div class="stamp">MEGFELELT · MÉRT</div>
+  <div class="demo mono">DEMÓ-BEJEGYZÉSEK — SZINTETIKUS ADATOK</div>
+
+  <div class="matrix">
+    <div class="row head">
+      <div>ELLENŐRZŐPONT</div><div>ÁLLAPOT</div><div>MÉRÉS</div><div>BEJEGYZÉS</div>
+    </div>
+    <div class="row"><div class="svc">CHIPTUNING STAGE 1</div><div class="cell">✓</div><div class="cell">✓</div><div class="cell">—</div></div>
+    <div class="row"><div class="svc">ECO-TUNING</div><div class="cell">✓</div><div class="cell">✓</div><div class="cell">—</div></div>
+    <div class="row"><div class="svc">EGR / DPF SZOFTVER</div><div class="cell">✓</div><div class="cell">✓</div><div class="cell">✓</div></div>
+    <div class="row"><div class="svc">ADBLUE JAVÍTÁS</div><div class="cell">✓</div><div class="cell">✓</div><div class="cell">✓</div></div>
+    <div class="row active"><div class="svc">VAG MELEGINDÍTÁS</div><div class="cell">✓</div><div class="cell">✓</div><div class="cell">✓</div></div>
+    <div class="row"><div class="svc">REJTETT FUNKCIÓK</div><div class="cell">✓</div><div class="cell">—</div><div class="cell">—</div></div>
+    <div class="row"><div class="svc">NAVIGÁCIÓFRISSÍTÉS</div><div class="cell">✓</div><div class="cell">—</div><div class="cell">—</div></div>
+  </div>
+
+  <div class="cta">
+    <div>
+      <div class="lbl mono">BEJELENTKEZÉS</div>
+      <div class="phone mono">+36 70 303 1020</div>
+    </div>
+    <div class="btn">IDŐPONTOT KÉREK</div>
+  </div>
+</body>
+</html>

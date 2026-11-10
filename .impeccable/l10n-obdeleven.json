@@ -1,0 +1,59 @@
+{
+  "obdeleven": {
+    "meta": {
+      "title": "OBDeleven – kódolás, diagnosztika, szerviz | Masinamágus",
+      "description": "OBDeleven kódolás, rejtett funkciók, szervizműveletek, diagnosztika és karbantartás Kétbodonyon. One-Click Apps, kézi kódolás, OBD2 és haladó vezérolvasás."
+    },
+    "hero": {
+      "title": "OBDeleven: kódolás, diagnosztika, szerviz",
+      "lead": "Az OBDeleven egy OBD2-es diagnosztikai eszköz, amellyel a műhelyben kódolást, szervizműveleteket, diagnosztikát és karbantartási ellenőrzéseket végzünk. Az alábbi lista az eszköz hivatalos képességlistájáról készült — nem ígérünk többet, mint amit az eszköz tud."
+    },
+    "coding": {
+      "title": "Kódolás & rejtett funkciók",
+      "lead": "A gyári szoftverben rejlő, bekapcsolható funkciók elérése — One-Click Apps-szal vagy kézi kódolással.",
+      "items": [
+        "One-Click Apps — kész, ellenőrzött kódolási műveletek",
+        "Kézi kódolás (long coding) — egyedi beállítások",
+        "Adaptációk beállítása"
+      ]
+    },
+    "service": {
+      "title": "Szervizműveletek",
+      "lead": "A szervizbe kerülő autók mindennapi karbantartási műveletei, szoftveres rásegítéssel.",
+      "items": [
+        "Szervizintervallum-reset",
+        "Fékbetét-csere / EPB műveletek",
+        "Service Reset — VAG és BMW modellek"
+      ]
+    },
+    "diagnostics": {
+      "title": "Diagnosztika",
+      "lead": "OBD2-diagnosztika minden CAN-buszos autón, és haladó vezérolvasás a leggyakoribb márkáknál.",
+      "items": [
+        "OBD2-diagnosztika minden CAN-buszos autón",
+        "Haladó vezérolvasás: VAG",
+        "Haladó vezérolvasás: BMW/MINI, Toyota/Lexus",
+        "Haladó vezérolvasás: Ford US, Mercedes-Benz"
+      ]
+    },
+    "maintenance": {
+      "title": "Karbantartás",
+      "lead": "Állapotfelmérés és emlékeztetők: ami a rendszeres karbantartáshoz kell.",
+      "items": [
+        "Egészségriport",
+        "Karbantartási emlékeztető",
+        "Emisszió-készültség ellenőrzés",
+        "Hibrid akkumulátor-ellenőrzés"
+      ]
+    },
+    "disclaimer": {
+      "title": "Amire figyelünk",
+      "text": "Egyes kódolások (pl. Video in Motion) közúton szürke zónásak lehetnek. Az ilyen műveleteket az ÁSZF 6.2 szerint, zárt pályás, K+F vagy hobbi célra végezzük; a közúti használat jogszerűsége a Megrendelő felelőssége. Az oldal nem bátorít jogsértő használatra."
+    },
+    "cta": {
+      "title": "Kérdésed van egy konkrét funkcióval kapcsolatban?",
+      "lead": "Egyeztessünk időpontot, és megnézzük, mi az, ami az autódon valóban elvégezhető.",
+      "button": "Kérjen árajánlatot"
+    }
+  }
+}

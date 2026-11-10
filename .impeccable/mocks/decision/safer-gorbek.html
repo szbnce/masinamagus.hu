@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<title>Előtte-utána görbék — első képernyő</title>
+<style>
+  html,body{margin:0;padding:0}
+  body{width:1440px;height:900px;overflow:hidden;position:relative;background:#F7F7F2;color:#1C1C1A;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+  .grid{position:absolute;inset:0;background-image:
+    repeating-linear-gradient(to right,rgba(143,179,154,.28) 0 1px,transparent 1px 40px),
+    repeating-linear-gradient(to bottom,rgba(143,179,154,.28) 0 1px,transparent 1px 40px),
+    repeating-linear-gradient(to right,rgba(143,179,154,.55) 0 1px,transparent 1px 200px),
+    repeating-linear-gradient(to bottom,rgba(143,179,154,.55) 0 1px,transparent 1px 200px)}
+  .mono{font-family:ui-monospace,"SF Mono",Menlo,monospace;font-variant-numeric:tabular-nums}
+  header{position:relative;display:flex;align-items:center;justify-content:space-between;padding:28px 48px 0}
+  .wordmark{font-size:44px;font-weight:800;letter-spacing:.04em;font-stretch:condensed}
+  .bar{color:#C0392B}
+  .note{font-size:22px;color:#4E5B51;letter-spacing:.06em}
+  .meta{font-size:26px;letter-spacing:.12em}
+  .display{position:relative;padding:30px 48px 0}
+  .display h1{margin:0;font-size:72px;font-weight:800;letter-spacing:-.01em;font-stretch:condensed;line-height:.98}
+  .sub{margin:14px 0 0;font-size:28px;max-width:760px}
+  .chart{position:absolute;left:48px;top:300px;width:830px;height:420px;background:#F7F7F2;border:3px solid #1C1C1A;padding:18px 20px 12px;box-sizing:border-box}
+  .chart .cap{display:flex;justify-content:space-between;font-size:22px;letter-spacing:.14em;color:#4E5B51}
+  .chart svg{display:block;margin-top:8px}
+  .side{position:absolute;left:922px;top:300px;width:470px}
+  .side .lbl{font-size:22px;letter-spacing:.16em;color:#4E5B51}
+  table{border-collapse:collapse;width:100%;margin-top:10px;background:#F7F7F2}
+  th,td{border:2px solid #1C1C1A;padding:12px 14px;font-size:24px;text-align:left}
+  th{font-size:22px;letter-spacing:.12em;font-weight:700;background:#EDEFE7}
+  td.num{font-family:ui-monospace,"SF Mono",Menlo,monospace;font-variant-numeric:tabular-nums;font-size:26px}
+  td.up{color:#C0392B;font-weight:700}
+  .cta{position:absolute;right:48px;bottom:52px;display:flex;align-items:center;gap:30px}
+  .cta a{text-decoration:none;color:#1C1C1A}
+  .cta .sec{font-size:26px;letter-spacing:.1em;border-bottom:3px solid #1C1C1A;padding-bottom:4px}
+  .cta .pri{border:4px solid #C0392B;color:#C0392B;font-size:30px;font-weight:800;letter-spacing:.12em;padding:18px 28px;transform:rotate(-1deg)}
+  .cta .pri .cap{display:block;font-size:22px;font-weight:400;letter-spacing:.08em;margin-top:6px}
+  .foot{position:absolute;left:48px;bottom:52px;font-size:24px;color:#4E5B51;letter-spacing:.08em}
+</style>
+</head>
+<body>
+  <div class="grid"></div>
+  <header>
+    <div>
+      <div class="wordmark">MASINA<span class="bar">‖</span>MÁGUS</div>
+      <div class="note">WORDMARK-JAVASLAT · TIPOGRÁFIAI</div>
+    </div>
+    <div class="meta mono">MÉRÉSI LAP 01 · KÉTBODONY · 2026</div>
+  </header>
+
+  <div class="display">
+    <h1>ELŐTTE. UTÁNA. MÉRTVE.</h1>
+    <p class="sub">Minden kalibráció két vonalon: a mért érték a görbére szegezve, tabuláris számmal — nem a szövegbe rejtve.</p>
+  </div>
+
+  <div class="chart">
+    <div class="cap mono">
+      <span>TELJESÍTMÉNY-GÖRBE · ELŐTTE / UTÁNA</span>
+      <span>FORDULATSZÁM 1500—4500 1/PERC</span>
+    </div>
+    <svg width="790" height="330" viewBox="0 0 790 330">
+      <!-- tengelyek -->
+      <line x1="70" y1="280" x2="770" y2="280" stroke="#1C1C1A" stroke-width="3"/>
+      <line x1="70" y1="20" x2="70" y2="280" stroke="#1C1C1A" stroke-width="3"/>
+      <!-- osztások -->
+      <g font-family="ui-monospace,Menlo,monospace" font-size="22" fill="#4E5B51">
+        <text x="8" y="288">0</text>
+        <text x="8" y="206">60</text>
+        <text x="8" y="124">120</text>
+        <text x="8" y="42">180 LE</text>
+        <text x="120" y="312">1500</text>
+        <text x="330" y="312">2750</text>
+        <text x="560" y="312">4000</text>
+      </g>
+      <g stroke="#B9CBBE" stroke-width="1">
+        <line x1="70" y1="197" x2="770" y2="197"/>
+        <line x1="70" y1="114" x2="770" y2="114"/>
+        <line x1="70" y1="32" x2="770" y2="32"/>
+      </g>
+      <!-- előtte görbe -->
+      <path d="M70 268 C 200 240, 330 176, 470 122 S 660 78, 762 88" fill="none" stroke="#1C1C1A" stroke-width="4"/>
+      <!-- utána görbe -->
+      <path d="M70 262 C 200 226, 330 148, 470 82 S 660 36, 762 46" fill="none" stroke="#C0392B" stroke-width="5"/>
+      <!-- szegezőpontok -->
+      <circle cx="470" cy="122" r="7" fill="#1C1C1A"/>
+      <circle cx="470" cy="82" r="7" fill="#C0392B"/>
+      <!-- szegezett címkék -->
+      <g font-family="ui-monospace,Menlo,monospace" font-size="23" font-weight="700">
+        <text x="300" y="150" fill="#1C1C1A">ELŐTTE 143 LE</text>
+        <line x1="300" y1="158" x2="462" y2="122" stroke="#1C1C1A" stroke-width="2"/>
+        <text x="300" y="52" fill="#C0392B">UTÁNA 171 LE</text>
+        <line x1="300" y1="60" x2="462" y2="82" stroke="#C0392B" stroke-width="2"/>
+      </g>
+    </svg>
+    <div class="cap mono" style="margin-top:2px">
+      <span style="color:#1C1C1A">— ELŐTTE (GYÁRI)</span>
+      <span style="color:#C0392B">— UTÁNA (EGYEDI KALIBRÁCIÓ)</span>
+    </div>
+  </div>
+
+  <div class="side">
+    <div class="lbl mono">MÉRT ÉRTÉKEK — SZINTETIKUS DEMÓ</div>
+    <table>
+      <tr><th>MÉRTÉK</th><th>ELŐTTE</th><th>UTÁNA</th><th>Δ</th></tr>
+      <tr><td>Teljesítmény</td><td class="num">143 LE</td><td class="num">171 LE</td><td class="num up">+28</td></tr>
+      <tr><td>Nyomaték</td><td class="num">320 Nm</td><td class="num">385 Nm</td><td class="num up">+65</td></tr>
+      <tr><td>Fogyasztás</td><td class="num">6,2 l</td><td class="num">5,8 l</td><td class="num up">−0,4</td></tr>
+    </table>
+    <div class="lbl mono" style="margin-top:12px">A GYÁRI SZOFTVER ÖRÖKÖSRE ARCHIVÁLVA</div>
+  </div>
+
+  <div class="foot mono">MÉRÉSI VÁZLAT · A SZÁMOK SZINTETIKUS DEMÓADATOK</div>
+  <div class="cta">
+    <a class="sec" href="#">SZOLGÁLTATÁSOK →</a>
+    <a class="pri" href="#">KÉRJEN ÁRAJÁNLATOT<span class="cap mono">CÉL · IDŐPONT-EGYEZTETÉSSEL</span></a>
+  </div>
+</body>
+</html>

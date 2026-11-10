@@ -1,0 +1,35 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "border-accent-on-rounded",
+        "value": "*",
+        "files": [
+          "src/styles/global.css"
+        ],
+        "createdAt": "2026-11-09T17:24:31.132Z",
+        "reason": "False positive: .btn--secondary is an unrounded (border-radius: 0) underline-text button, not a rounded card — the 3px underline is its deliberate emphasis mark in the user-confirmed safer-zomanc world"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "11px",
+        "createdAt": "2026-11-09T19:19:12.337Z",
+        "reason": "A hero-jegyzet (src/pages/index.astro .hero__note) egyedi fluid felirat-lépcsője clamp(11px, 2.6vw, 14px) — display-behangolás, nem rendszerszintű lépcső"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "40px",
+        "createdAt": "2026-11-09T19:19:12.356Z",
+        "reason": "Egyedi display-lépcsők: a 404-cím clamp(40px, 5vw, 64px) és a kalkulátor eredményszáma clamp(26px, 3vw, 40px) — oldalspecifikus display-behangolás"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "60px",
+        "createdAt": "2026-11-09T19:19:12.373Z",
+        "reason": "A bemutató szekció címének (index .demo__title) clamp(34px, 4.4vw, 60px) egyedi display-lépcsője — oldalspecifikus display-behangolás"
+      }
+    ]
+  }
+}

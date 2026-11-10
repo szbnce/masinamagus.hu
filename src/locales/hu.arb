@@ -1,0 +1,927 @@
+{
+  "site": {
+    "name": "Masinamágus",
+    "tagline": "Mérünk, elemzünk, írunk. Nem tippelünk."
+  },
+  "nav": {
+    "home": "Főoldal",
+    "services": "Szolgáltatások",
+    "glossary": "Szakszótár",
+    "blog": "Blog",
+    "contact": "Kapcsolat",
+    "diagnostics": "Diagnosztika"
+  },
+  "a11y": {
+    "skipToContent": "Ugrás a tartalomra",
+    "mainNav": "Fő navigáció"
+  },
+  "navbar": {
+    "brand_home": "Masinamágus – Főoldal",
+    "main_nav": "Fő navigáció",
+    "menu": "Menü"
+  },
+  "page": {
+    "services": {
+      "title": "Szolgáltatások"
+    },
+    "contact": {
+      "title": "Kapcsolat"
+    }
+  },
+  "services": {
+    "stage1": {
+      "title": "Stage 1 chiptuning"
+    },
+    "eco": {
+      "title": "Eco-tuning (fogyasztáscsökkentés)"
+    },
+    "dpfegr": {
+      "title": "DPF & EGR szoftveres megoldások"
+    },
+    "adblue": {
+      "title": "AdBlue / SCR szoftveres hibajavítás"
+    },
+    "vag": {
+      "title": "VAG melegindítás-javítás (1.9/2.0 TDI)"
+    },
+    "coding": {
+      "title": "Kódolás & rejtett funkciók (BMW, Audi, VW, Skoda)"
+    },
+    "nav": {
+      "title": "Navigáció & térképfrissítés (MMI, iDrive, Discover)"
+    },
+    "kicker": "01 / Szolgáltatások",
+    "title": "Amit a motorháztető alatt",
+    "title_mark": "csinálunk",
+    "lead": "Hét terület, egy mérnöki szemlélet: minden beavatkozás mérésre és tényekre épül, a motor és a hajtáslánc fizikai korlátain belül.",
+    "more_link": "Részletek",
+    "back_link": "Vissza a szolgáltatásokhoz",
+    "items": [
+      {
+        "icon": "gauge",
+        "title": "Stage 1 Chiptuning",
+        "description": "Érezhető erő- és nyomatéktöbblet hardveres átalakítás nélkül, a gyári biztonsági határok megtartásával.",
+        "slug": "/szolgaltatasok/chiptuning-stage-1"
+      },
+      {
+        "icon": "leaf",
+        "title": "Eco-Tuning",
+        "description": "Mérhető fogyasztáscsökkentés a nyomaték csúcspontjának alacsonyabb fordulatra tolásával. Flottáknak is.",
+        "slug": "/szolgaltatasok/eco-tuning-fogyasztascsokkentes"
+      },
+      {
+        "icon": "filter",
+        "title": "DPF & EGR megoldások",
+        "description": "Eltömődött részecskeszűrő, leragadt EGR, folyamatos regenerálás – szoftveres megoldás, szakszerűen. Csak zárt pályára.",
+        "slug": "/szolgaltatasok/egr-dpf-szoftveres-megoldasok"
+      },
+      {
+        "icon": "alert",
+        "title": "AdBlue / SCR hibajavítás",
+        "description": "Megállt a visszaszámláló? NOx szenzor, szivattyú, fűtőszál hiba helyett végleges szoftveres megoldás. Csak zárt pályára.",
+        "slug": "/szolgaltatasok/adblue-szoftveres-javitas"
+      },
+      {
+        "icon": "thermometer",
+        "title": "VAG melegindítás javítás",
+        "description": "„Teker, de nem indul melegen” – a 1.9 és 2.0 TDI-k tipikus szoftveres hibája, alkatrészcsere nélkül orvosolva.",
+        "slug": "/szolgaltatasok/vag-meleginditas-javitas"
+      },
+      {
+        "icon": "code",
+        "title": "Kódolás & rejtett funkciók",
+        "description": "Start-Stop memória, CarPlay, Video in Motion és további kényelmi funkciók aktiválása BMW, Audi, VW, Skoda modellekben.",
+        "slug": "/szolgaltatasok/bmw-audi-rejtett-funkciok-kodolas"
+      },
+      {
+        "icon": "map",
+        "title": "Navigáció & térképfrissítés",
+        "description": "Gyári MMI, iDrive és Discover rendszerek frissítése a legújabb európai térképekkel, firmware-rel és magyarítással.",
+        "slug": "/szolgaltatasok/navigacio-terkep-frissites"
+      }
+    ]
+  },
+  "home": {
+    "meta": {
+      "title": "Masinamágus – ECU optimalizálás, chiptuning és diagnosztika Kétbodonyban",
+      "description": "Egyedi ECU kalibráció, chiptuning, eco-tuning és szoftveres hibajavítás Kétbodonyban. 25 év gépészeti tapasztalat, mérnöki precizitás, archivált gyári szoftver. Kérjen árajánlatot."
+    },
+    "world": {
+      "slogan": "EGYEDI ECU-KALIBRÁCIÓ — MÉRTEN.",
+      "note": "IDŐPONT-EGYEZTETÉSSEL · SZEMÉLYES MUNKA",
+      "cta_primary": "Kérjen árajánlatot",
+      "cta_secondary": "Szolgáltatások",
+      "hero_h1": "Egyedi ECU-kalibráció, mérten — Kétbodony"
+    },
+    "plates": {
+      "stage1": {
+        "fact": "Saját fájlból, mért előtte-utána eredménnyel."
+      },
+      "eco": {
+        "fact": "Fogyasztáscsökkentés a használathoz igazítva."
+      },
+      "dpfegr": {
+        "fact": "Csak zárt pálya, K+F, hobby — ÁSZF 6.2."
+      },
+      "adblue": {
+        "fact": "Visszaszámláló és hibajelzés szoftveres javítása."
+      }
+    },
+    "medal": {
+      "line1": "MÉRT · ARCHIVÁLVA",
+      "line2": "GYÁRI ÁLLAPOT INGYEN VISSZAÁLLÍTHATÓ"
+    },
+    "demo": {
+      "label": "MÉRT ÉRTÉKEK — SZINTETIKUS DEMÓ",
+      "title": "Előtte. Utána. Mérve.",
+      "lead": "Minden kalibráció két számon: az előtte-utána értékek kifüggesztve, tabuláris számmal — nem a szövegbe rejtve. Az alábbi értékek szintetikus demóadatok, nem garantált eredmény.",
+      "col_metric": "Mérték",
+      "col_before": "Előtte",
+      "col_after": "Utána",
+      "col_delta": "Δ",
+      "rows": [
+        {
+          "metric": "Teljesítmény",
+          "before": "143 LE",
+          "after": "171 LE",
+          "delta": "+28"
+        },
+        {
+          "metric": "Nyomaték",
+          "before": "320 Nm",
+          "after": "385 Nm",
+          "delta": "+65"
+        },
+        {
+          "metric": "Fogyasztás",
+          "before": "6,2 l",
+          "after": "5,8 l",
+          "delta": "−0,4"
+        }
+      ],
+      "archived": "A gyári szoftver örökösre archiválva",
+      "foot": "A számok szintetikus demóadatok."
+    }
+  },
+  "hero": {
+    "kicker": "ECU optimalizálás · Chiptuning · Diagnosztika",
+    "title_a": "Vezérlés a",
+    "title_mark": "vérünkben.",
+    "subtitle": "Ahol a 25 éves gépészeti rutin és a modern szoftverfejlesztés találkozik. Egyedi ECU kalibráció és hibajavítás – mérve, nem tippelve, Kétbodonyban.",
+    "cta_primary": "Árajánlatot kérek",
+    "cta_secondary": "Szolgáltatások",
+    "stats": [
+      {
+        "num": "25",
+        "unit": " év",
+        "label": "Gépészeti tapasztalat"
+      },
+      {
+        "num": "1–2",
+        "unit": " nap",
+        "label": "Átlagos átfutás"
+      },
+      {
+        "num": "100",
+        "unit": "%",
+        "label": "Egyedi kalibráció"
+      }
+    ]
+  },
+  "trust": {
+    "label": "Miért válasszon minket",
+    "items": [
+      {
+        "icon": "cpu",
+        "title": "Nem sablonfájl",
+        "text": "Egyedi kalibráció az Ön autója letöltött, eredeti fájljából – nem kész, bizonytalan eredetű tömegfájl."
+      },
+      {
+        "icon": "database",
+        "title": "Gyári program archiválva",
+        "text": "Az eredeti szoftvert örökösre archiváljuk, így bármikor ingyenesen visszaállítható a gyári állapot."
+      },
+      {
+        "icon": "activity",
+        "title": "Mérés előtte és utána",
+        "text": "Előzetes és utólagos élőadatos diagnosztika, kontrollmérés. Csak stabil paraméterekkel engedünk útnak."
+      },
+      {
+        "icon": "clock",
+        "title": "Nem futószalag",
+        "text": "1–2 munkanap alatt elkészülünk. A minőségi munkához idő kell – de nem marad hetekig autó nélkül."
+      }
+    ]
+  },
+  "about": {
+    "kicker": "02 / Rólunk",
+    "title_a": "A",
+    "title_mark": "„Mágus”",
+    "title_b": "duó",
+    "tagline": "„Mérünk, elemzünk, írunk. Nem tippelünk.”",
+    "intro": "Két generáció, egy műhely: ahol a klasszikus gépészeti diagnosztika találkozik a modern motorvezérlő-szoftverek ismeretével. Nem futószalagon tuningolunk – minden autót egyedileg mérünk és hangolunk.",
+    "profile_1_name": "Szabó Zsolt",
+    "profile_1_role": "A gépészeti agy",
+    "profile_1_desc": "25 év a motortérben. Ismeri a vas minden rezdülését, mielőtt még a laptopot rádugnánk.",
+    "profile_2_name": "Szabó Bence",
+    "profile_2_role": "A kódfelelős",
+    "profile_2_desc": "Szoftverfejlesztői háttérrel látja át az ECU logikáját. Ahol a mechanika véget ér, ott kezdődik az ő birodalma.",
+    "table_title_a": "Mérnök",
+    "table_title_mark": "vs.",
+    "table_title_b": "sufnituning",
+    "table_header_1": "Szempont",
+    "table_header_2": "Masinamágus",
+    "table_header_3": "Átlagos fájlhuszár",
+    "table_rows": [
+      {
+        "title": "Szoftver forrása",
+        "col1": "Saját fejlesztésű, egyedi kalibráció",
+        "col2": "Vásárolt, bizonytalan eredetű „tömegfájl”"
+      },
+      {
+        "title": "Biztonsági limitek",
+        "col1": "Gyári védelmi funkciók és nyomatékhatárok megtartva",
+        "col2": "Védelmek kiiktatva a látványosabb számokért"
+      },
+      {
+        "title": "Állapotfelmérés",
+        "col1": "Csak műszakilag hibátlan autót módosítunk",
+        "col2": "Bármire ráírják, aminek van OBD csatlakozója"
+      },
+      {
+        "title": "Adatbiztonság",
+        "col1": "Eredeti szoftver örökös archiválása",
+        "col2": "Ha elveszik az eredeti, így jártál"
+      }
+    ]
+  },
+  "process": {
+    "kicker": "03 / Folyamat",
+    "title_a": "Így dolgozunk –",
+    "title_mark": "négy lépésben",
+    "steps": [
+      {
+        "num": "01",
+        "title": "Diagnózis",
+        "description": "Átbeszéljük a célokat, és megnézzük, egyáltalán alkalmas-e az autó a beavatkozásra."
+      },
+      {
+        "num": "02",
+        "title": "Logolás",
+        "description": "Menet közbeni paramétervizsgálat. A számok nem hazudnak."
+      },
+      {
+        "num": "03",
+        "title": "Optimalizálás",
+        "description": "A módosítás elvégzése. Nem sietünk, a minőséghez idő kell (1–2 munkanap)."
+      },
+      {
+        "num": "04",
+        "title": "Validálás",
+        "description": "Próbakör és kontrollmérés. Csak akkor távozhatsz, ha minden paraméter stabil."
+      }
+    ]
+  },
+  "faq": {
+    "kicker": "04 / Gyakori kérdések",
+    "title_a": "Kérdése van?",
+    "title_mark": "Itt a válasz.",
+    "items": [
+      {
+        "q": "Mennyibe kerül egy beavatkozás?",
+        "a": "Minden autó és vezérlőtípus más munkát igényel, ezért nem fix árlistával dolgozunk – minden autóra pontos, egyedi árajánlatot adunk, rejtett költségek nélkül. Írja meg az autója típusát, és küldjük az árat."
+      },
+      {
+        "q": "Mennyi időt vesz igénybe a munka?",
+        "a": "A legtöbb beavatkozás 1–2 munkanap alatt elkészül. Nem sietünk: a minőségi kalibrációhoz idő kell, de nem marad hetekig autó nélkül."
+      },
+      {
+        "q": "Visszaállítható a gyári állapot?",
+        "a": "Igen. Minden autó eredeti (gyári) szoftverét archiváljuk, így a módosítás bármikor ingyenesen visszafordítható az eredeti állapotra."
+      },
+      {
+        "q": "Kell-e hardveres átalakítás a Stage 1-hez?",
+        "a": "Nem. A Stage 1 optimalizálás kizárólag szoftveres: a gyári turbó, befecskendezők és kipufogórendszer tökéletesen elegendőek a biztonságos erőtöbblet eléréséhez."
+      },
+      {
+        "q": "Közúton használható a DPF, EGR vagy AdBlue módosítás?",
+        "a": "A környezetvédelmi rendszerek (DPF, EGR, SCR) szoftveres módosítása kizárólag zárt pályás (verseny) használatra engedélyezett. A közúti forgalomban a módosítás a jármű környezetvédelmi besorolását érintheti, és hatósági eljárást vonhat maga után."
+      },
+      {
+        "q": "Elveszítem a gyári garanciámat?",
+        "a": "A szoftveres módosítás a gyártói garanciát érintheti – ezt minden esetben előre jelezzük, mielőtt bármihez hozzányúlnánk."
+      },
+      {
+        "q": "Milyen autókat vállaltok?",
+        "a": "Turbós benzines és dízel személyautókat, a legtöbb modern típusvezérlővel. Csak műszakilag hibátlan autót módosítunk – ha az autó nem alkalmas a beavatkozásra, azt őszintén megmondjuk."
+      },
+      {
+        "q": "Hol található a műhely?",
+        "a": "2655 Kétbodony, Rákóczi út 36. Balassagyarmattól ~15 percre, Váctól ~35 percre – forgalmi dugók nélkül."
+      }
+    ]
+  },
+  "contact": {
+    "kicker": "05 / Kapcsolat",
+    "title_a": "Kérjen",
+    "title_mark": "árajánlatot",
+    "lead": "Írja meg az autója típusát és a kérdését – pontos, egyedi árajánlatot küldünk. Ha sürgős, hívjon telefonon.",
+    "phone_label": "Telefon",
+    "email_label": "E-mail",
+    "address_label": "Műhely",
+    "address": "2655 Kétbodony, Rákóczi út 36.",
+    "form": {
+      "name": "Név",
+      "phone": "Telefonszám",
+      "car": "Autó (típus, évjárat, motor)",
+      "date": "Preferált időpont (nem kötelező)",
+      "message": "Üzenet",
+      "submit": "Árajánlatot kérek",
+      "note": "Az űrlap az Ön levelezőprogramját nyitja meg egy előre kitöltött levéllel. Az adatait kizárólag az árajánlatadáshoz használjuk.",
+      "error_name": "Kérjük, adja meg a nevét.",
+      "error_phone_required": "Kérjük, adja meg a telefonszámát.",
+      "error_phone_invalid": "Érvénytelen telefonszám – adjon meg egy valós számot, pl. +36 70 123 4567.",
+      "mail_subject": "Árajánlatkérés",
+      "mail_default_car": "ECU munka",
+      "mail_name": "Név",
+      "mail_phone": "Telefon",
+      "mail_car": "Autó",
+      "mail_date": "Preferált időpont",
+      "mail_no_data": "–",
+      "sent_title": "Az üzeneted a leveleződben vár",
+      "sent_body": "A levelezőprogramja megnyílt egy előre kitöltött levéllel. Küldje el, és 1–2 munkanapon belül válaszolunk – a levél addig Önnél van, nem nálunk.",
+      "sent_fallback": "Nem nyílt meg a levelezője? Írjon vagy hívjon közvetlenül:",
+      "sent_back": "Vissza az űrlaphoz"
+    }
+  },
+  "blog": {
+    "meta": {
+      "title": "Blog & Tudástár | Masinamágus",
+      "description": "Szakmai cikkek, esettanulmányok és tudástár a motorvezérlő-optimalizálás világából. Ismerje meg a kulisszatitkokat."
+    },
+    "hero": {
+      "title_a": "Szakmai",
+      "title_mark": "tudástár",
+      "subtitle": "Esettanulmányok, műhelytitkok és válaszok minden szoftveres kérdésre."
+    },
+    "all": "Minden cikk",
+    "back": "Vissza a cikkekhez",
+    "loading": "Betöltés…",
+    "not_found": "A bejegyzés nem található – ellenőrizze az oldal címét.",
+    "cta": {
+      "heading": "Szakértői segítségre van szüksége?",
+      "text": "Tapasztalta a cikkben említett hibajeleket? Kérjen egyedi, szoftveres megoldásra árajánlatot.",
+      "button": "Kérjen ajánlatot"
+    }
+  },
+  "official": {
+    "back": "Vissza a főoldalra",
+    "loading": "Dokumentum betöltése…",
+    "not_found": "A dokumentum nem található – ellenőrizze az oldal címét.",
+    "invalid": "Érvénytelen dokumentum",
+    "default_title": "Dokumentum",
+    "aszf_title": "Általános Szerződési Feltételek",
+    "gdpr_title": "Adatkezelési Tájékoztató",
+    "meta_description": "A Masinamágus hivatalos dokumentumai: Általános Szerződési Feltételek és Adatkezelési Tájékoztató."
+  },
+  "notfound": {
+    "meta_title": "404 – Az oldal nem található | Masinamágus",
+    "kicker": "404 / Elveszve",
+    "title_a": "Ez az oldal",
+    "title_mark": "nem létezik.",
+    "subtitle": "A keresett oldalt nem találjuk – lehet, hogy elírás történt a címben, vagy a tartalmat áthelyeztük. Az alábbi linkek segítenek visszatalálni.",
+    "home": "Vissza a főoldalra",
+    "services": "Szolgáltatások",
+    "blog": "Blog tudástár",
+    "contact": "Kapcsolat"
+  },
+  "newsletter": {
+    "kicker": "Hírlevél",
+    "title_a": "Műhelytitkok",
+    "title_mark": "első kézből.",
+    "subtitle": "Esettanulmányok, új szolgáltatások és szoftveres tippek – ritkán és a lényegről. Spam nélkül, bármikor leiratkozhat.",
+    "email_label": "E-mail cím",
+    "email_placeholder": "pelda@email.hu",
+    "consent_prefix": "Hozzájárulok, hogy a Masinamágus hírlevelet küldjön a megadott e-mail címre. Az adatkezelés részleteit az ",
+    "consent_link": "Adatkezelési Tájékoztató",
+    "consent_suffix": " tartalmazza. A hozzájárulásomat bármikor, indokolás nélkül visszavonhatom.",
+    "submit": "Feliratkozás",
+    "required_email": "Kérjük, adjon meg egy érvényes e-mail címet.",
+    "required_consent": "A feliratkozáshoz a hozzájárulás megadása szükséges.",
+    "mail_subject": "Hírlevél-feliratkozás",
+    "sent_title": "A levele a levelezőjében vár",
+    "sent_body": "Küldje el, és végleges a feliratkozás – az e-mail címe addig nem kerül hozzánk.",
+    "sent_fallback": "Nem nyílt meg a levelezője? Írjon közvetlenül:",
+    "sent_back": "Vissza az űrlaphoz",
+    "mailto_note": "A gomb az Ön levelezőprogramját nyitja meg; a feliratkozás az üzenet elküldésével válik véglegessé."
+  },
+  "references": {
+    "kicker": "Munkáink",
+    "title_a": "Mért, nem",
+    "title_mark": "tippelt.",
+    "lead": "Minden beavatkozás dokumentált: élőadatos kontrollmérés előtte és utána, archivált gyári fájl, visszaállítható állapot. A munkatípusok, amikkel nap mint nap találkozunk:",
+    "items": [
+      {
+        "title": "Diesel Stage 1",
+        "text": "EDC16/EDC17 vezérlők egyedi kalibrációja a letöltött gyári fájlból. Érzékelhető erő- és nyomatéktöbblet, stabil alapjárat, kontrollméréssel igazolva."
+      },
+      {
+        "title": "DPF / EGR megoldások",
+        "text": "Elöregedett, dugulásra hajlamos részecskeszűrő- és EGR-rendszerek szoftveres kezelése. Zárt pályás használatra, az eredeti állapot archiválva marad."
+      },
+      {
+        "title": "AdBlue / SCR hibajavítás",
+        "text": "Megállt visszaszámláló, szivattyú- és adagolóhibák végleges, szoftveres orvoslása – alkatrészcserétől mentesen, visszaállítható módon."
+      }
+    ],
+    "proof_title": "Ami minden munkához jár",
+    "proof": [
+      "Élőadatos diagnosztika és kontrollmérés",
+      "A gyári szoftver örökösre archiválva",
+      "Visszaállítás gyári állapotba bármikor",
+      "Szoftveres szavatosság a kódra"
+    ],
+    "cta": "Kérjen részletes, autótípusra szabott referenciát",
+    "reviews_title": "Ügyfeleink mondták",
+    "reviews": [
+      {
+        "name": "H. Martin",
+        "car": "Volkswagen Golf VII · Stage 1",
+        "quote": "Sokkal erősebb lett az autóm, és nem eszik annyit!"
+      },
+      {
+        "name": "S. Zsolt",
+        "car": "Mercedes Sprinter OM651 · Stage 1",
+        "quote": "163 ló helyett 193 ló lett, sokkal egyenletesebben húz a pályán!"
+      }
+    ]
+  },
+  "glossary": {
+    "meta": {
+      "title": "Szakszótár – ECU, chiptuning és diagnosztikai kifejezések | Masinamágus",
+      "description": "Érthető magyarázatok a motorvezérlés, chiptuning és diagnosztika legfontosabb kifejezéseire: DPF, EGR, AdBlue, ECU, Stage 1, checksum és még sok más."
+    },
+    "hero": {
+      "title_a": "Szakmai",
+      "title_mark": "szakszótár",
+      "subtitle": "A motorvezérlő-szoftverek és a diagnosztika világának legfontosabb kifejezései – érthetően, mellébeszélés nélkül."
+    },
+    "search_label": "Keresés a szótárban",
+    "search_placeholder": "pl. DPF, checksum, ECU…",
+    "empty": "Nincs találat erre a kifejezésre.",
+    "items": [
+      {
+        "term": "ECU",
+        "def": "Electronic Control Unit – a motorvezérlő egység. A motor minden paraméterét (befecskendezés, turbónyomás, kipufogógáz-visszavezetés) ez a számítógép vezérli. A chiptuning ezen egység szoftverét módosítja."
+      },
+      {
+        "term": "Chiptuning",
+        "def": "Az ECU szoftverének módosítása a motor teljesítményének, nyomatékának vagy fogyasztásának optimalizálása érdekében. Létezik teljesítménynövelő (Stage 1) és fogyasztáscsökkentő (eco) irány is."
+      },
+      {
+        "term": "Stage 1",
+        "def": "A vezérlő szoftverének módosítása hardverátalakítás nélkül. A gyári biztonsági határok megtartásával ér el érzékelhető erő- és nyomatéktöbbletet."
+      },
+      {
+        "term": "Tuningbox",
+        "def": "Külső, a vezérlőre csatlakoztatható doboz, amely a szenzorjeleket módosítva ér el teljesítménynövekedést. Hátránya, hogy a vezérlő nem a valós értékeket látja, ezért pontatlanabb és kevésbé biztonságos, mint az egyedi szoftver."
+      },
+      {
+        "term": "Checksum",
+        "def": "Az ECU-fájl ellenőrzőösszege. Minden módosítás után újra kell számolni, különben a vezérlő hibakóddal elutasítja a fájlt – ezért fontos, hogy a módosítást végző hely ezt kezelje."
+      },
+      {
+        "term": "EDC16 / EDC17",
+        "def": "Bosch dízel motorvezérlő családok. Az EDC16 a régebbi, az EDC17 az újabb generáció – utóbbi több védelemmel rendelkezik, a módosítás technikailag összetettebb."
+      },
+      {
+        "term": "MG1 / MD1",
+        "def": "A Bosch legújabb generációs motorvezérlői (MD1 dízel, MG1 benzines). Erős hardveres és szoftveres védelemmel (pl. SFD), speciális eszközt és tudást igényelnek."
+      },
+      {
+        "term": "DPF (részecskeszűrő)",
+        "def": "Diesel Particulate Filter – a kipufogógázban lévő koromrészecskéket szűri ki. Elöregedve vagy városi használatban gyorsan eltömődik, regenerációs hibákhoz vezetve."
+      },
+      {
+        "term": "EGR",
+        "def": "Exhaust Gas Recirculation – kipufogógáz-visszavezetés. A NOx-kibocsátást csökkenti, cserébe lerakódással és teljesítményvesztéssel járhat."
+      },
+      {
+        "term": "AdBlue / SCR",
+        "def": "Az SCR rendszer karbamid-oldatot (AdBlue) fecskendez a kipufogógázba a NOx csökkentésére. Hibája esetén a jármű visszaszámolhat, majd korlátozhatja a teljesítményt."
+      },
+      {
+        "term": "Regeneráció",
+        "def": "A DPF öntisztító folyamata: a felgyülemlett korom elégetése. Rövid távokon a folyamat nem fejeződik be, ami idővel eltömődéshez vezet."
+      },
+      {
+        "term": "Lambda szonda",
+        "def": "A kipufogógáz oxigéntartalmát méri; az ECU ebből szabályozza a keverékarányt. Hibás jele esetén a motor gazdagabbra állhat, növelve a fogyasztást."
+      },
+      {
+        "term": "Légtömegmérő (MAF)",
+        "def": "A beszívott levegő tömegét méri. Hibás mérése rontja a keverékképzést, ami gyengülést és fogyasztásnövekedést okoz."
+      },
+      {
+        "term": "Check-engine",
+        "def": "A motorellenőrző jelzőfény. A tárolt hibakód kiolvasása nélkül találgatás következik – a diagnosztika mindig kódkiolvasással kezdődik."
+      },
+      {
+        "term": "OBD",
+        "def": "On-Board Diagnostics – a gépjármű diagnosztikai csatlakozója és rendszere, amelyen keresztül a hibakódok olvashatók és a vezérlők paraméterei követhetők."
+      },
+      {
+        "term": "Élőadat",
+        "def": "A motor működési paraméterei valós időben (fordulatszám, hőmérséklet, nyomások, keverékarány). A kontrollmérés ezek alapján igazolja, hogy a beavatkozás után minden paraméter a határokon belül maradt."
+      },
+      {
+        "term": "BDM / Boot",
+        "def": "Az ECU közvetlen, padon vagy kábeles olvasásának/írásának módjai, amikor az OBD-n keresztül a fájl nem hozzáférhető (pl. erős védelem esetén)."
+      },
+      {
+        "term": "Dinamométer (pad)",
+        "def": "Teljesítménymérő pad, amelyen a motor teljesítménye és nyomatékgörbéje mérhető. A mérés objektív képet ad a beavatkozás eredményéről."
+      },
+      {
+        "term": "Archiválás",
+        "def": "Az eredeti, gyári szoftverállomány elmentése. Ez teszi lehetővé, hogy az autó bármikor visszaállítható legyen a gyári állapotba."
+      }
+    ]
+  },
+  "calc": {
+    "title": "Megtérülés-kalkulátor",
+    "lead": "Számolja ki, körülbelül mennyit spórolhat az eco-tuninggal. A becslés a tapasztalati 5–15% közötti fogyasztáscsökkentésen alapul.",
+    "consumption_label": "Jelenlegi fogyasztás (l/100 km)",
+    "km_label": "Éves futásteljesítmény (km)",
+    "fuel_label": "Üzemanyagár (Ft/l)",
+    "result_label": "Becsült éves megtakarítás",
+    "result_none": "Adjon meg értékeket a számításhoz.",
+    "low_tag": "óvatos becslés (5%)",
+    "high_tag": "optimista becslés (15%)",
+    "note": "A kalkulátor tájékoztató jellegű becslés, nem garantált eredmény. A tényleges megtakarítás a vezetési stílustól, az úttípustól és az autó műszaki állapotától függ.",
+    "cta": "Kérjen pontosabb, autójára szabott becslést"
+  },
+  "footer": {
+    "brand_desc": "Mérnöki precizitás a motorháztető alatt. Ha nem csak tippelni akar, hanem tudni.",
+    "links": "Gyorslinkek",
+    "services_title": "Szolgáltatások",
+    "contact": "Kapcsolat",
+    "location": "2655 Kétbodony, Rákóczi út 36.",
+    "phone": "+36 70 303 1020",
+    "email": "info@masinamagus.hu",
+    "disclaimer": "Fontos: A környezetvédelmi rendszerek (DPF, EGR, SCR) szoftveres módosítása kizárólag zárt pályás (verseny) használatra engedélyezett! A közúti forgalomban a módosítás a jármű környezetvédelmi besorolását érintheti, és hatósági eljárást vonhat maga után.",
+    "copyright": "Minden jog fenntartva – Masinamágus 2026",
+    "aszf": "ÁSZF",
+    "gdpr": "Adatkezelés",
+    "glossary": "Szakszótár",
+    "newsletter": "Hírlevél"
+  },
+  "pages": {
+    "stage1": {
+      "meta": {
+        "title": "Stage 1 Chiptuning | Biztonságos teljesítménynövelés | Masinamágus",
+        "description": "Prémium Stage 1 chiptuning Kétbodonyban. Erősebb motor, jobb gyorsulás, szoftveres optimalizálás a gyári határokon belül, egyedi kalibrációval."
+      },
+      "hero": {
+        "title_a": "Stage 1",
+        "title_mark": "Chiptuning",
+        "subtitle": "Biztonságos teljesítménynövelés és nyomatékoptimalizálás Kétbodonyban, kibontakoztatva a motorban rejlő gyári tartalékokat."
+      },
+      "intro": {
+        "heading": "Mi az a Stage 1 optimalizálás?",
+        "paragraphs": [
+          "A gyártók a legtöbb modern motort jelentős biztonsági tartalékkal tervezik, hogy eltérő éghajlatokon (extrém hideg vagy meleg), változó üzemanyag-minőség mellett, és elhanyagolt karbantartás esetén is túléljék a garanciaidőt.",
+          "A Stage 1 chiptuning során ezeket az indokolatlanul szűk szoftveres korlátokat (Torque Limiters, Boost Limits) hangoljuk finomra. Nincs szükség hardveres átalakításra; a gyári turbó, befecskendezők és kipufogórendszer tökéletesen elegendőek a biztonságos erőtöbblet eléréséhez."
+        ]
+      },
+      "features": [
+        {
+          "icon": "activity",
+          "title": "20–30% erőtöbblet",
+          "text": "Megnövekedett lóerő és drasztikusan magasabb forgatónyomaték a dinamikusabb előzésekért."
+        },
+        {
+          "icon": "shield",
+          "title": "Gyári határokon belül",
+          "text": "A paramétereket a motor és a hajtáslánc fizikai teherbírásához igazítjuk, figyelve a kipufogógáz-hőmérsékletre (EGT)."
+        },
+        {
+          "icon": "wrench",
+          "title": "Hardver nélkül",
+          "text": "Tisztán szoftveres beavatkozás – nincs megbontás, nincs utángyártott alkatrész, nincs meglepetés."
+        }
+      ],
+      "guarantees": {
+        "heading": "A Masinamágus garancia",
+        "items": [
+          "Előzetes és utólagos élő adatos motordiagnosztika.",
+          "Egyedi szoftverírás az Ön autója letöltött, eredeti (Ori) fájlja alapján.",
+          "Az eredeti szoftver archiválása: bármikor ingyenesen visszaállítható a gyári állapot."
+        ]
+      },
+      "cta": {
+        "heading": "Szeretné kihozni a maximumot az autójából?",
+        "text": "Műhelyünk Kétbodonyban található, így Balassagyarmatról (15 perc) és Vácról (35 perc) is gyorsan, forgalmi dugók nélkül megközelíthető.",
+        "button": "Árajánlatkérés az Ön autójára"
+      }
+    },
+    "eco": {
+      "meta": {
+        "title": "Eco-Tuning | Fogyasztáscsökkentés szoftveresen | Masinamágus",
+        "description": "Csökkentse autója üzemanyag-fogyasztását szoftveres Eco-Tuning segítségével. Gazdaságosabb üzemeltetés optimalizált motorvezérléssel Kétbodonyban."
+      },
+      "hero": {
+        "title_a": "Eco-",
+        "title_mark": "Tuning",
+        "subtitle": "Csökkentse üzemanyag-fogyasztását 8–12%-kal anélkül, hogy lemondana a vezetési élményről. Tökéletes megoldás sokat futott autókhoz és flottakezelőknek."
+      },
+      "intro": {
+        "heading": "Hogyan működik az Eco-Tuning?",
+        "paragraphs": [
+          "A fogyasztáscsökkentés (Eco-Tuning) koncepciója arra épül, hogy a motor maximális forgatónyomatékát alacsonyabb fordulatszám-tartományba toljuk el.",
+          "Mivel az autója hamarabb kezd el húzni, sokkal hamarabb válthat magasabb sebességfokozatba. A csökkentett átlagos fordulatszám kevesebb befecskendezési ciklust, ezáltal mérhető üzemanyag-megtakarítást jelent a mindennapi, vagy autópályás használat során."
+        ]
+      },
+      "features": [
+        {
+          "icon": "leaf",
+          "title": "8–12% megtakarítás",
+          "text": "Kevesebb elégetett üzemanyag 100 km-en."
+        },
+        {
+          "icon": "gauge",
+          "title": "Nyomatékosabb",
+          "text": "Jobb alsó tartománybeli húzóerő."
+        },
+        {
+          "icon": "banknote",
+          "title": "Gyors megtérülés",
+          "text": "Nagy futásteljesítmény esetén hónapok alatt visszahozza az árát."
+        }
+      ],
+      "cta": {
+        "heading": "Kérjen számítást autója fogyasztáscsökkenésére",
+        "text": "Vegye fel velünk a kapcsolatot, és kiszámoljuk, mennyit spórolhat éves szinten egy szakszerű Eco-Tuninggal.",
+        "button": "Kapcsolatfelvétel"
+      }
+    },
+    "adblue": {
+      "meta": {
+        "title": "AdBlue hiba szoftveres javítás és megoldás | Masinamágus",
+        "description": "Visszaszámláló megállt? SCR vagy NOx szenzor hiba? Végleges szoftveres megoldások AdBlue rendszer problémákra gyorsan és szakszerűen Kétbodonyban. (Zárt pályára)"
+      },
+      "hero": {
+        "title_a": "AdBlue hiba",
+        "title_mark": "szoftveres javítás",
+        "subtitle": "Megállt a visszaszámláló? NOx szenzor csere helyett nyújtunk végleges, szoftveres megoldást a letiltó AdBlue rendszerekre. Kizárólag zárt pályás (verseny) használatra!"
+      },
+      "warning": {
+        "heading": "Figyelmeztetés: letiltás",
+        "paragraphs": [
+          "A modern dízel autók esetén az SCR (AdBlue) rendszer meghibásodása – legyen az a szivattyú, a fűtőszál, vagy az NOx szenzor – elindít egy visszaszámlálót a műszerfalon (általában 800–1000 km). Amint ez eléri a nullát, a motor a hibakód törléséig vagy a javításig nem indítható újra."
+        ]
+      },
+      "features": [
+        {
+          "icon": "wrench",
+          "title": "Végleges megoldás",
+          "text": "A motorvezérlő szoftverből szakszerűen inaktiváljuk az SCR rendszer logikáját, így soha többé nem okoz letiltást."
+        },
+        {
+          "icon": "banknote",
+          "title": "Költséghatékony",
+          "text": "A százezres, vagy akár milliós gyári alkatrészcsere helyett a szoftveres beavatkozás töredékébe kerül."
+        }
+      ],
+      "cta": {
+        "heading": "Azonnali segítségre van szüksége?",
+        "text": "Ne várja meg a letiltást. Műhelyünk Kétbodonyban azonnali szoftveres megoldást kínál.",
+        "button": "Időpontfoglalás"
+      }
+    },
+    "dpfegr": {
+      "meta": {
+        "title": "DPF és EGR szoftveres megoldások | Masinamágus",
+        "description": "Eltömődött a részecskeszűrő? Folyamatosan regenerál? Végleges szoftveres megoldás EGR szelep és DPF problémákra Kétbodonyban. (Zárt pályára)"
+      },
+      "hero": {
+        "title_a": "DPF és EGR",
+        "title_mark": "szoftveres megoldások",
+        "subtitle": "Végleges megoldás eltömődött részecskeszűrőkre és leragadt EGR szelepekre. Szakszerű szoftveres inaktiválás a megbízhatóságért. Kizárólag zárt pályás (verseny) használatra!"
+      },
+      "intro": {
+        "heading": "Mi a probléma a modern környezetvédelmi rendszerekkel?",
+        "paragraphs": [
+          "A DPF (dízel részecskeszűrő) és az EGR (kipufogógáz-visszavezető) szelepek a városi, rövid távú használat során gyorsan eltömődnek korommal. A folyamatos regenerálási kísérletek gázolajat juttathatnak a motorolajba, ami drasztikus motorhibákhoz vezethet.",
+          "Amikor a Check Engine lámpa folyamatosan világít, és az autó „vészüzembe” kapcsol (nincs erő), a gyári alkatrészek cseréje csillagászati összegekbe kerülhet, ráadásul a hiba a használati mód miatt később újra előjöhet."
+        ]
+      },
+      "features": [
+        {
+          "icon": "filter",
+          "title": "DPF kiiktatás (szoftver)",
+          "text": "A motorvezérlőben kikapcsoljuk a regenerálási ciklusokat és a nyomáskülönbség-szenzor monitorozását."
+        },
+        {
+          "icon": "settings",
+          "title": "EGR lefalazás / zárás",
+          "text": "Szoftveresen zárt pozícióban rögzítjük az EGR szelepet, így csak tiszta, oxigéndús levegő jut a motorba (nincs több koromlerakódás a szívósorban)."
+        }
+      ],
+      "note": {
+        "heading": "Fontos mechanikai lépések",
+        "text": "A DPF szoftveres kikapcsolása csak akkor működik hibátlanul, ha azt a fizikai szűrőbetét eltávolítása kíséri. Az eltömődött szűrő a rendszerben hagyva extrém hőterhelést okoz a turbófeltöltőn."
+      },
+      "cta": {
+        "heading": "Elege van a Check Engine lámpából?",
+        "text": "Keresse műhelyünket Kétbodonyban a végleges szoftveres megoldásért.",
+        "button": "Időpontfoglalás"
+      }
+    },
+    "vag": {
+      "meta": {
+        "title": "VAG melegindítási hiba szoftveres orvoslása | Masinamágus",
+        "description": "Nehezen indul az 1.9 vagy 2.0 TDI melegen? A melegindítási probléma szoftveresen javítható, drága alkatrészcsere nélküli végleges megoldás Kétbodonyban."
+      },
+      "hero": {
+        "title_a": "VAG melegindítás",
+        "title_mark": "optimalizálása",
+        "subtitle": "Hidegen pöccre indul, de melegen csak hosszas tekeretés után röffen be a TDI? Ne cseréljen önindítót vagy akkumulátort, a hiba szoftveresen javítható."
+      },
+      "intro": {
+        "heading": "Mi okozza a VAG csoportos melegindítási hibát?",
+        "paragraphs": [
+          "A Volkswagen konszern (VW, Audi, Seat, Skoda) 1.9 és 2.0 TDI motorjainál gyakori jelenség, hogy egy bizonyos futásteljesítmény felett az autó üzemmeleg állapotban nagyon nehezen, másodpercekig tartó indítózás után indul csak be.",
+          "Ennek oka a gyári motorvezérlő (ECU) szoftverében keresendő. A szoftver meleg motor esetén elvár egy bizonyos minimális indítási fordulatszámot (pl. 250 RPM) az önindítótól ahhoz, hogy egyáltalán engedélyezze az üzemanyag-befecskendezést. Ahogy az önindító és az akkumulátor öregszik, ez a fordulat egyre nehezebben van meg az első pillanatokban, így az autó „teker, de nem indul”."
+        ]
+      },
+      "features": [
+        {
+          "icon": "thermometer",
+          "title": "Eredeti hiba",
+          "text": "Csak meleg motornál (70°C+) jelentkezik a hosszú indítózás."
+        },
+        {
+          "icon": "zap",
+          "title": "Szoftveres javítás",
+          "text": "Az indítási térképek korrekciója, már alacsonyabb fordulattól ad üzemanyagot."
+        },
+        {
+          "icon": "check",
+          "title": "Azonnali eredmény",
+          "text": "Az autó melegen is ugyanúgy „pöcc-röf” fog indulni, mint hidegen."
+        }
+      ],
+      "cta": {
+        "heading": "Mentsen meg tízezreket a felesleges alkatrészcseréktől",
+        "text": "A szoftveres módosítás gyors és végleges megoldást jelent erre a típusazonos problémára.",
+        "button": "Árajánlatkérés a javításra"
+      }
+    },
+    "coding": {
+      "meta": {
+        "title": "BMW, Audi kódolás | Rejtett funkciók bekapcsolása | Masinamágus",
+        "description": "Aktiválja autója rejtett extráit. BMW, Audi, VW, Skoda szoftveres kódolás, Start-Stop kikapcsolás és kényelmi funkciók bekapcsolása."
+      },
+      "hero": {
+        "title_a": "Kényelmi funkciók",
+        "title_mark": "kódolása",
+        "subtitle": "Aktiválja autója rejtett extráit diagnosztikai csatlakozón (OBD) keresztül. Start-Stop kikapcsolás, videó menet közben, CarPlay aktiválás és egyéb kényelmi beállítások."
+      },
+      "intro": {
+        "heading": "Mik azok a rejtett funkciók?",
+        "paragraphs": [
+          "A modern autók elektronikai moduljai (BMW, Audi, Volkswagen, Skoda, stb.) rengeteg olyan funkciót tartalmaznak, melyeket a gyárban szoftveresen letiltottak vagy egyszerűen nem rendeltek meg az első vásárláskor.",
+          "Diagnosztikai szoftvereink segítségével ezeket a funkciókat fizikai megbontás nélkül, a vezérlőegységek kódolásával (parametrizálásával) tudjuk bekapcsolni vagy kikapcsolni az igényei szerint."
+        ]
+      },
+      "features": [
+        {
+          "icon": "power",
+          "title": "Start-Stop memória",
+          "text": "Végleges kikapcsolás vagy az utolsó állapot megjegyzése a motor kímélése érdekében."
+        },
+        {
+          "icon": "phone_smart",
+          "title": "CarPlay / Android Auto",
+          "text": "Okostelefon tükrözés aktiválása a gyári infotainment (fejegység) rendszeren."
+        },
+        {
+          "icon": "monitor",
+          "title": "Video in Motion",
+          "text": "Mozgó jármű esetén is engedélyezett videó és DVD lejátszás az utasok számára."
+        }
+      ],
+      "cta": {
+        "heading": "Többet tud az autója, mint gondolná",
+        "text": "A kódolható funkciók listája típusonként és évjáratonként eltér. Írja meg nekünk autója pontos típusát, és küldünk egy listát a lehetőségekről.",
+        "button": "Funkciók lekérdezése"
+      }
+    },
+    "nav": {
+      "meta": {
+        "title": "Gyári navigáció és térkép frissítés | Masinamágus",
+        "description": "Legújabb térképek telepítése gyári fejegységekre. Audi MMI, BMW iDrive, VW Discover Media navigáció frissítés és szoftveres magyarítás Kétbodonyban."
+      },
+      "hero": {
+        "title_a": "Navigáció",
+        "title_mark": "frissítés",
+        "subtitle": "Új elkerülők, megváltozott sebességhatárok? Ne hagyja, hogy a gyári fejegység a semmibe vezesse. Gyári prémium rendszerek (MMI, iDrive, Discover) szoftverítése."
+      },
+      "intro": {
+        "heading": "Miért érdemes a gyári navigációt frissíteni?",
+        "paragraphs": [
+          "Habár sokan használnak telefont a navigáláshoz, a prémium kategóriás autók (Audi, BMW, Mercedes) Head-Up Display (szélvédőre vetített kijelző) funkciói és a digitális műszerfal (Virtual Cockpit) iránytűi kizárólag a gyári navigáció adatbázisával működnek együtt.",
+          "A legújabb európai térképek telepítésével a gyári rendszer újra pontos és megbízható lesz, ráadásul a szoftverfrissítések gyakran a fejegység általános gyorsaságát (Bluetooth stabilitás, rádióvétel) is javítják."
+        ]
+      },
+      "features": [
+        {
+          "icon": "map",
+          "title": "Legújabb térképek",
+          "text": "Full Európa adatbázis hivatalos forrásból (POI adatokkal, kamerákkal)."
+        },
+        {
+          "icon": "download",
+          "title": "Firmware frissítés",
+          "text": "A teljes fejegység vezérlőszoftverének (firmware) naprakészre frissítése az optimális, stabil működésért."
+        },
+        {
+          "icon": "languages",
+          "title": "Magyar nyelv",
+          "text": "Külföldről behozott, nem magyar nyelvű rendszerek teljes magyarítása (hang + menü)."
+        }
+      ],
+      "cta": {
+        "heading": "Tegye újra értékessé a gyári rendszert.",
+        "text": "A frissítés időtartama a letöltendő adat mennyiségétől függ (általában 1–2 óra). Kérjen online időpontot.",
+        "button": "Frissítés igénylése"
+      }
+    }
+  },
+  "cookie": {
+    "title": "Ez az oldal sütiket használ",
+    "text": "A webhely működéséhez szükséges sütiket mindig használjuk. Statisztikai (Google Analytics) sütiket csak az Ön hozzájárulásával. Részletek az Adatkezelési Tájékoztatóban.",
+    "accept": "Elfogadom",
+    "decline": "Csak a szükségeseket",
+    "more": "Részletek",
+    "settings": "Süti beállítások"
+  },
+  "diagnostics": {
+    "meta": {
+      "title": "Diagnosztika – kódolás, szerviz, karbantartás | Masinamágus",
+      "description": "Műhelyi diagnosztika Kétbodonyon: OBD2- és haladó vezérolvasás, kódolás és rejtett funkciók, szervizműveletek, karbantartási ellenőrzések — OBDeleven és egyéb diagnosztikai eszközökkel."
+    },
+    "hero": {
+      "title": "Diagnosztika: kódolás, szerviz, karbantartás",
+      "lead": "A műhelyben diagnosztikai eszközökkel — köztük az OBDeleven-nel — végzünk kódolást, szervizműveleteket, hibafeltárást és karbantartási ellenőrzéseket. Az alábbi lista az eszközök hivatalos képességlistájáról készült — nem ígérünk többet, mint amit az eszközök tudnak."
+    },
+    "coding": {
+      "title": "Kódolás & rejtett funkciók",
+      "lead": "A gyári szoftverben rejlő, bekapcsolható funkciók elérése — One-Click Apps-szal vagy kézi kódolással.",
+      "items": [
+        "One-Click Apps — kész, ellenőrzött kódolási műveletek",
+        "Kézi kódolás (long coding) — egyedi beállítások",
+        "Adaptációk beállítása"
+      ]
+    },
+    "service": {
+      "title": "Szervizműveletek",
+      "lead": "A szervizbe kerülő autók mindennapi karbantartási műveletei, szoftveres rásegítéssel.",
+      "items": [
+        "Szervizintervallum-reset",
+        "Fékbetét-csere / EPB műveletek",
+        "Service Reset — VAG és BMW modellek"
+      ]
+    },
+    "diagnostics": {
+      "title": "Diagnosztika",
+      "lead": "OBD2-diagnosztika minden CAN-buszos autón, és haladó vezérolvasás a leggyakoribb márkáknál.",
+      "items": [
+        "OBD2-diagnosztika minden CAN-buszos autón",
+        "Haladó vezérolvasás: VAG",
+        "Haladó vezérolvasás: BMW/MINI, Toyota/Lexus",
+        "Haladó vezérolvasás: Ford US, Mercedes-Benz"
+      ]
+    },
+    "maintenance": {
+      "title": "Karbantartás",
+      "lead": "Állapotfelmérés és emlékeztetők: ami a rendszeres karbantartáshoz kell.",
+      "items": [
+        "Egészségriport",
+        "Karbantartási emlékeztető",
+        "Emisszió-készültség ellenőrzés",
+        "Hibrid akkumulátor-ellenőrzés"
+      ]
+    },
+    "disclaimer": {
+      "title": "Amire figyelünk",
+      "text": "Egyes kódolások (pl. Video in Motion) közúton szürke zónásak lehetnek. Az ilyen műveleteket az ÁSZF 6.2 szerint, zárt pályás, K+F vagy hobbi célra végezzük; a közúti használat jogszerűsége a Megrendelő felelőssége. Az oldal nem bátorít jogsértő használatra."
+    },
+    "cta": {
+      "title": "Kérdése van egy konkrét funkcióval kapcsolatban?",
+      "lead": "Egyeztessen időpontot, és megnézzük, mi az, ami az autóján valóban elvégezhető.",
+      "button": "Kérjen árajánlatot"
+    }
+  }
+}

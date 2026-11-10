@@ -1,0 +1,239 @@
+---
+// Szolgáltatás-részletoldalak — tartalom a pages.* l10n-csoportokból.
+// DPF/EGR és AdBlue oldalakon a zárt pályás záradék vörös táblán jelenik meg.
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Screws from '../../components/Screws.astro';
+import Icon, { type IconName } from '../../components/Icon.astro';
+import CtaPlate from '../../components/CtaPlate.astro';
+import { t, l10n } from '../../lib/l10n';
+import { services, type ServiceEntry } from '../../data/services';
+
+interface Feature {
+  icon: string;
+  title: string;
+  text: string;
+}
+interface PageContent {
+  meta: { title: string; description: string };
+  hero: { title_a: string; title_mark: string; subtitle: string };
+  intro?: { heading: string; paragraphs: string[] };
+  features?: Feature[];
+  guarantees?: { heading: string; items: string[] };
+  warning?: { heading: string; paragraphs: string[] };
+  note?: { heading: string; text: string };
+  cta: { heading: string; text: string; button: string };
+}
+
+// A getStaticPaths saját szkópban fut — a slug → pages.* leképezés itt él.
+export function getStaticPaths() {
+  const pageKeyBySlug: Record<string, string> = {
+    'chiptuning-stage-1': 'stage1',
+    'eco-tuning-fogyasztascsokkentes': 'eco',
+    'egr-dpf-szoftveres-megoldasok': 'dpfegr',
+    'adblue-szoftveres-javitas': 'adblue',
+    'vag-meleginditas-javitas': 'vag',
+    'bmw-audi-rejtett-funkciok-kodolas': 'coding',
+    'navigacio-terkep-frissites': 'nav',
+  };
+  return services.map((service: ServiceEntry) => ({
+    params: { slug: service.slug },
+    props: {
+      titleKey: service.titleKey,
+      pageKey: pageKeyBySlug[service.slug],
+    },
+  }));
+}
+
+const pagesBundle = (l10n as unknown as { pages: Record<string, PageContent> }).pages;
+
+interface Props {
+  titleKey: string;
+  pageKey: string;
+}
+
+const { pageKey } = Astro.props;
+const content = pagesBundle[pageKey];
+---
+
+<BaseLayout title={content.meta.title} description={content.meta.description}>
+  <header class="page-hero shell">
+    <a class="page-hero__back" href="/szolgaltatasok">← {t('services.back_link')}</a>
+    <h1>
+      {content.hero.title_a}{' '}
+      <span class="mark">{content.hero.title_mark}</span>
+    </h1>
+    <p class="page-hero__lead">{content.hero.subtitle}</p>
+  </header>
+
+  {
+    content.intro && (
+      <section class="section shell">
+        <div class="plate plate--cream intro-plate">
+          <Screws />
+          <h2>{content.intro.heading}</h2>
+          {content.intro.paragraphs.map((p) => (
+            <p>{p}</p>
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  {
+    content.features && (
+      <section class="section shell">
+        <div class="plate-grid">
+          {content.features.map((f) => (
+            <div class="plate plate--blue">
+              <Screws />
+              <Icon name={f.icon as IconName} size={30} />
+              <h2 class="feature__title">{f.title}</h2>
+              <p class="plate__fact">{f.text}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  {
+    content.guarantees && (
+      <section class="section shell">
+        <div class="plate plate--cream guarantees-plate">
+          <Screws />
+          <h2>{content.guarantees.heading}</h2>
+          <ul class="guarantees__list">
+            {content.guarantees.items.map((item) => (
+              <li>
+                <Icon name="check" size={22} />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+    )
+  }
+
+  {
+    content.warning && (
+      <section class="section shell">
+        <div class="plate plate--red warning-plate">
+          <Screws />
+          <Icon name="alert" size={32} />
+          <h2>{content.warning.heading}</h2>
+          {content.warning.paragraphs.map((p) => (
+            <p>{p}</p>
+          ))}
+          <p class="warning-plate__clause">{t('footer.disclaimer')}</p>
+        </div>
+      </section>
+    )
+  }
+
+  {
+    content.note && (
+      <section class="section shell">
+        <div class="plate plate--cream note-plate">
+          <Screws />
+          <Icon name="filter" size={30} />
+          <h2>{content.note.heading}</h2>
+          <p>{content.note.text}</p>
+          <p class="note-plate__clause">{t('footer.disclaimer')}</p>
+        </div>
+      </section>
+    )
+  }
+
+  <section class="section shell">
+    <CtaPlate heading={content.cta.heading} text={content.cta.text} button={content.cta.button} />
+  </section>
+</BaseLayout>
+
+<style>
+  .page-hero {
+    padding-block: clamp(26px, 4vw, 52px) 0;
+  }
+  .page-hero__back {
+    display: inline-block;
+    margin-bottom: 22px;
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 14px;
+    color: var(--parchment);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+  }
+  .page-hero__back:hover {
+    color: var(--brass);
+    border-bottom-color: var(--brass);
+  }
+  .mark {
+    color: var(--brass);
+  }
+  .page-hero__lead {
+    color: var(--parchment);
+    font-size: clamp(18px, 1.7vw, 22px);
+    max-width: 62ch;
+    margin-top: 18px;
+  }
+
+  .intro-plate p:last-child {
+    margin-bottom: 0;
+  }
+
+  .feature__title {
+    margin: 14px 0 0.35em;
+    font-size: clamp(19px, 1.8vw, 25px);
+  }
+  .plate--blue :global(.icon) {
+    color: var(--brass);
+  }
+
+  .guarantees__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  .guarantees__list li {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .guarantees__list :global(.icon) {
+    color: var(--oxblood);
+    margin-top: 3px;
+  }
+
+  .warning-plate :global(.icon) {
+    color: var(--brass);
+    margin-bottom: 12px;
+  }
+  .warning-plate p,
+  .note-plate p {
+    color: rgba(239, 234, 216, 0.88);
+    max-width: 72ch;
+  }
+  .note-plate p {
+    color: var(--cast-2);
+  }
+  .warning-plate__clause,
+  .note-plate__clause {
+    margin-top: 18px;
+    padding-top: 16px;
+    border-top: 2px solid rgba(239, 234, 216, 0.25);
+    font-size: 15px;
+  }
+  .note-plate__clause {
+    border-top-color: rgba(46, 42, 36, 0.2);
+    color: var(--cast-2) !important;
+  }
+  .note-plate :global(.icon) {
+    color: var(--oxblood);
+    margin-bottom: 12px;
+  }
+</style>

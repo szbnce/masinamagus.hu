@@ -21,7 +21,7 @@ Ilyenkor az ECU:
 
 ### Hol a bökkenő?
 
-A városi dugókban, 5 kilométeres utak során ez a folyamat sosem tud végbemenni. Az autó próbálkozik, megszakítod, próbálkozik, megszakítod... Az erdmény? Cseppenként a karterbe (a motorolajba) folyik a gázolaj. Az olaj felhígul, elveszti kenőképességét, és **a motor fizikailag tönkremegy**.
+A városi dugókban, 5 kilométeres utak során ez a folyamat sosem tud végbemenni. Az autó próbálkozik, megszakítja, próbálkozik, megszakítja... Az erdmény? Cseppenként a karterbe (a motorolajba) folyik a gázolaj. Az olaj felhígul, elveszti kenőképességét, és **a motor fizikailag tönkremegy**.
 
 ## Fizikai Eltávolítás vs. Szoftveres Kikapcsolás
 
@@ -56,6 +56,8 @@ A professzionális DPF kiiktatás során mi **kikapcsoljuk magát az algoritmust
 
 ## Összegzés
 
-Egy eltömődött DPF cseréje egy új, gyári alkatrészre ma 400.000-től akár 1.000.000 Forintig is terjedhet. Ha az autó versenycélokra vagy olyan országúti használatra lett áthelyezve, ahol a részecskeszűrő már nem követelmény, a szakszerű fizikai és szoftveres kiiktatás a legeredményesebb eljárás.
+Egy eltömődött DPF cseréje új, gyári alkatrészre ma súlyos százezrekbe, akár milliókba is kerülhet. Ha az autó kizárólag zárt pályás verseny-, K+F vagy hobbyfelhasználásra szolgál, ahol a részecskeszűrő nem követelmény, a szakszerű fizikai és szoftveres kiiktatás a legeredményesebb eljárás.
 
-Kérdésed van a saját autód DPF rendszerével kapcsolatban? Hozd el Kétbodonyba, és a gyári szintű diagnosztikánkkal pontosan megmondjuk a telítettség százalékos arányát.
+Kérdése van a saját autója DPF rendszerével kapcsolatban? Hozza el Kétbodonyba, és a gyári szintű diagnosztikánkkal pontosan megmondjuk a telítettség százalékos arányát.
+
+Kapcsolódó szolgáltatás: [DPF & EGR megoldások](/szolgaltatasok/egr-dpf-szoftveres-megoldasok) – szakszerű szoftveres beavatkozás, kizárólag zárt pályás felhasználásra.

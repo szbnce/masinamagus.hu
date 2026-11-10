@@ -1,0 +1,28 @@
+---
+/**
+ * „Masina‖mágus" wordmark — Zománc-öntvény változat (wm-zomanc, jóváhagyva 2026-11-09).
+ * Kevert kis- és nagybetűs forma, domborított öntött fém betűként;
+ * a ‖ dupla oszlop maratott fémválasztó (nem tipográfiai jel).
+ * Forrás-vázlat: .impeccable/mocks/decision/wm-zomanc.html
+ */
+interface Props {
+  size?: 'sm' | 'md' | 'xl';
+  /** Világos öntvény sötét (nem tábla) háttéren. */
+  light?: boolean;
+  class?: string;
+}
+
+const { size = 'md', light = false, class: className = '' } = Astro.props;
+---
+
+<span
+  class:list={[
+    'wordmark',
+    `wordmark--${size}`,
+    'wordmark--emboss',
+    light && 'wordmark--light',
+    className,
+  ]}
+>
+  <span>Masina</span><span class="wordmark__slot" aria-hidden="true"></span><span>mágus</span>
+</span>

@@ -8,13 +8,13 @@ author: "Szabó Bence"
 
 A chiptuning és az ECU (Engine Control Unit) szoftveres módosítása során az egyik legkritikusabb, ugyanakkor a laikus tunerek által leginkább figyelmen kívül hagyott tényező a **Checksum (Ellenőrzőösszeg)**.
 
-Ebben a cikkben mérnöki szemmel boncolgatjuk, mi is ez pontosan, és miért válik "téglává" (használhatatlan fémhalmazzá) a motorvezérlőd, ha a szoftverírás során hiba csúszik a gépezetbe.
+Ebben a cikkben mérnöki szemmel boncolgatjuk, mi is ez pontosan, és miért válik "téglává" (használhatatlan fémhalmazzá) a motorvezérlő, ha a szoftverírás során hiba csúszik a gépezetbe.
 
 ## Mi is az a Checksum?
 
 A Checksum egy egyszerű matematikai jelszó. Amikor a gyárban megírják a motorvezérlő szoftverét – ami lényegében több ezer sornyi Hexadecimális kódból áll –, a kód végére beillesztenek egy egyedi értéket. Ezt az értéket a teljes fájl tranzakciós összegéből számolják ki (például az összes adatbájt összeadásával).
 
-Amikor ráadod a gyújtást, a processzor lepörgeti a saját kódját, újra kiszámolja ezt az összeget, majd ellenőrzi: ***"Egyezik a kapott eredmény a fájl végén lévő, gyárilag betáplált számmal?"***
+Amikor ráadja a gyújtást, a processzor lepörgeti a saját kódját, újra kiszámolja ezt az összeget, majd ellenőrzi: ***"Egyezik a kapott eredmény a fájl végén lévő, gyárilag betáplált számmal?"***
 
 - **Ha IGEN:** A motor indul.
 - **Ha NEM:** Immobilizer letilt, Check Engine, az autó nem indul el. Ezt hívjuk "téglásításnak" (bricking).
@@ -38,7 +38,7 @@ Ha a tuner átírja a zölddel jelölt `[55]` (Hex) értéket mondjuk `[6A]`-ra 
 
 ## Hogyan csináljuk mi a Masinamágusnál?
 
-Mivel szoftverfejlesztői háttérrel rendelkezünk, mi nem vaktában "ütögetjük a billentyűzetet". Miután elkészítjük az egyedi optimalizált szoftvert (a te eredeti fájlod alapján), egy dedikált algoritmus segítségével **újraszámoljuk az összes érintett blokk ellenőrzőösszegét**.
+Mivel szoftverfejlesztői háttérrel rendelkezünk, mi nem vaktában "ütögetjük a billentyűzetet". Miután elkészítjük az egyedi optimalizált szoftvert (az Ön eredeti fájlja alapján), egy dedikált algoritmus segítségével **újraszámoljuk az összes érintett blokk ellenőrzőösszegét**.
 
 Pseudocode szinten így néz ki a validációs folyamatunk:
 
@@ -65,10 +65,12 @@ bool ValidateEcuFirmware(const std::vector<uint8_t>& firmwareMap) {
 }
 ```
 
-A fenti ellenőrző hurok gondoskodik róla, hogy az autód soha ne álljon meg letiltott motorvezérlővel egy frissítés után.
+A fenti ellenőrző hurok gondoskodik róla, hogy az autója soha ne álljon meg letiltott motorvezérlővel egy frissítés után.
 
 ## Konklúzió
 
 Az autó szoftveres optimalizálása (chiptuning) ma már színtiszta IT-szakterület. Ne bízza az autóját olyan "szakemberre", aki csak mechanikailag látja a járművet, de a szoftveres hátteret letöltött, ismeretlen eredetű (ne adj isten hibás checksummal rendelkező) fájlokkal próbálja megoldani.
 
 Válassza a mérnöki precizitást. Válassza a Masinamágust.
+
+Kapcsolódó szolgáltatás: [Stage 1 Chiptuning](/szolgaltatasok/chiptuning-stage-1) – ahol a checksum-számítás is a folyamat része.

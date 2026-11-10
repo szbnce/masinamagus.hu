@@ -1,0 +1,497 @@
+/*
+ * Zománctábla-műhely — globális design system
+ * Irány: .impeccable/surfaces/src-pages-index-astro.md (ZOMÁNCTÁBLA-MŰHELY)
+ * Anyag: olaj-fekete fal, zománctáblák (krém / zománckék / oxblood),
+ *        sarok-csavarok, domború öntvény-betűk, tabuláris számok.
+ */
+@import './fonts.css';
+
+:root {
+  /* Fal és zománcok */
+  --wall: #211e1a;
+  --wall-line: rgba(239, 234, 216, 0.03);
+  --cream: #efead8;
+  --oxblood: #7a1f1f;
+  --oxblood-deep: #5c1616;
+  --enamel-blue: #1e3a5f;
+  --brass: #e4b84a;
+
+  /* Szövegszínek */
+  --cast: #2e2a24; /* öntött betű krém táblán */
+  --cast-2: #4a4136; /* másodlagos krém táblán */
+  --parchment: #c9bfa4; /* másodlagos a falon */
+  --on-dark: #efead8;
+
+  /* Fém */
+  --screw-a: #c9c2ae;
+  --screw-b: #5a544a;
+
+  /* Tipográfia */
+  --font-display: 'Oswald', 'Arial Narrow', sans-serif;
+  --font-body: 'Barlow', 'Helvetica Neue', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* Rács */
+  --gutter: clamp(20px, 4vw, 48px);
+  --measure: 68ch;
+  --plate-radius: 16px;
+  --plate-border: 8px;
+
+  /* Mozgás */
+  --ease-settle: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ---------- Alap ---------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: clip;
+  overflow-wrap: break-word;
+  background-color: var(--wall);
+  background-image: repeating-linear-gradient(
+    115deg,
+    var(--wall-line) 0 2px,
+    transparent 2px 26px
+  );
+  color: var(--on-dark);
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Böngésző-felületek a világ anyagából */
+::selection {
+  background: var(--brass);
+  color: var(--wall);
+}
+
+:focus-visible {
+  outline: 3px solid var(--brass);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.plate :focus-visible {
+  outline-color: var(--oxblood);
+}
+
+input,
+textarea,
+select {
+  caret-color: var(--oxblood);
+  font: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+}
+::-webkit-scrollbar-track {
+  background: var(--wall);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--screw-b);
+  border: 3px solid var(--wall);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--parchment);
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+  text-transform: uppercase;
+  text-wrap: balance;
+  hyphens: auto;
+  margin: 0 0 0.5em;
+}
+
+h1 {
+  font-size: clamp(34px, 4.2vw, 54px);
+}
+h2 {
+  font-size: clamp(28px, 3.2vw, 42px);
+}
+h3 {
+  font-size: clamp(21px, 2vw, 28px);
+}
+
+p {
+  margin: 0 0 1em;
+  max-width: var(--measure);
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- Zománctábla ---------- */
+
+.plate {
+  position: relative;
+  border-radius: var(--plate-radius);
+  border: var(--plate-border) solid var(--cream);
+  padding: clamp(26px, 3vw, 38px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.45);
+  background: var(--enamel-blue);
+  color: var(--on-dark);
+}
+
+.plate::after {
+  /* zománcfény */
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: calc(var(--plate-radius) - var(--plate-border) + 2px);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0) 38%);
+  pointer-events: none;
+}
+
+.plate--cream {
+  background: var(--cream);
+  color: var(--cast);
+  border-color: var(--oxblood);
+}
+
+.plate--red {
+  background: var(--oxblood);
+  color: var(--on-dark);
+  border-color: var(--cream);
+}
+
+.plate--blue {
+  background: var(--enamel-blue);
+  color: var(--on-dark);
+  border-color: var(--cream);
+}
+
+/* Sarok-csavarok */
+.screw {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, var(--screw-a), var(--screw-b));
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.25s ease;
+  z-index: 1;
+}
+.screw--tl { top: 14px; left: 14px; }
+.screw--tr { top: 14px; right: 14px; }
+.screw--bl { bottom: 14px; left: 14px; }
+.screw--br { bottom: 14px; right: 14px; }
+
+/* Interaktív tábla: megemelkedik, a csavarok árnyékot vetnek */
+.plate--interactive {
+  transition: transform 0.25s var(--ease-settle), box-shadow 0.25s ease;
+}
+.plate--interactive:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 36px rgba(0, 0, 0, 0.55);
+}
+.plate--interactive:hover .screw {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
+}
+
+a.plate--interactive {
+  text-decoration: none;
+  display: block;
+}
+
+/* ---------- Wordmark: zománc-öntvény (wm-zomanc) ---------- */
+
+.wordmark {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  color: var(--cast);
+  text-transform: none;
+  white-space: nowrap;
+}
+
+.wordmark__slot {
+  display: inline-block;
+  width: 0.16em;
+  height: 0.78em;
+  margin: 0 0.12em;
+  vertical-align: -0.06em;
+  background: var(--oxblood);
+  border-radius: 0.05em;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.wordmark--emboss {
+  text-shadow:
+    0 2px 0 rgba(255, 255, 255, 0.35),
+    0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* sötét (kék/oxblood) táblán világos öntvény */
+.plate--blue .wordmark,
+.plate--red .wordmark,
+.wordmark--light {
+  color: var(--on-dark);
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.22),
+    0 -1px 0 rgba(0, 0, 0, 0.35);
+}
+.plate--blue .wordmark__slot,
+.plate--red .wordmark__slot,
+.wordmark--light .wordmark__slot {
+  background: var(--brass);
+}
+
+.wordmark--xl { font-size: clamp(44px, 5.6vw, 84px); }
+.wordmark--md { font-size: clamp(26px, 2.4vw, 34px); }
+.wordmark--sm { font-size: 22px; }
+
+/* ---------- Gombok, hivatkozások ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(17px, 1.5vw, 22px);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.2s var(--ease-settle), box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.btn--primary {
+  background: var(--cream);
+  color: var(--oxblood);
+  border: 6px solid var(--oxblood);
+  border-radius: 10px;
+  padding: 0.75em 1.2em;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.4);
+}
+.btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.5);
+}
+
+.btn--secondary {
+  color: var(--on-dark);
+  border-bottom: 3px solid var(--on-dark);
+  border-radius: 0;
+  padding: 0.35em 0.1em;
+}
+.btn--secondary:hover {
+  color: var(--brass);
+  border-bottom-color: var(--brass);
+}
+
+.btn--on-cream.btn--secondary {
+  color: var(--cast);
+  border-bottom-color: var(--cast);
+}
+.btn--on-cream.btn--secondary:hover {
+  color: var(--oxblood);
+  border-bottom-color: var(--oxblood);
+}
+
+/* ---------- Tábla-szövegek ---------- */
+
+.plate__title {
+  margin: 0 0 0.35em;
+}
+
+.plate__fact {
+  margin: 0;
+  font-size: clamp(16px, 1.4vw, 20px);
+  line-height: 1.35;
+  letter-spacing: 0.01em;
+}
+
+.plate__label {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+/* Fal-feliratok (nem táblán) */
+.wall-note {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--parchment);
+}
+
+/* ---------- Mozgásnyelv ---------- */
+
+/* A táblák súlyosan a falra ülnek: egyszeri, késleltetett blur→éles */
+@keyframes plate-settle {
+  from {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+.settle {
+  animation: plate-settle 0.9s var(--ease-settle) both;
+}
+.settle-1 { animation-delay: 0.05s; }
+.settle-2 { animation-delay: 0.18s; }
+.settle-3 { animation-delay: 0.31s; }
+.settle-4 { animation-delay: 0.44s; }
+.settle-5 { animation-delay: 0.57s; }
+
+/* A zománcfény egyszer áthalad a fő táblán */
+@keyframes sheen-sweep {
+  from {
+    transform: translateX(-120%) skewX(-18deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  to {
+    transform: translateX(220%) skewX(-18deg);
+    opacity: 0;
+  }
+}
+
+.sheen-sweep {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: calc(var(--plate-radius) - var(--plate-border) + 2px);
+  pointer-events: none;
+}
+.sheen-sweep::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  bottom: -20%;
+  left: 0;
+  width: 34%;
+  background: linear-gradient(
+    100deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.38) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: sheen-sweep 1.6s ease-in-out 0.7s 1 both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .settle,
+  .sheen-sweep::before {
+    animation: none;
+  }
+  .plate--interactive,
+  .btn {
+    transition: none;
+  }
+}
+
+/* ---------- Elrendezés ---------- */
+
+.shell {
+  width: min(1344px, 100% - 2 * var(--gutter));
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: clamp(56px, 8vw, 110px);
+}
+
+.section__head {
+  margin-bottom: clamp(28px, 4vw, 52px);
+}
+
+/* ---------- Táblák rácsa a szolgáltatásokhoz ---------- */
+
+.plate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: clamp(18px, 2.4vw, 30px);
+}
+
+/* ---------- Adat-tábla (árak, mérés) ---------- */
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+.data-table th,
+.data-table td {
+  text-align: left;
+  padding: 0.85em 1em;
+  border-bottom: 2px solid rgba(46, 42, 36, 0.18);
+}
+.data-table th {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.85em;
+}
+.data-table td.num,
+.data-table th.num {
+  font-family: var(--font-mono);
+  text-align: right;
+}

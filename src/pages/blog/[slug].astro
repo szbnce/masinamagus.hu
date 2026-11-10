@@ -1,0 +1,172 @@
+---
+// Blogcikk-oldalak — a markdown tartalom a src/content/blog/ alól.
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Screws from '../../components/Screws.astro';
+import Icon from '../../components/Icon.astro';
+import { t } from '../../lib/l10n';
+import blogData from '../../content/blogData.json';
+
+export function getStaticPaths() {
+  const posts = import.meta.glob('../../content/blog/*.md', { eager: true });
+  return Object.entries(posts).map(([path, mod]) => {
+    const slug = path.split('/').pop()!.replace(/\.md$/, '');
+    return {
+      params: { slug },
+      props: { mod, slug },
+    };
+  });
+}
+
+interface BlogPostMeta {
+  slug: string;
+  title: string;
+  description: string;
+  category: string;
+  tags: string[];
+  author: string;
+  readingTime: string;
+}
+
+const { mod, slug } = Astro.props as {
+  mod: { Content: any; frontmatter: Record<string, unknown> };
+  slug: string;
+};
+const meta = blogData.find((p) => p.slug === slug) as BlogPostMeta | undefined;
+const fm = mod.frontmatter as Partial<BlogPostMeta>;
+const title = meta?.title ?? fm.title ?? slug;
+const description = meta?.description ?? fm.description ?? '';
+const tags = meta?.tags ?? fm.tags ?? [];
+const author = meta?.author ?? fm.author ?? '';
+const readingTime = meta?.readingTime ?? '';
+const category = meta?.category ?? fm.category ?? '';
+const Content = mod.Content;
+---
+
+<BaseLayout title={`${title} | Masinamágus`} description={description}>
+  <article class="post shell">
+    <header class="post__head">
+      <a class="post__back" href="/blog">← {t('blog.back')}</a>
+      <h1>{title}</h1>
+      <p class="post__meta mono">
+        {[category, readingTime, author].filter(Boolean).join(' · ')}
+      </p>
+      {
+        tags.length > 0 && (
+          <ul class="post__tags">
+            {tags.map((tag: string) => (
+              <li class="mono">{tag}</li>
+            ))}
+          </ul>
+        )
+      }
+    </header>
+
+    <div class="plate plate--cream post__body">
+      <Screws />
+      <Content />
+    </div>
+
+    <aside class="post__cta plate plate--red">
+      <Screws />
+      <h2>{t('blog.cta.heading')}</h2>
+      <p>{t('blog.cta.text')}</p>
+      <a class="btn btn--primary" href="/kapcsolat">{t('blog.cta.button')}</a>
+    </aside>
+  </article>
+</BaseLayout>
+
+<style>
+  .post {
+    padding-block: clamp(26px, 4vw, 52px) clamp(56px, 8vw, 110px);
+    max-width: 920px;
+  }
+  .post__back {
+    display: inline-block;
+    margin-bottom: 22px;
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 14px;
+    color: var(--parchment);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+  }
+  .post__back:hover {
+    color: var(--brass);
+    border-bottom-color: var(--brass);
+  }
+  .post__meta {
+    color: var(--brass);
+    font-size: 14px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin: 14px 0 0;
+  }
+  .post__tags {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 16px 0 0;
+    padding: 0;
+  }
+  .post__tags li {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--parchment);
+    border: 2px solid rgba(201, 191, 164, 0.4);
+    border-radius: 100px;
+    padding: 4px 12px;
+  }
+  .post__body {
+    margin-top: clamp(24px, 3vw, 40px);
+  }
+  .post__body :global(h2) {
+    margin-top: 1.6em;
+    font-size: clamp(22px, 2.2vw, 30px);
+  }
+  .post__body :global(h3) {
+    margin-top: 1.4em;
+  }
+  .post__body :global(p),
+  .post__body :global(li) {
+    color: var(--cast-2);
+    max-width: 72ch;
+  }
+  .post__body :global(a) {
+    color: var(--oxblood);
+  }
+  .post__body :global(strong) {
+    color: var(--cast);
+  }
+  .post__body :global(code) {
+    font-family: var(--font-mono);
+    font-size: 0.92em;
+    background: rgba(46, 42, 36, 0.08);
+    padding: 0.15em 0.45em;
+    border-radius: 5px;
+  }
+  .post__body :global(blockquote) {
+    margin: 1.4em 0;
+    padding: 0.9em 1.1em;
+    background: rgba(46, 42, 36, 0.08);
+    border-radius: 8px;
+    color: var(--cast-2);
+    font-style: italic;
+  }
+  .post__body :global(img) {
+    border-radius: 10px;
+    margin-block: 1.2em;
+  }
+  .post__cta {
+    margin-top: clamp(24px, 3vw, 40px);
+    text-align: center;
+    padding-block: clamp(30px, 4vw, 48px);
+  }
+  .post__cta p {
+    color: rgba(239, 234, 216, 0.85);
+    margin-inline: auto;
+    max-width: 56ch;
+  }
+</style>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<title>Jelút-tábla — első képernyő</title>
+<style>
+  html,body{margin:0;padding:0}
+  body{width:1440px;height:900px;overflow:hidden;background:#0A0A0A;color:#FFB000;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+  .mono{font-family:ui-monospace,"SF Mono",Menlo,monospace;font-variant-numeric:tabular-nums}
+  .frame{position:absolute;inset:22px;border:1px solid #7A5200;display:grid;grid-template-columns:360px 1fr}
+  .left{border-right:1px solid #7A5200;padding:30px 26px;display:flex;flex-direction:column;gap:22px}
+  .wordmark{font-size:40px;font-weight:800;letter-spacing:.05em;font-stretch:condensed;color:#FFB000}
+  .sub{font-size:22px;letter-spacing:.22em;color:#C98A12}
+  h1{margin:0;font-size:64px;line-height:.98;font-weight:800;font-stretch:condensed}
+  .status{border:1px solid #7A5200;padding:14px 16px;font-size:22px;letter-spacing:.12em;color:#E8E6E0}
+  .status b{color:#FFB000;font-size:30px;display:block;margin-top:6px;letter-spacing:.06em}
+  .btn{background:#FFB000;color:#0A0A0A;font-size:28px;font-weight:800;letter-spacing:.12em;padding:18px 22px;text-align:center}
+  .right{padding:26px 30px;display:flex;flex-direction:column}
+  .lanehead{display:grid;grid-template-columns:70px 320px 1fr 150px 170px;font-size:22px;letter-spacing:.22em;color:#C98A12;border-bottom:1px solid #7A5200;padding-bottom:10px}
+  .lane{display:grid;grid-template-columns:70px 320px 1fr 150px 170px;align-items:center;height:64px;border-bottom:1px solid #3A2600;font-size:24px}
+  .lane .num{font-size:30px;font-weight:800}
+  .lane .item{letter-spacing:.08em;color:#E8E6E0}
+  .lane .state{font-size:22px;letter-spacing:.18em;text-align:center}
+  .chip{border:1px solid #FFB000;padding:4px 12px;display:inline-block;font-size:22px;letter-spacing:.16em}
+  .chip.out{border-color:#E8E6E0;color:#E8E6E0}
+  .def{border:1px solid #7A5200;padding:4px 12px;text-align:center;font-size:22px;letter-spacing:.14em;color:#E8E6E0}
+  .legend{margin-top:auto;display:flex;gap:28px;font-size:22px;letter-spacing:.14em;color:#C98A12;border-top:1px solid #7A5200;padding-top:16px}
+</style>
+</head>
+<body>
+  <div class="frame">
+    <div class="left">
+      <div>
+        <div class="wordmark">MASINA‖MÁGUS</div>
+        <div class="sub">JELÚT-TÁBLA · ECU</div>
+      </div>
+      <h1>EGY MEGSZAKADT JEL.<br>EGY JAVÍTOTT ÚT.</h1>
+      <div class="status">RENDSZERÁLLAPOT<b>7 SÁV · 1 AKTUÁLIS</b></div>
+      <div class="btn">ÁRAJÁNLATKÉRÉS →</div>
+      <div class="status" style="border:none;color:#C98A12;letter-spacing:.12em">KÉTBODONY · SZEMÉLYES MUNKA · IDŐPONT-EGYEZTETÉSSEL</div>
+    </div>
+    <div class="right">
+      <div class="lanehead"><div>SÁV</div><div>ELEM</div><div>JELÚT</div><div>ÁLLAPOT</div><div>ALAPÉRTÉK</div></div>
+
+      <div class="lane">
+        <div class="num">01</div><div class="item">CHIPTUNING STAGE 1</div>
+        <div><svg width="100%" height="20"><line x1="0" y1="10" x2="82%" y2="10" stroke="#FFB000" stroke-width="3"/><circle cx="86%" cy="10" r="7" fill="none" stroke="#FFB000" stroke-width="3"/></svg></div>
+        <div class="state"><span class="chip">NORMÁL</span></div><div class="def">MÉRT</div>
+      </div>
+      <div class="lane">
+        <div class="num">02</div><div class="item">ECO-TUNING</div>
+        <div><svg width="100%" height="20"><line x1="0" y1="10" x2="82%" y2="10" stroke="#FFB000" stroke-width="3"/><circle cx="86%" cy="10" r="7" fill="none" stroke="#FFB000" stroke-width="3"/></svg></div>
+        <div class="state"><span class="chip">NORMÁL</span></div><div class="def">MÉRT</div>
+      </div>
+      <div class="lane">
+        <div class="num">03</div><div class="item">EGR / DPF SZOFTVER</div>
+        <div><svg width="100%" height="20"><line x1="0" y1="10" x2="82%" y2="10" stroke="#FFB000" stroke-width="3"/><circle cx="86%" cy="10" r="7" fill="none" stroke="#FFB000" stroke-width="3"/></svg></div>
+        <div class="state"><span class="chip">NORMÁL</span></div><div class="def">ZÁRT PÁLYA</div>
+      </div>
+      <div class="lane" style="background:#120C00">
+        <div class="num">04</div><div class="item">ADBLUE JAVÍTÁS</div>
+        <div><svg width="100%" height="20"><line x1="0" y1="10" x2="38%" y2="10" stroke="#FFB000" stroke-width="3"/><line x1="52%" y1="10" x2="72%" y2="10" stroke="#FFB000" stroke-width="3"/><circle cx="82%" cy="10" r="9" fill="none" stroke="#E8E6E0" stroke-width="3"/><text x="44%" y="16" fill="#E8E6E0" font-size="16">//</text></svg></div>
+        <div class="state"><span class="chip out">KIMENET</span></div><div class="def">MEGSZAKADT</div>
+      </div>
+      <div class="lane">
+        <div class="num">05</div><div class="item">VAG MELEGINDÍTÁS</div>
+        <div><svg width="100%" height="20"><line x1="0" y1="10" x2="82%" y2="10" stroke="#FFB000" stroke-width="3"/><circle cx="86%" cy="10" r="7" fill="none" stroke="#FFB000" stroke-width="3"/></svg></div>
+        <div class="state"><span class="chip">NORMÁL</span></div><div class="def">MÉRT</div>
+      </div>
+      <div class="lane">
+        <div class="num">06</div><div class="item">REJTETT FUNKCIÓK</div>
+        <div><svg width="100%" height="20"><line x1="0" y1="10" x2="82%" y2="10" stroke="#FFB000" stroke-width="3"/><circle cx="86%" cy="10" r="7" fill="none" stroke="#FFB000" stroke-width="3"/></svg></div>
+        <div class="state"><span class="chip">NORMÁL</span></div><div class="def">KÓDOLÁS</div>
+      </div>
+      <div class="lane">
+        <div class="num">07</div><div class="item">NAVIGÁCIÓFRISSÍTÉS</div>
+        <div><svg width="100%" height="20"><line x1="0" y1="10" x2="82%" y2="10" stroke="#FFB000" stroke-width="3"/><circle cx="86%" cy="10" r="7" fill="none" stroke="#FFB000" stroke-width="3"/></svg></div>
+        <div class="state"><span class="chip">NORMÁL</span></div><div class="def">FRISSÍTÉS</div>
+      </div>
+
+      <div class="legend">
+        <div>— FOLYTONOS = ÉLŐ</div>
+        <div>// SZAKADT = HIBA</div>
+        <div>○ GYŰRŰ = MEGSZAKÍTVA</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

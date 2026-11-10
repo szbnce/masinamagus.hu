@@ -27,5 +27,35 @@
         "author": "Szabó Zsolt",
         "readingTime": "7 perc",
         "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80&w=1200"
+    },
+    {
+        "slug": "adblue-visszaszamlalo-mit-jelent",
+        "title": "AdBlue visszaszámláló: mit jelent, és mi a valódi megoldás?",
+        "description": "Miért kezd el visszaszámolni az AdBlue-rendszer, mi történik, ha lejár, és milyen sorrendben érdemes végigmenni a hibák feltárásán – mérnöki szemmel.",
+        "category": "Mágus Műhely",
+        "tags": [
+            "AdBlue",
+            "SCR",
+            "Hibakód",
+            "Diagnosztika"
+        ],
+        "author": "Szabó Bence",
+        "readingTime": "6 perc",
+        "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80&w=1200"
+    },
+    {
+        "slug": "chiptuning-vagy-tuningbox",
+        "title": "Chiptuning vagy tuningbox? – ne tévesszen meg a doboz",
+        "description": "Mi a különbség a tuningbox és a valódi ECU-szoftveres chiptuning között, melyik mit csinál a motorvezérlővel, és milyen kérdésekkel szűrje ki a silány megoldásokat.",
+        "category": "Tudástár",
+        "tags": [
+            "Chiptuning",
+            "Tuningbox",
+            "ECU",
+            "Összehasonlítás"
+        ],
+        "author": "Szabó Bence",
+        "readingTime": "6 perc",
+        "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200"
     }
 ]

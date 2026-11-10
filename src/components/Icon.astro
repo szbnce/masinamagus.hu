@@ -1,0 +1,73 @@
+---
+/**
+ * Szerkesztett SVG-ikonrendszer — azonos 24-es rács, 2-es vonalvastagság,
+ * lekerekített végek. Nincs unicode/emoji (craft floor).
+ */
+export type IconName =
+  | 'gauge'
+  | 'leaf'
+  | 'filter'
+  | 'alert'
+  | 'thermometer'
+  | 'code'
+  | 'map'
+  | 'cpu'
+  | 'database'
+  | 'activity'
+  | 'clock'
+  | 'phone'
+  | 'mail'
+  | 'pin'
+  | 'arrow-right'
+  | 'check';
+
+interface Props {
+  name: IconName;
+  size?: number;
+  class?: string;
+}
+
+const { name, size = 24, class: className = '' } = Astro.props;
+
+// Minden útvonal 24×24-es négyzetre rajzolva, stroke-alapú, azonos súllyal.
+const paths: Record<IconName, string[]> = {
+  gauge: ['M12 14l4-4', 'M5.6 18a9 9 0 1 1 12.8 0', 'M12 14a1.6 1.6 0 1 0 0-3.2 1.6 1.6 0 0 0 0 3.2z'],
+  leaf: ['M5 19c0-7 4-12 14-14 0 10-5 14-12 14', 'M5 19c3-4 6-6 9-7'],
+  filter: ['M4 5h16l-6 7v6l-4 2v-8z'],
+  alert: ['M12 4l9 16H3z', 'M12 10v4', 'M12 17.2h.01'],
+  thermometer: ['M12 14.8V5a2 2 0 1 1 4 0v9.8a4 4 0 1 1-4 0z', 'M14 15.5h.01'],
+  code: ['M8.5 8L5 12l3.5 4', 'M15.5 8L19 12l-3.5 4', 'M13 6l-2 12'],
+  map: ['M9 5L4 7v12l5-2 6 2 5-2V5l-5 2z', 'M9 5v12', 'M15 7v12'],
+  cpu: ['M8 8h8v8H8z', 'M10 4v4', 'M14 4v4', 'M10 16v4', 'M14 16v4', 'M4 10h4', 'M4 14h4', 'M16 10h4', 'M16 14h4'],
+  database: ['M12 3c4.4 0 8 1.3 8 3s-3.6 3-8 3-8-1.3-8-3 3.6-3 8-3z', 'M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6', 'M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3'],
+  activity: ['M3 12h4l3-7 4 14 3-7h4'],
+  clock: ['M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18z', 'M12 7v5l3.5 2'],
+  phone: ['M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a1.5 1.5 0 0 1-1.6 1.5C10.5 20 4 13.5 3.5 5.6A1.5 1.5 0 0 1 5 4z'],
+  mail: ['M3 6h18v12H3z', 'M3 7l9 6 9-6'],
+  pin: ['M12 21s7-6.3 7-12a7 7 0 1 0-14 0c0 5.7 7 12 7 12z', 'M12 11.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z'],
+  'arrow-right': ['M4 12h15', 'M13 6l6 6-6 6'],
+  check: ['M4 12.5l5 5L20 6.5'],
+};
+---
+
+<svg
+  class:list={['icon', className]}
+  width={size}
+  height={size}
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  aria-hidden="true"
+  focusable="false"
+>
+  {(paths[name] ?? paths.check).map((d) => <path d={d} />)}
+</svg>
+
+<style>
+  .icon {
+    flex: none;
+  }
+</style>

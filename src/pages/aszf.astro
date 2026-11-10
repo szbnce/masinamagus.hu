@@ -1,0 +1,70 @@
+---
+// ÁSZF — a hivatalos dokumentum szó szerint, markdown render.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Screws from '../components/Screws.astro';
+import { t } from '../lib/l10n';
+import AszfContent from '../content/official/ASZF.md';
+---
+
+<BaseLayout title={`${t('official.aszf_title')} | Masinamágus`} description={t('official.meta_description')}>
+  <article class="doc shell">
+    <header class="doc__head">
+      <a class="doc__back" href="/">{t('official.back')}</a>
+      <h1>{t('official.aszf_title')}</h1>
+    </header>
+    <div class="plate plate--cream doc__body">
+      <Screws />
+      <AszfContent />
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .doc {
+    padding-block: clamp(26px, 4vw, 52px) clamp(56px, 8vw, 110px);
+    max-width: 920px;
+  }
+  .doc__back {
+    display: inline-block;
+    margin-bottom: 22px;
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 14px;
+    color: var(--parchment);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+  }
+  .doc__back:hover {
+    color: var(--brass);
+    border-bottom-color: var(--brass);
+  }
+  .doc__body {
+    margin-top: clamp(20px, 3vw, 36px);
+  }
+  .doc__body :global(h1),
+  .doc__body :global(h2) {
+    margin-top: 1.6em;
+    font-size: clamp(21px, 2.1vw, 28px);
+  }
+  .doc__body :global(h3) {
+    margin-top: 1.4em;
+  }
+  .doc__body :global(p),
+  .doc__body :global(li) {
+    color: var(--cast-2);
+    max-width: 72ch;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+  .doc__body :global(a) {
+    color: var(--oxblood);
+  }
+  .doc__body :global(strong) {
+    color: var(--cast);
+  }
+  .doc__body :global(ol),
+  .doc__body :global(ul) {
+    padding-left: 1.3em;
+  }
+</style>

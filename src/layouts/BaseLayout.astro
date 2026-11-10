@@ -1,0 +1,573 @@
+---
+// Alap layout — Zománctábla-műhely (olaj-fekete fal, zománctáblák).
+// Minden UI-szöveg az l10n rétegből jön (AGENTS.md).
+import '../styles/global.css';
+import { t } from '../lib/l10n';
+import { nav } from '../data/nav';
+import { services } from '../data/services';
+import Wordmark from '../components/Wordmark.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
+const year = new Date().getFullYear();
+
+// Kanonikus alap-URL — a végleges domain (döntés: masinamagus.hu).
+const SITE = 'https://masinamagus.hu';
+const canonicalUrl = `${SITE}${currentPath === '/' ? '/' : currentPath}`;
+
+// schema.org AutoRepair — csak a valós adatok (nincs kitalált értékelés, nyitvatartás stb.)
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'AutoRepair',
+  name: t('site.name'),
+  url: SITE,
+  telephone: '+36-70-303-1020',
+  email: 'info@masinamagus.hu',
+  description: t('site.tagline'),
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Rákóczi út 36.',
+    addressLocality: 'Kétbodony',
+    postalCode: '2655',
+    addressCountry: 'HU',
+  },
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: t('footer.services_title'),
+    itemListElement: services.map((s) => ({
+      '@type': 'Offer',
+      itemOffered: {
+        '@type': 'Service',
+        name: t(s.titleKey),
+        url: `${SITE}/szolgaltatasok/${s.slug}`,
+      },
+    })),
+  },
+};
+---
+
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    {description !== undefined && <meta name="description" content={description} />}
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="hu_HU" />
+    <meta property="og:site_name" content={t('site.name')} />
+    <meta property="og:title" content={title} />
+    {description !== undefined && <meta property="og:description" content={description} />}
+    <meta property="og:url" content={canonicalUrl} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    {description !== undefined && <meta name="twitter:description" content={description} />}
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </head>
+  <body>
+    <a class="skip-link" href="#tartalom">{t('a11y.skipToContent')}</a>
+
+    <header class="site-head">
+      <div class="shell site-head__inner">
+        <a class="site-head__brand" href="/" aria-label={t('navbar.brand_home')}>
+          <Wordmark size="md" light />
+        </a>
+
+        <nav class="site-nav" aria-label={t('a11y.mainNav')}>
+          <ul class="site-nav__list">
+            {
+              nav.map((item) => (
+                <li>
+                  <a
+                    href={item.href}
+                    aria-current={
+                      (item.href === '/' ? '/' : item.href.replace(/\/$/, '')) === currentPath
+                        ? 'page'
+                        : undefined
+                    }
+                  >
+                    {t(item.labelKey)}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </nav>
+
+        <details class="nav-mobile">
+          <summary>
+            <span class="nav-mobile__bars" aria-hidden="true"></span>
+            {t('navbar.menu')}
+          </summary>
+          <ul class="nav-mobile__list">
+            {
+              nav.map((item) => (
+                <li>
+                  <a
+                    href={item.href}
+                    aria-current={
+                      (item.href === '/' ? '/' : item.href.replace(/\/$/, '')) === currentPath
+                        ? 'page'
+                        : undefined
+                    }
+                  >
+                    {t(item.labelKey)}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </details>
+
+        <p class="site-head__addr wall-note">{t('footer.location')}</p>
+      </div>
+    </header>
+
+    <main id="tartalom">
+      <slot />
+    </main>
+
+    <footer class="site-foot">
+      <div class="shell site-foot__grid">
+        <div class="site-foot__brand">
+          <Wordmark size="md" light />
+          <p class="site-foot__desc">{t('footer.brand_desc')}</p>
+        </div>
+
+        <nav aria-label={t('footer.links')}>
+          <h2 class="site-foot__h">{t('footer.links')}</h2>
+          <ul class="site-foot__list">
+            {
+              nav.map((item) => (
+                <li>
+                  <a href={item.href}>{t(item.labelKey)}</a>
+                </li>
+              ))
+            }
+          </ul>
+        </nav>
+
+        <nav aria-label={t('footer.services_title')}>
+          <h2 class="site-foot__h">{t('footer.services_title')}</h2>
+          <ul class="site-foot__list">
+            {
+              services.map((s) => (
+                <li>
+                  <a href={`/szolgaltatasok/${s.slug}`}>{t(s.titleKey)}</a>
+                </li>
+              ))
+            }
+          </ul>
+        </nav>
+
+        <div>
+          <h2 class="site-foot__h">{t('footer.contact')}</h2>
+          <ul class="site-foot__list">
+            <li>{t('footer.location')}</li>
+            <li>
+              <a class="mono" href="tel:+36703031020">{t('footer.phone')}</a>
+            </li>
+            <li>
+              <a href="mailto:info@masinamagus.hu">{t('footer.email')}</a>
+            </li>
+          </ul>
+          <p class="site-foot__legal-links">
+            <a href="/aszf">{t('footer.aszf')}</a>
+            <a href="/gdpr">{t('footer.gdpr')}</a>
+            <a href="/szakszotar">{t('footer.glossary')}</a>
+            <button class="cookie-reopen" type="button">{t('cookie.settings')}</button>
+          </p>
+        </div>
+      </div>
+
+      <div class="shell">
+        <p class="site-foot__disclaimer">{t('footer.disclaimer')}</p>
+        <p class="site-foot__copy mono">{t('footer.copyright')} · {year}</p>
+      </div>
+    </footer>
+
+    <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label={t('cookie.title')} hidden>
+      <div class="cookie-banner__inner">
+        <div class="cookie-banner__text">
+          <p class="cookie-banner__title">{t('cookie.title')}</p>
+          <p class="cookie-banner__body">
+            {t('cookie.text')}
+            <a href="/gdpr">{t('cookie.more')}</a>
+          </p>
+        </div>
+        <div class="cookie-banner__actions">
+          <button class="btn btn--primary cookie-banner__accept" type="button">
+            {t('cookie.accept')}
+          </button>
+          <button class="btn btn--secondary btn--on-cream cookie-banner__decline" type="button">
+            {t('cookie.decline')}
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Cookie-hozzájárulás + GA4 betöltés (csak hozzájárulás után).
+      // TODO(ga4): cseréld a valódi GA4 mérési azonosítóra (G-XXXXXXXXXX formátum).
+      const GA4_ID = 'G-XXXXXXXXXX';
+      const CONSENT_KEY = 'mm-cookie-consent';
+      const banner = document.getElementById('cookie-banner');
+
+      const loadGA = () => {
+        if (!GA4_ID || GA4_ID.includes('X')) return; // placeholder: nem tölt be
+        if (document.getElementById('ga4-loader')) return;
+        const s = document.createElement('script');
+        s.id = 'ga4-loader';
+        s.async = true;
+        s.src = `https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`;
+        document.head.appendChild(s);
+        const cfg = document.createElement('script');
+        cfg.textContent = `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA4_ID}',{anonymize_ip:true});`;
+        document.head.appendChild(cfg);
+      };
+
+      const stored = localStorage.getItem(CONSENT_KEY);
+      if (stored === 'all') {
+        loadGA();
+      } else if (stored !== 'necessary' && banner) {
+        banner.hidden = false;
+      }
+
+      const close = (value: string) => {
+        localStorage.setItem(CONSENT_KEY, value);
+        if (banner) banner.hidden = true;
+        if (value === 'all') loadGA();
+      };
+
+      document.querySelector('.cookie-banner__accept')?.addEventListener('click', () => close('all'));
+      document.querySelector('.cookie-banner__decline')?.addEventListener('click', () => close('necessary'));
+      document.querySelectorAll('.cookie-reopen').forEach((el) =>
+        el.addEventListener('click', () => {
+          if (banner) banner.hidden = false;
+        })
+      );
+    </script>
+  </body>
+</html>
+
+<style>
+  .skip-link {
+    position: absolute;
+    left: var(--gutter);
+    top: -60px;
+    z-index: 20;
+    background: var(--brass);
+    color: var(--wall);
+    padding: 0.6em 1em;
+    font-family: var(--font-display);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: top 0.2s ease;
+  }
+  .skip-link:focus {
+    top: 12px;
+  }
+
+  /* ---------- Fejléc ---------- */
+  .site-head {
+    position: relative;
+    z-index: 10;
+    padding-top: 22px;
+    padding-bottom: 14px;
+  }
+  .site-head__inner {
+    display: flex;
+    align-items: center;
+    gap: clamp(18px, 3vw, 42px);
+  }
+  .site-head__brand {
+    text-decoration: none;
+    flex: none;
+  }
+  .site-head__addr {
+    margin: 0 0 0 auto;
+    white-space: nowrap;
+  }
+
+  .site-nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(12px, 1.8vw, 26px);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .site-nav a {
+    font-family: var(--font-display);
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--parchment);
+    padding: 0.35em 0.15em;
+    border-bottom: 2px solid transparent;
+  }
+  .site-nav a:hover {
+    color: var(--on-dark);
+    border-bottom-color: var(--brass);
+  }
+  .site-nav a[aria-current='page'] {
+    color: var(--on-dark);
+    border-bottom-color: var(--oxblood);
+  }
+
+  /* Mobilmenü */
+  .nav-mobile {
+    display: none;
+    position: relative;
+    margin-left: auto;
+  }
+  .nav-mobile summary {
+    list-style: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-display);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--on-dark);
+    border: 2px solid var(--parchment);
+    border-radius: 8px;
+    padding: 0.55em 0.9em;
+  }
+  .nav-mobile summary::-webkit-details-marker {
+    display: none;
+  }
+  .nav-mobile__bars,
+  .nav-mobile__bars::before,
+  .nav-mobile__bars::after {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--brass);
+  }
+  .nav-mobile__bars {
+    position: relative;
+  }
+  .nav-mobile__bars::before,
+  .nav-mobile__bars::after {
+    content: '';
+    position: absolute;
+    left: 0;
+  }
+  .nav-mobile__bars::before {
+    top: -6px;
+  }
+  .nav-mobile__bars::after {
+    top: 6px;
+  }
+  .nav-mobile__list {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 10px);
+    min-width: 240px;
+    list-style: none;
+    margin: 0;
+    padding: 14px;
+    background: var(--cream);
+    color: var(--cast);
+    border: 6px solid var(--oxblood);
+    border-radius: 12px;
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.5);
+  }
+  .nav-mobile__list a {
+    display: block;
+    padding: 0.6em 0.5em;
+    font-family: var(--font-display);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: 2px solid rgba(46, 42, 36, 0.12);
+  }
+  .nav-mobile__list li:last-child a {
+    border-bottom: none;
+  }
+  .nav-mobile__list a[aria-current='page'] {
+    color: var(--oxblood);
+  }
+
+  @media (max-width: 1100px) {
+    .site-head__addr {
+      display: none;
+    }
+  }
+  @media (max-width: 900px) {
+    .site-nav {
+      display: none;
+    }
+    .nav-mobile {
+      display: block;
+    }
+  }
+
+  /* ---------- Lábléc ---------- */
+  .site-foot {
+    padding-block: clamp(44px, 6vw, 72px) 34px;
+    border-top: 2px solid rgba(201, 191, 164, 0.18);
+  }
+  .site-foot__grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1.2fr 1.1fr;
+    gap: clamp(24px, 3.5vw, 48px);
+  }
+  @media (max-width: 900px) {
+    .site-foot__grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media (max-width: 560px) {
+    .site-foot__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .site-foot__desc {
+    color: var(--parchment);
+    margin: 14px 0 0;
+  }
+  .site-foot__h {
+    font-size: 15px;
+    letter-spacing: 0.18em;
+    color: var(--brass);
+    margin: 0 0 14px;
+  }
+  .site-foot__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 8px;
+  }
+  .site-foot__list a {
+    color: var(--on-dark);
+    text-decoration-color: rgba(239, 234, 216, 0.35);
+  }
+  .site-foot__list a:hover {
+    color: var(--brass);
+    text-decoration-color: var(--brass);
+  }
+  .site-foot__legal-links {
+    margin-top: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .site-foot__legal-links a {
+    font-family: var(--font-display);
+    font-size: 14px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--parchment);
+  }
+  .site-foot__disclaimer {
+    /* kis oxblood zománcsáv — nem színes border-left (craft floor) */
+    margin: clamp(28px, 4vw, 44px) 0 18px;
+    padding: 18px 22px;
+    background: var(--oxblood-deep);
+    border: 3px solid var(--cream);
+    border-radius: 10px;
+    color: var(--on-dark);
+    font-size: 15px;
+    max-width: none;
+  }
+  .site-foot__copy {
+    margin: 0;
+    color: var(--parchment);
+    font-size: 13px;
+    letter-spacing: 0.12em;
+  }
+
+  /* ---------- Cookie-sáv ---------- */
+  .cookie-reopen {
+    font-family: var(--font-display);
+    font-size: 14px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--parchment);
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 0;
+    cursor: pointer;
+  }
+  .cookie-reopen:hover {
+    color: var(--brass);
+    border-bottom-color: var(--brass);
+  }
+
+  .cookie-banner {
+    position: fixed;
+    left: var(--gutter);
+    right: var(--gutter);
+    bottom: clamp(14px, 2.5vw, 26px);
+    z-index: 40;
+    max-width: 1080px;
+    margin-inline: auto;
+    background: var(--cream);
+    color: var(--cast);
+    border: 6px solid var(--oxblood);
+    border-radius: 12px;
+    box-shadow: 0 22px 44px rgba(0, 0, 0, 0.55);
+  }
+  .cookie-banner__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: clamp(14px, 2vw, 26px);
+    padding: clamp(16px, 2vw, 22px) clamp(18px, 2.4vw, 28px);
+  }
+  .cookie-banner__text {
+    flex: 1 1 320px;
+  }
+  .cookie-banner__title {
+    margin: 0 0 0.35em;
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 17px;
+    color: var(--cast);
+  }
+  .cookie-banner__body {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--cast-2);
+    max-width: none;
+  }
+  .cookie-banner__body a {
+    color: var(--oxblood);
+    white-space: nowrap;
+  }
+  .cookie-banner__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+  }
+  .cookie-banner .btn {
+    white-space: nowrap;
+  }
+  @media (max-width: 560px) {
+    .cookie-banner__actions {
+      width: 100%;
+    }
+    .cookie-banner__actions .btn {
+      flex: 1 1 auto;
+      justify-content: center;
+    }
+  }
+</style>

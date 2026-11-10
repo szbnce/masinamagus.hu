@@ -1,0 +1,61 @@
+{
+  "title": "Válaszd ki a vizuális világot",
+  "question": "Újratartás a safer regiszterben — nincs kijelölt lap, te választasz. A konvencionális vég felől három földi irány, teljes kártyán, őszinte kockázati sorral; plusz a kategória-sztenderd a nevesített versenytársakkal szemben. Melyik épüljön?",
+  "options": [
+    {
+      "id": "safer-gorbek",
+      "kind": "grounded",
+      "label": "Előtte-utána görbék",
+      "lineage": "teljesítménymérő-görbék milliméterpapíron",
+      "thesis": "A bizonyíték görbében van: minden munka előtte-utána vonalon, mért értékekkel — a szöveg helyett a diagram beszél.",
+      "palette": ["#F7F7F2", "#1C1C1A", "#8FB39A", "#C0392B"],
+      "materials": ["milliméterpapír", "két átfedő görbe", "mért érték-címkék", "tűhegyes tinta"],
+      "viewport": "Mérőpapíros első képernyő: balra a nagy előtte-utána diagram két görbével, jobbra a mért értékek táblája, alul a CTA.",
+      "risk": "A tuning-oldalak ezt a nyelvet ismerik legjobban — erős és ismerős, de pont ezért nehéz megkülönböztetni magunkat; a görbék valódi mérés nélkül üres díszré válnak.",
+      "html": ".impeccable/mocks/decision/safer-gorbek.html"
+    },
+    {
+      "id": "safer-szervizkonyv",
+      "kind": "grounded",
+      "label": "Szervizkönyv-bélyegzőrács",
+      "lineage": "hivatalos szervizkönyvek és bélyegőnyomatok",
+      "thesis": "Bizalom a bélyegzőrácsban: minden elvégzett munka bejegyzés, minden bejegyzés mögött dátum és mérés.",
+      "palette": ["#F2EFE6", "#23211C", "#3B4E77", "#9B2D2D"],
+      "materials": ["szervizkönyv-papír", "gumi bélyegzőnyomat", "kézírásos bejegyzés", "kötésgerinc"],
+      "viewport": "Nyitott szervizkönyv-spread: bal oldal bélyegzőrács a szolgáltatásokkal, jobb oldalon az utolsó bejegyzés nagyban, alul a bejelentkezés.",
+      "risk": "A bélyegző-közhely könnyen dísz lesz; ha nincs mögötte valódi bejegyzés-rendszer, csak papír-imitáció.",
+      "html": ".impeccable/mocks/decision/safer-szervizkonyv.html"
+    },
+    {
+      "id": "safer-zomanc",
+      "kind": "grounded",
+      "label": "Zománctábla-műhely",
+      "lineage": "műhely-fali zománctáblák és olajtégely-címkék",
+      "thesis": "A műhely táblája: a szolgáltatások zománcként kiírt tények, a telefonszám nagyobb, mint a szlogen.",
+      "palette": ["#EFEAD8", "#211E1A", "#7A1F1F", "#1E3A5F"],
+      "materials": ["zománcmező", "fém dombornyomás", "patinás festék", "csavaros rögzítés"],
+      "viewport": "Műhelyfal: nagy zománctábla a cégnévvel és a telefonszámmal, mellette kisebb táblák szolgáltatásonként, alul a CTA mint fém tábla.",
+      "risk": "A retró-zománc hangulatdísz lehet, és a patina könnyen koszosnak hat; a szöveg olvashatósága a festék felett dől el.",
+      "html": ".impeccable/mocks/decision/safer-zomanc.html"
+    }
+  ],
+  "reroll": {
+    "registers": ["safer", "bolder"]
+  },
+  "buildPath": {
+    "value": "code",
+    "toggle": false
+  },
+  "canon": true,
+  "canonCard": {
+    "kind": "canon",
+    "label": "A kategória sztenderd",
+    "thesis": "Amit a hazai piac szállít, teljes kidolgozással: tiszta rács, világos ajánlat, kék gomb — pontosan az a mező, amit az MMC AutoChip (autochip.hu + chiptuning.hu + motoroptimalizalas.hu), a tuningbox.hu és a DPF Centrum elfoglal.",
+    "palette": ["#FFFFFF", "#111827", "#2563EB"],
+    "materials": ["tiszta rács", "kék kiemelés", "szolgáltatás-kártyák"],
+    "viewport": "A látogató által várt elrendezés úgy, ahogy a nevesített szereplők csinálják: fejléc, középre zárt cím, kék CTA, kártyák — a láblécben a piac nevesített mezője.",
+    "risk": "Tervezés szerint megkülönböztethetetlen a nevesített versenytársaktól — ez az ajtó, nem ajánlás.",
+    "html": ".impeccable/mocks/decision/safer-canon.html"
+  },
+  "steer": true
+}

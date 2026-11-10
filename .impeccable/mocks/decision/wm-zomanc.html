@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<title>Wordmark — zománc-öntvény</title>
+<style>
+  html,body{margin:0;padding:0}
+  body{width:1440px;height:900px;overflow:hidden;position:relative;background:#211E1A;color:#EFEAD8;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+  .wall{position:absolute;inset:0;background-image:repeating-linear-gradient(115deg,rgba(239,234,216,.03) 0 2px,transparent 2px 26px)}
+  .mono{font-family:ui-monospace,"SF Mono",Menlo,monospace;font-variant-numeric:tabular-nums}
+  header{position:relative;display:flex;align-items:center;justify-content:space-between;padding:26px 48px 0}
+  .note{font-size:22px;letter-spacing:.22em;color:#C9BFA4}
+  .plate{position:relative;border-radius:16px;box-shadow:0 14px 28px rgba(0,0,0,.45)}
+  .plate.cream{background:#EFEAD8;color:#211E1A;border:8px solid #7A1F1F}
+  .plate.blue{background:#1E3A5F;color:#EFEAD8;border:8px solid #EFEAD8}
+  .plate.red{background:#7A1F1F;color:#EFEAD8;border:8px solid #EFEAD8}
+  .screw{position:absolute;width:14px;height:14px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#C9C2AE,#5A544A)}
+  .sheen{position:absolute;inset:0;border-radius:8px;background:linear-gradient(160deg,rgba(255,255,255,.20),rgba(255,255,255,0) 38%);pointer-events:none}
+  .hero{position:absolute;left:48px;top:112px;width:1344px;height:380px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+  .cast{font-size:110px;font-weight:800;letter-spacing:.01em;line-height:1;color:#2E2A24;
+    text-shadow:0 2px 0 rgba(255,255,255,.35),0 -1px 0 rgba(0,0,0,.25);}
+  .slot{display:inline-block;width:18px;height:86px;background:#7A1F1F;border-radius:4px;vertical-align:-14px;margin:0 12px;box-shadow:inset 0 2px 4px rgba(0,0,0,.5)}
+  .cap{margin-top:22px;font-size:24px;letter-spacing:.18em;color:#4A4136}
+  .row{position:absolute;left:48px;top:536px;width:1344px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:26px}
+  .cell{height:210px;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;padding:20px}
+  .cell .lbl{position:absolute;left:20px;top:16px;font-size:22px;letter-spacing:.16em}
+  .cast-sm{font-size:36px;font-weight:800;color:#2E2A24;text-shadow:0 1px 0 rgba(255,255,255,.3),0 -1px 0 rgba(0,0,0,.25)}
+  .plate.blue .cast-sm,.plate.red .cast-sm{color:#EFEAD8;text-shadow:0 1px 0 rgba(255,255,255,.22),0 -1px 0 rgba(0,0,0,.35)}
+  .plate.blue .slot-sm,.plate.red .slot-sm{background:#E4B84A}
+  .slot-sm{display:inline-block;width:8px;height:32px;background:#7A1F1F;border-radius:2px;vertical-align:-5px;margin:0 5px}
+  .foot{position:absolute;left:48px;bottom:52px;font-size:23px;color:#C9BFA4;letter-spacing:.12em}
+  .cta{position:absolute;right:48px;bottom:52px;display:flex;align-items:center;gap:30px}
+  .cta a{text-decoration:none;color:#EFEAD8}
+  .cta .sec{font-size:25px;letter-spacing:.12em;border-bottom:3px solid #EFEAD8;padding-bottom:4px}
+  .cta .pri{background:#EFEAD8;color:#7A1F1F;border:6px solid #7A1F1F;font-size:29px;font-weight:800;letter-spacing:.12em;padding:16px 28px}
+</style>
+</head>
+<body>
+  <div class="wall"></div>
+  <header>
+    <div class="note mono">WORDMARK-VÁLTOZAT 3 · ZOMÁNC-ÖNTVÉNY</div>
+    <div class="note mono">MASINA‖MÁGUS · KÉTBODONY</div>
+  </header>
+
+  <div class="hero plate cream">
+    <div class="screw" style="left:18px;top:18px"></div>
+    <div class="screw" style="right:18px;top:18px"></div>
+    <div class="screw" style="left:18px;bottom:18px"></div>
+    <div class="screw" style="right:18px;bottom:18px"></div>
+    <div class="sheen"></div>
+    <div class="cast">Masina<span class="slot"></span>mágus</div>
+    <div class="cap mono">EGYEDI ECU-KALIBRÁCIÓ — MÉRTEN.</div>
+  </div>
+
+  <div class="row">
+    <div class="cell plate blue">
+      <div class="lbl mono">KICSI ÖNTVÉNY · 36 PX</div>
+      <div class="cast-sm">Masina<span class="slot-sm"></span>mágus</div>
+    </div>
+    <div class="cell plate red">
+      <div class="lbl mono">OLAJTÉGELY-CÍMKE</div>
+      <div class="cast-sm" style="font-size:30px">Masina<span class="slot-sm"></span>mágus</div>
+    </div>
+    <div class="cell plate cream">
+      <div class="lbl mono" style="color:#4A4136">IRÁNYÍTÓ TÁBLA</div>
+      <div class="cast-sm" style="font-size:28px">Masina<span class="slot-sm"></span>mágus · +36 70 303 1020</div>
+    </div>
+  </div>
+
+  <div class="foot mono">WORDMARK-VÁZLAT · TIPOGRÁFIAI JAVASLAT JÓVÁHAGYÁSRA</div>
+  <div class="cta">
+    <a class="sec" href="#">MÁS VÁLTOZAT →</a>
+    <a class="pri" href="#">EZT VÁLASZTOM</a>
+  </div>
+</body>
+</html>

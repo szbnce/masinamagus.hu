@@ -1,0 +1,50 @@
+{
+  "title": "Válaszd ki a wordmarkot",
+  "question": "A »Masina‖mágus« szétválasztás kötött márkakötelezettség — itt a tipográfiai megoldás dől el. Három változat a kiválasztott zománctábla-világban. Melyik épüljön?",
+  "options": [
+    {
+      "id": "wm-egysoros",
+      "kind": "grounded",
+      "label": "Egy soros jelzőtábla",
+      "lineage": "műhely-fali feliratok, tömör verzál",
+      "thesis": "MASINA‖MÁGUS egy sorban, kondenzált verzállal; a ‖ az egyetlen színes elem — ugyanaz a gesztus, mint a zománctáblák peremén.",
+      "palette": ["#EFEAD8", "#211E1A", "#7A1F1F", "#1E3A5F"],
+      "materials": ["zománcmező", "kondenzált verzál", "oxblood ‖", "soros irány"],
+      "viewport": "Nagy krém zománctábla a fallal: MASINA‖MÁGUS egy sorban, alatta kicsi alkalmazások — kék és oxblood táblán fejjel lefelé, szűk helyen kicsiben.",
+      "risk": "A kondenzált grotesque rendszerszerűen áll a helyén: a végleges építéshez önálló, self-hostolt betűt kell választani és a ‖ arányait betűmérethez kötni.",
+      "html": ".impeccable/mocks/decision/wm-egysoros.html"
+    },
+    {
+      "id": "wm-tengelyes",
+      "kind": "grounded",
+      "label": "Tengelyes felosztás",
+      "lineage": "kétirányú tábla-rendszerek, középtengely",
+      "thesis": "MASINA a ‖ tengely felett, MÁGUS alatta; a dupla oszlop a név kettősségét tartja — a mérés és a kalibráció tengelye.",
+      "palette": ["#EFEAD8", "#211E1A", "#7A1F1F", "#1E3A5F"],
+      "materials": ["zománcmező", "függőleges tengely", "kétsoros verzál", "csavaros rögzítés"],
+      "viewport": "Nagy krém zománctábla: MASINA fent, piros ‖ tengely középen, MÁGUS lent; mellette kicsi vízszintes változat és egy fejjel lefelé alkalmazás.",
+      "risk": "A kétsoros forma több helyet kér, és kicsiben (fejléc, favicon) a tengely elvékonyodik; külön kis méretű variáns kell hozzá.",
+      "html": ".impeccable/mocks/decision/wm-tengelyes.html"
+    },
+    {
+      "id": "wm-zomanc",
+      "kind": "grounded",
+      "label": "Zománc-öntvény",
+      "lineage": "öntött és dombornyomott műhely-táblák",
+      "thesis": "Masina‖mágus kevert kis- és nagybetűvel, domborított öntvényként a táblában; a ‖ maratott fémválasztó — a név maga a tárgy.",
+      "palette": ["#EFEAD8", "#211E1A", "#7A1F1F", "#1E3A5F"],
+      "materials": ["öntött fém betű", "domború perem", "maratott választó", "patina"],
+      "viewport": "Nagy krém zománctábla, domborított betűkkel: Masina‖mágus; alatta kicsi öntött címke-változat és egy olajtégely-címke alkalmazás.",
+      "risk": "A domborítás a weben csak imitáció: ha túl sok a fény és árnyék, a betű olvashatósága romlik; a határt a kontraszt szabja.",
+      "html": ".impeccable/mocks/decision/wm-zomanc.html"
+    }
+  ],
+  "reroll": {
+    "registers": ["safer", "bolder"]
+  },
+  "buildPath": {
+    "value": "code",
+    "toggle": false
+  },
+  "steer": true
+}

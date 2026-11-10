@@ -1,0 +1,6 @@
+# Masinamágus — robots.txt
+# Éles verzió: az indexelés engedélyezve (cutover: 2026-11-10).
+User-agent: *
+Allow: /
+
+Sitemap: https://masinamagus.hu/sitemap.xml

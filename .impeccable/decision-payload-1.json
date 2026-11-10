@@ -1,0 +1,146 @@
+{
+  "title": "Válaszd ki a vizuális világot",
+  "question": "A dobás a rally-itinert jelölte ki. Marad ez, jön egy alternatíva, vagy újratartás?",
+  "options": [
+    {
+      "id": "assigned",
+      "kind": "assigned",
+      "label": "Rally-itiner",
+      "kicker": "THE ROLL",
+      "lineage": "verseny-itinerek és pacenote-jelölés",
+      "thesis": "A munka útvonal: a tünettől a mért eredményig minden szakasz egy itiner-sor, egy megszakítatlan vonalon — nem ígéret, hanem bejárt út.",
+      "palette": ["#F4F3EF", "#141412", "#C8102E", "#77756E"],
+      "materials": ["itiner-papír", "fekete nyomás", "piros korrekciós toll", "tulip-diagramok"],
+      "viewport": "Teljes szélességű itiner-lap: a »Masina‖mágus« fejléc, alatta a munkafolyamat mint négy megállós útvonal (beolvasás → mentés → írás → mérés), az aktív szakasz pirossal, a cél-bélyeg az árajánlatkérés.",
+      "risk": "A motorsport-íz tuning-oldalként olvasható, ha a mérnöki komolyság nem ül mellé; a tulip-jelölés hozzá kíván egy rövid legendát. A pályasport-hangulat sosem sértheti az ÁSZF zárt pályás kikötését.",
+      "raised": [
+        {
+          "from": "challenger-daylight",
+          "raise": "Minden mért érték a maga helyére szegezve, tabuláris számmal — sosem összefoglalóban (donor: napnyaláb-metszet)."
+        },
+        {
+          "from": "challenger-kit",
+          "raise": "A jelvények tényeket kódolnak — mérés, archiválás —, dísz-jelvény nincs (donor: mezfal)."
+        },
+        {
+          "from": "challenger-civic",
+          "raise": "Színkeret: szinte minden szín az egyetlen élő elemen ég, a lap többi része nyugodt (donor: hivatali prospectus)."
+        }
+      ],
+      "html": ".impeccable/mocks/decision/assigned.html"
+    },
+    {
+      "id": "model-pick",
+      "kind": "pick",
+      "label": "Műszaki vizsga–jegyzőkönyv",
+      "kicker": "IMPECCABLE'S PICK",
+      "lineage": "hivatalos műszaki vizsgaellenőrzőlapok",
+      "thesis": "A mérés hivatalos papírja: minden szolgáltatás ellenőrzőpont, minden eredmény bejegyzés.",
+      "palette": ["#E9EAE4", "#22231F", "#2B4C7E", "#8C2F2F"],
+      "materials": ["formapapír", "bélyegzőnyomat", "ellenőrző-mátrix", "kézi bejegyzés"],
+      "viewport": "Hivatalos ellenőrzőlap: fejléc-sorszámok és dátumdobozok, alatta a szolgáltatások OK-mátrixa, legalul a bejelentkezési blokk.",
+      "risk": "Ismerős terep: sok szervizoldal a bizalom-papírok felé nyúl. Itt a mérés eredeti formája, nem dísz — de ha túl hivatalosra húzzuk, száraz lehet.",
+      "html": ".impeccable/mocks/decision/model-pick.html"
+    },
+    {
+      "id": "challenger-glazier",
+      "kind": "challenger",
+      "catalogId": "craft-making-glazier-colorfield-partition",
+      "label": "Üvegfal-rács",
+      "verdict": "competitive",
+      "lineage": "üvegesműhely színes üvegfala",
+      "thesis": "Egy tábla, egy állítás: a szolgáltatások súlyukkal és színükkel rendezett üvegfal.",
+      "palette": ["#EDEBE6", "#16150F", "#1E4FCB", "#D99A27", "#7A2B2B"],
+      "materials": ["kézzel hengerelt üveg", "fekete glett-rács", "színes üvegmezők"],
+      "viewport": "Üvegfal-előnézet: bal oldali üvegtábla-navigáció, középen nagy tábla az állítással, egy kobalt tábla megvilágítva.",
+      "risk": "Galéria-érzet: az üvegfal távol áll a műhely valóságától, és fotóköré épül — amiből nekünk nincs.",
+      "case": "Tisztán illeszkedik: szolgáltatásonként egy üvegtábla, egy állítás; az azonosításban veszít az itinerrel szemben.",
+      "hero": "https://impeccable.style/worlds/cards/craft-making-glazier-colorfield-partition-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/craft-making-glazier-colorfield-partition.webp",
+      "html": ".impeccable/mocks/decision/challenger-glazier.html"
+    },
+    {
+      "id": "challenger-jackfield",
+      "kind": "challenger",
+      "catalogId": "operate-b-normalled-jackfield",
+      "label": "Jelút-tábla",
+      "verdict": "competitive",
+      "lineage": "gépterem jackfield-bekötési rendje",
+      "thesis": "Minden hiba egy megszakadt jelút: a lap megmutatja, hol szakad meg a normál, és mi köti újra.",
+      "palette": ["#0A0A0A", "#FFB000", "#7A5200", "#E8E6E0"],
+      "materials": ["fekete üveg", "borostyán jel-vonalak", "sáv-sorszámok", "szitanyomás"],
+      "viewport": "Sávos jelút-tábla: 01–48 sorszámú sorok, mindegyik alapértékéhez kötött vonallal, egy megszakadt jel útja a hiba.",
+      "risk": "Gépterem-jelmez: a fekete üveg + borostyán az autótulajdonosnak idegenül hathat, és a műszerfal-íz elfedheti az ajánlatot.",
+      "case": "A hibajelút-metafora a legfegyelmezettebb diagnózis-nyelv (állapot = vonal, nem szín); az azonosítás gyengébb.",
+      "hero": "https://impeccable.style/worlds/cards/operate-b-normalled-jackfield-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/operate-b-normalled-jackfield.webp",
+      "html": ".impeccable/mocks/decision/challenger-jackfield.html"
+    },
+    {
+      "id": "challenger-daylight",
+      "kind": "challenger",
+      "catalogId": "architecture-inhabitable-space-daylight-section",
+      "label": "Napnyaláb-metszet",
+      "verdict": "declined",
+      "lineage": "építészeti napfény-metszetek",
+      "thesis": "A tér metszetben, a fény útja szerint olvasva — minden érték a saját pontjára szegezve.",
+      "palette": ["#EFEDE4", "#2B2B28", "#C9962B", "#5B6B8C"],
+      "materials": ["meszelt fal", "metszet-poche", "arany fényút", "tabuláris időbélyeg"],
+      "viewport": "Egy hosszú, folytonos metszet: a napnyaláb arany sávja végigmegy a falon, a mért értékek szegezve.",
+      "risk": "Az építészeti nyelv távol áll az autótulajdonostól, és a nap-út semmilyen ECU-igazságot nem hordoz.",
+      "case": "Gyengén olvad be: a napnyaláb-metafora nem hordoz ECU-tartalmat.",
+      "kept": "Minden mért érték a maga helyére szegezve, tabuláris számmal — sosem összefoglalóban.",
+      "hero": "https://impeccable.style/worlds/cards/architecture-inhabitable-space-daylight-section-hero.webp"
+    },
+    {
+      "id": "challenger-kit",
+      "kind": "challenger",
+      "catalogId": "pop-culture-shelf-football-kit-crest",
+      "label": "Mezfal",
+      "verdict": "declined",
+      "lineage": "futballmez-címerek és hátsó számok",
+      "thesis": "Identitás jelvényekben és számokban: aki itt megjelenik, az azonosítható.",
+      "palette": ["#101318", "#E8D9A8", "#C22B2B", "#2B4C8C"],
+      "materials": ["polyester szövet", "arany hímzés", "árnyékos számok"],
+      "viewport": "Mezek fala: címer a szív felett, nagy árnyékos szám a háton, név ívelt verzállal.",
+      "risk": "A futball-kultúra jelmezzé válik az ECU mellett; az otthon/idegen színlogika erőltetett.",
+      "case": "Jelmezes: a mezfal-kód nem hordoz ECU-tartalmat.",
+      "kept": "A jelvények tényeket kódolnak — mérés, archiválás —, dísz-jelvény nincs.",
+      "hero": "https://impeccable.style/worlds/cards/pop-culture-shelf-football-kit-crest-hero.webp"
+    },
+    {
+      "id": "challenger-civic",
+      "kind": "challenger",
+      "catalogId": "civic-bureau-prospectus-late-modern",
+      "label": "Hivatali prospectus",
+      "verdict": "declined",
+      "lineage": "késő modern hivatali tájékoztatók",
+      "thesis": "Majdnem minden üres csontfehér; a szín egyetlen szalagon és egy gombon ég.",
+      "palette": ["#F7F7FA", "#1B1547", "#6B5CE7", "#7FD8D0"],
+      "materials": ["csontfehér lemez", "selyemszalag", "lakkpad"],
+      "viewport": "88 px-es cím balra, a szalag jobbra kifut, hat pecsét szürkén a hajtás alatt.",
+      "risk": "A hivatali hidegség távol tart, és a szalag könnyen dísz marad — a kategória sablonja közelében.",
+      "case": "Veszít mindkét tengelyen: a hivatal-hidegség távol tart, és semmi ECU-specifikusat nem mond.",
+      "kept": "Színkeret: szinte minden szín az egyetlen élő elemen ég, a lap többi része nyugodt.",
+      "hero": "https://impeccable.style/worlds/cards/civic-bureau-prospectus-late-modern-hero.webp"
+    }
+  ],
+  "reroll": {
+    "registers": ["safer", "bolder"]
+  },
+  "buildPath": {
+    "value": "code",
+    "toggle": false
+  },
+  "canon": true,
+  "canonCard": {
+    "kind": "canon",
+    "label": "A kategória sztenderd",
+    "thesis": "Amit ez a kategória szállít, teljes kidolgozással: tiszta rács, világos ajánlat, kék gomb.",
+    "palette": ["#FFFFFF", "#111827", "#2563EB"],
+    "materials": ["tiszta rács", "kék kiemelés", "szolgáltatás-kártyák"],
+    "viewport": "A látogató által várt elrendezés: fejléc, középre zárt cím, kék CTA, alatta egyenlő kártyák.",
+    "risk": "Tervezés szerint megkülönböztethetetlen a versenytársaktól — ez az ajtó, nem ajánlás."
+  },
+  "steer": true
+}

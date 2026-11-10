@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<title>Üvegfal-rács — első képernyő</title>
+<style>
+  html,body{margin:0;padding:0}
+  body{width:1440px;height:900px;overflow:hidden;background:#16150F;color:#16150F;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+  .wall{display:grid;grid-template-columns:300px 8px 620px 8px 496px;grid-template-rows:120px 8px 300px 8px 200px 8px 248px;height:900px}
+  .pane{background:#EDEBE6;padding:26px 28px;overflow:hidden}
+  .cobalt{background:#1E4FCB;color:#F4F2ED}
+  .amber{background:#D99A27}
+  .oxblood{background:#7A2B2B;color:#F4F2ED}
+  .bar{background:#16150F}
+  .wordmark{font-size:38px;font-weight:800;letter-spacing:.05em;font-stretch:condensed;line-height:1.05}
+  .nav-item{border-bottom:3px solid #16150F;padding:14px 4px;font-size:24px;letter-spacing:.12em}
+  .nav-item.on{background:#1E4FCB;color:#F4F2ED;border-bottom-color:#1E4FCB;padding-left:12px}
+  h1{margin:0;font-size:88px;line-height:.95;font-weight:800;font-stretch:condensed;letter-spacing:-.01em}
+  .sub{margin:16px 0 0;font-size:26px;line-height:1.3}
+  .mini{display:flex;flex-direction:column;justify-content:space-between}
+  .mini .k{font-size:22px;letter-spacing:.16em}
+  .mini .t{font-size:32px;font-weight:800;font-stretch:condensed;margin-top:8px}
+  .btnpane{display:flex;align-items:center;justify-content:space-between}
+  .btn{border:4px solid #16150F;padding:16px 26px;font-size:28px;font-weight:800;letter-spacing:.12em}
+  .svc{font-size:26px;font-weight:700;letter-spacing:.08em;margin-top:10px}
+</style>
+</head>
+<body>
+  <div class="wall">
+    <!-- sáv 1 -->
+    <div class="pane">
+      <div class="wordmark">MASINA<br>‖<br>MÁGUS</div>
+    </div>
+    <div class="bar"></div>
+    <div class="pane mini">
+      <div>
+        <h1>EGY TÁBLA.<br>EGY ÁLLÍTÁS.</h1>
+        <p class="sub">Mért, egyedi ECU-kalibráció a te fájlodból — a szolgáltatások üvegfalanként, súly szerint.</p>
+      </div>
+    </div>
+    <div class="bar"></div>
+    <div class="pane cobalt mini">
+      <div class="k">AKTUÁLIS</div>
+      <div class="t">ADBLUE<br>JAVÍTÁS</div>
+    </div>
+
+    <div class="bar" style="grid-column:1 / -1"></div>
+
+    <!-- sáv 2: navigáció + szolgáltatások -->
+    <div class="pane" style="padding:0">
+      <div class="nav-item on">FŐOLDAL</div>
+      <div class="nav-item">SZOLGÁLTATÁSOK</div>
+      <div class="nav-item">OBDELEVEN</div>
+      <div class="nav-item">ÁRAK</div>
+      <div class="nav-item">SZAKSZÓTÁR</div>
+    </div>
+    <div class="bar"></div>
+    <div class="pane">
+      <div class="svc">CHIPTUNING STAGE 1</div>
+      <div class="svc">ECO-TUNING</div>
+      <div class="svc">EGR / DPF SZOFTVERES MEGOLDÁS</div>
+    </div>
+    <div class="bar"></div>
+    <div class="pane amber mini">
+      <div class="k">MÉRVE</div>
+      <div class="t">ELŐTTE /<br>UTÁNA</div>
+    </div>
+
+    <div class="bar" style="grid-column:1 / -1"></div>
+
+    <!-- sáv 3 -->
+    <div class="pane oxblood btnpane">
+      <div class="btn" style="border-color:#F4F2ED;color:#F4F2ED">KÉRJEN ÁRAJÁNLATOT</div>
+    </div>
+    <div class="bar"></div>
+    <div class="pane btnpane">
+      <div>
+        <div class="k" style="font-size:22px;letter-spacing:.16em">ÖRÖKÖSRE ARCHIVÁLVA</div>
+        <div class="t" style="font-size:32px;font-weight:800;font-stretch:condensed;margin-top:8px">A GYÁRI SZOFTVER</div>
+      </div>
+      <div class="btn">RÉSZLETEK →</div>
+    </div>
+    <div class="bar"></div>
+    <div class="pane mini">
+      <div class="k" style="font-size:22px;letter-spacing:.16em">KÉTBODONY</div>
+      <div class="t" style="font-size:32px;font-weight:800;font-stretch:condensed;margin-top:8px">SZEMÉLYES<br>MUNKA</div>
+    </div>
+  </div>
+</body>
+</html>

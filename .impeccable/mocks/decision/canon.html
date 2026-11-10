@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<title>A kategória sztenderd — első képernyő</title>
+<style>
+  html,body{margin:0;padding:0}
+  body{width:1440px;height:900px;overflow:hidden;background:#FFFFFF;color:#111827;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+  header{height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;border-bottom:1px solid #E5E7EB}
+  .logo{font-size:26px;font-weight:700}
+  nav{display:flex;gap:30px;font-size:22px;color:#374151}
+  .btn{background:#2563EB;color:#fff;font-size:22px;font-weight:600;padding:12px 22px;border-radius:8px}
+  .hero{text-align:center;padding:110px 200px 0}
+  .hero h1{margin:0;font-size:58px;line-height:1.12;font-weight:700}
+  .hero p{margin:22px auto 0;font-size:22px;color:#4B5563;max-width:760px;line-height:1.5}
+  .cta{margin-top:36px;display:flex;gap:16px;justify-content:center}
+  .cta .pri{background:#2563EB;color:#fff;font-size:24px;font-weight:600;padding:16px 30px;border-radius:8px}
+  .cta .sec{border:1px solid #D1D5DB;color:#111827;font-size:24px;padding:16px 30px;border-radius:8px}
+  .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;padding:96px 48px 0}
+  .card{border:1px solid #E5E7EB;border-radius:12px;padding:24px;box-shadow:0 8px 20px rgba(17,24,39,.06)}
+  .icon{width:44px;height:44px;border-radius:10px;background:#EFF6FF;margin-bottom:16px}
+  .card h2{margin:0;font-size:24px;font-weight:600}
+  .card p{margin:10px 0 0;font-size:22px;color:#4B5563;line-height:1.45}
+  .card a{display:inline-block;margin-top:14px;font-size:22px;color:#2563EB;font-weight:600}
+</style>
+</head>
+<body>
+  <header>
+    <div class="logo">Masinamágus</div>
+    <nav>
+      <div>Szolgáltatások</div><div>OBDeleven</div><div>Árak</div><div>Szakszótár</div><div>Blog</div><div>Kapcsolat</div>
+    </nav>
+    <div class="btn">Kérjen árajánlatot</div>
+  </header>
+
+  <div class="hero">
+    <h1>Megbízható ECU-szerviz és chiptuning Kétbodonyon</h1>
+    <p>Egyedi kalibráció a saját fájljából, mért előtte-utána eredménnyel. A gyári szoftvert örökösre archiváljuk.</p>
+    <div class="cta">
+      <div class="pri">Kérjen árajánlatot</div>
+      <div class="sec">Szolgáltatásaink</div>
+    </div>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <div class="icon"></div>
+      <h2>Chiptuning Stage 1</h2>
+      <p>Egyedi kalibráció a motor saját fájljából, mérve.</p>
+      <a href="#">Részletek →</a>
+    </div>
+    <div class="card">
+      <div class="icon"></div>
+      <h2>Eco-tuning</h2>
+      <p>Fogyasztáscsökkentés a használathoz igazítva.</p>
+      <a href="#">Részletek →</a>
+    </div>
+    <div class="card">
+      <div class="icon"></div>
+      <h2>EGR / DPF</h2>
+      <p>Szoftveres megoldások, zárt pályás felhasználásra.</p>
+      <a href="#">Részletek →</a>
+    </div>
+    <div class="card">
+      <div class="icon"></div>
+      <h2>AdBlue</h2>
+      <p>Visszaszámláló és hibajelzés szoftveres javítása.</p>
+      <a href="#">Részletek →</a>
+    </div>
+  </div>
+</body>
+</html>

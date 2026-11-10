@@ -1,0 +1,123 @@
+---
+// Szolgáltatások áttekintő — 7 terület zománctáblákon.
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Screws from '../../components/Screws.astro';
+import Icon, { type IconName } from '../../components/Icon.astro';
+import CtaPlate from '../../components/CtaPlate.astro';
+import { t, l10n } from '../../lib/l10n';
+import { services } from '../../data/services';
+
+interface ServiceItem {
+  title: string;
+  description: string;
+  icon: string;
+}
+const items = (l10n as unknown as { services: { items: ServiceItem[] } }).services.items;
+
+const cards = services.map((s, i) => ({
+  slug: s.slug,
+  titleKey: s.titleKey,
+  description: items[i].description,
+  icon: items[i].icon as IconName,
+  restricted: s.slug === 'egr-dpf-szoftveres-megoldasok' || s.slug === 'adblue-szoftveres-javitas',
+}));
+---
+
+<BaseLayout title={t('page.services.title')} description={t('services.lead')}>
+  <header class="page-hero shell">
+    <h1>
+      {t('services.title')}{' '}
+      <span class="mark">{t('services.title_mark')}</span>
+    </h1>
+    <p class="page-hero__lead">{t('services.lead')}</p>
+  </header>
+
+  <section class="section shell">
+    <div class="plate-grid">
+      {
+        cards.map((card) => (
+          <a
+            class:list={[
+              'plate',
+              card.restricted ? 'plate--red' : 'plate--blue',
+              'plate--interactive',
+              'svc-card',
+            ]}
+            href={`/szolgaltatasok/${card.slug}`}
+          >
+            <Screws />
+            <Icon name={card.icon} size={30} />
+            <h2 class="svc-card__title">{t(card.titleKey)}</h2>
+            <p class="plate__fact">{card.description}</p>
+            <span class="svc-card__more">
+              {t('services.more_link')}
+              <Icon name="arrow-right" size={18} />
+            </span>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section shell">
+    <div class="plate plate--cream diag-strip">
+      <Screws />
+      <h2>{t('diagnostics.hero.title')}</h2>
+      <p>{t('diagnostics.hero.lead')}</p>
+      <a class="btn btn--secondary btn--on-cream" href="/diagnosztika">
+        {t('nav.diagnostics')}
+        <Icon name="arrow-right" size={18} />
+      </a>
+    </div>
+  </section>
+
+  <section class="section shell">
+    <CtaPlate heading={t('contact.title_a') + ' ' + t('contact.title_mark')} text={t('contact.lead')} button={t('contact.form.submit')} />
+  </section>
+</BaseLayout>
+
+<style>
+  .page-hero {
+    padding-block: clamp(26px, 4vw, 52px) 0;
+  }
+  .mark {
+    color: var(--brass);
+  }
+  .page-hero__lead {
+    color: var(--parchment);
+    font-size: clamp(18px, 1.7vw, 22px);
+    max-width: 62ch;
+    margin-top: 18px;
+  }
+  .svc-card {
+    display: flex;
+    flex-direction: column;
+  }
+  .svc-card :global(.icon) {
+    color: var(--brass);
+  }
+  .svc-card__title {
+    margin: 14px 0 0.35em;
+    font-size: clamp(19px, 1.8vw, 25px);
+  }
+  .svc-card__more {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: auto 0 0;
+    padding-top: 16px;
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 14px;
+    color: var(--brass);
+    border-bottom: 2px solid transparent;
+  }
+  .svc-card:hover .svc-card__more {
+    border-bottom-color: var(--brass);
+  }
+  .diag-strip p {
+    color: var(--cast-2);
+    max-width: 68ch;
+  }
+</style>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<title>Zománctábla-műhely — első képernyő</title>
+<style>
+  html,body{margin:0;padding:0}
+  body{width:1440px;height:900px;overflow:hidden;position:relative;background:#211E1A;color:#EFEAD8;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+  .wall{position:absolute;inset:0;background-image:repeating-linear-gradient(115deg,rgba(239,234,216,.03) 0 2px,transparent 2px 26px)}
+  .mono{font-family:ui-monospace,"SF Mono",Menlo,monospace;font-variant-numeric:tabular-nums}
+  .plate{position:relative;border-radius:16px;padding:34px 38px;box-shadow:0 14px 28px rgba(0,0,0,.45)}
+  .plate.cream{background:#EFEAD8;color:#211E1A;border:8px solid #7A1F1F}
+  .plate.blue{background:#1E3A5F;color:#EFEAD8;border:8px solid #EFEAD8}
+  .plate.red{background:#7A1F1F;color:#EFEAD8;border:8px solid #EFEAD8}
+  .screw{position:absolute;width:14px;height:14px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#C9C2AE,#5A544A)}
+  .sheen{position:absolute;inset:0;border-radius:8px;background:linear-gradient(160deg,rgba(255,255,255,.22),rgba(255,255,255,0) 38%);pointer-events:none}
+  header{position:relative;display:flex;align-items:center;justify-content:space-between;padding:26px 48px 0}
+  .wordmark{font-size:44px;font-weight:800;letter-spacing:.05em;font-stretch:condensed}
+  .bar{color:#E4B84A}
+  .note{font-size:22px;letter-spacing:.22em;color:#C9BFA4}
+  h1{margin:0;font-size:54px;font-weight:800;font-stretch:condensed;letter-spacing:.02em;line-height:1.02}
+  .slogan{margin-top:14px;font-size:28px;letter-spacing:.14em;color:#4A4136;font-weight:700}
+  .phone{margin-top:18px;font-size:86px;font-weight:800;letter-spacing:.01em;line-height:1}
+  .small{margin-top:14px;font-size:23px;letter-spacing:.12em;color:#4A4136}
+  .main{position:absolute;left:48px;top:120px;width:800px;height:560px}
+  .col{position:absolute;left:888px;top:120px;width:504px;display:flex;flex-direction:column;gap:22px}
+  .col .plate{padding:22px 26px}
+  .svc{font-size:30px;font-weight:800;font-stretch:condensed;letter-spacing:.04em}
+  .fact{margin-top:8px;font-size:23px;line-height:1.3}
+  .medal{position:absolute;left:48px;top:706px;width:330px;height:118px;border-radius:100px;background:#EFEAD8;color:#7A1F1F;border:7px solid #7A1F1F;display:flex;align-items:center;justify-content:center;text-align:center;font-size:23px;font-weight:800;letter-spacing:.16em;box-shadow:0 10px 22px rgba(0,0,0,.45)}
+  .cta{position:absolute;right:48px;bottom:52px;display:flex;align-items:center;gap:30px}
+  .cta a{text-decoration:none;color:#EFEAD8}
+  .cta .sec{font-size:25px;letter-spacing:.12em;border-bottom:3px solid #EFEAD8;padding-bottom:4px}
+  .cta .pri{background:#EFEAD8;color:#7A1F1F;border:6px solid #7A1F1F;font-size:30px;font-weight:800;letter-spacing:.12em;padding:18px 30px}
+  .foot{position:absolute;left:430px;bottom:64px;font-size:23px;color:#C9BFA4;letter-spacing:.12em}
+</style>
+</head>
+<body>
+  <div class="wall"></div>
+  <header>
+    <div>
+      <div class="wordmark">MASINA<span class="bar">‖</span>MÁGUS</div>
+      <div class="note">WORDMARK-JAVASLAT · TIPOGRÁFIAI</div>
+    </div>
+    <div class="note mono">KÉTBODONY · RÁKÓCZI ÚT 36.</div>
+  </header>
+
+  <div class="main plate cream">
+    <div class="screw" style="left:16px;top:16px"></div>
+    <div class="screw" style="right:16px;top:16px"></div>
+    <div class="screw" style="left:16px;bottom:16px"></div>
+    <div class="screw" style="right:16px;bottom:16px"></div>
+    <div class="sheen"></div>
+    <h1>A MŰHELY TÁBLÁJA.<br>A SZÁM A LÉNYEG.</h1>
+    <div class="slogan mono">EGYEDI ECU-KALIBRÁCIÓ — MÉRTEN.</div>
+    <div class="phone mono">+36 70 303 1020</div>
+    <div class="small mono">IDŐPONT-EGYEZTETÉSSEL · SZEMÉLYES MUNKA</div>
+  </div>
+
+  <div class="col">
+    <div class="plate blue">
+      <div class="svc">CHIPTUNING STAGE 1</div>
+      <div class="fact">Saját fájlból, mért előtte-utána eredménnyel.</div>
+    </div>
+    <div class="plate blue">
+      <div class="svc">ECO-TUNING</div>
+      <div class="fact">Fogyasztáscsökkentés a használathoz igazítva.</div>
+    </div>
+    <div class="plate red">
+      <div class="svc">EGR / DPF SZOFTVER</div>
+      <div class="fact">Csak zárt pálya, K+F, hobby — ÁSZF 6.2.</div>
+    </div>
+    <div class="plate blue">
+      <div class="svc">ADBLUE JAVÍTÁS</div>
+      <div class="fact">Visszaszámláló és hibajelzés szoftveres javítása.</div>
+    </div>
+  </div>
+
+  <div class="medal mono">MÉRT · ARCHIVÁLVA<br>OLAJTÉGELY-CÍMKE</div>
+
+  <div class="foot mono">A SZÁMOK SZINTETIKUS DEMÓADATOK</div>
+  <div class="cta">
+    <a class="sec" href="#">SZOLGÁLTATÁSOK →</a>
+    <a class="pri" href="#">KÉRJEN ÁRAJÁNLATOT</a>
+  </div>
+</body>
+</html>
